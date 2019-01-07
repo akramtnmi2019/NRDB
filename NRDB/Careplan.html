@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+        <link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<!--<link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap-datetimepicker.min.css">-->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>        
+
+</head>
+
+<body>
+
+<div id="header" class="container" style="padding-top: 1em; padding-bottom: .5em">	
+ 
+ <div style="float:left">
+   <img src="images/logo.png" style="padding-right: 2em; padding-bottom: .55em">
+   <span class="title">Patient Directory</span>
+ </div>
+
+ <div style="float:right; margin-top:1.2em">
+ 	<i class="fas fa-arrow-left" style="padding-right: .5em; color:#707070"></i> <a href="#" class="link_back">Back to Patient Directory</a>
+ 	<span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars"></i></span>
+ </div>
+
+
+</div>
+
+
+<div id="menu" class="container" style="background-color: white;margin-top:2em">	
+
+  <ul class="nav nav-pills">
+    <li><a href="#">Patient Information</a></li>
+    <li><a href="Patient_Information_Medical-History.html">Medical History</a></li>
+    <li><a href="#">Scheduling</a></li>
+    <li class="active"><a href="Careplan.html">Care Plan</a></li>
+  </ul>
+</div>
+
+<div id="exTab" class="container" style="padding-top: 2em;">	
+
+<ul  class="nav nav-pills">
+			<li class="active"><a  href="#1b" data-toggle="tab">Insulin Injection</a></li>
+			<li><a href="#2b" data-toggle="tab">Blood Glucose</a></li>
+			<li><a href="#3b" data-toggle="tab">Blood Pressure</a></li>
+			<li><a href="#4b" data-toggle="tab">Orthostatic Hypotention Testing</a></li>
+			<li><a href="#5b" data-toggle="tab">Other Injection</a></li>
+			<li><a href="#6b" data-toggle="tab">Patch</a></li>
+			<li><a href="#7b" data-toggle="tab">High Risk Medication and Medical Condition</a></li>
+			<li><a href="#8b" data-toggle="tab">Patient Device Teaching</a></li>
+			<li><a href="#9b" data-toggle="tab">Physical Lab and Assessment</a></li>
+			<li><a href="#10b" data-toggle="tab">Notes</a></li>			
+		</ul>
+
+	<div class="tab-content clearfix" style="padding-bottom: 2em">
+			  <div class="tab-pane active" id="1b">
+       
+<!-- Insulin Injection (start) -->
+
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Insulin Injection</h3>           
+           <br>
+           <span style="padding-left: 2.5em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
+
+        </div>
+        <div class="col-md-7">
+          <br><br>	
+          <h3>Select areas to administer injection</h3>
+          <br>
+
+      <div class="row">
+        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
+
+<div id="IM" style="display:none">        	
+
+         <div class="col-md-6"><h3>Starting Insulin Dosage</h3></div>
+
+         <div style="display: inline-flex;">
+         <select class="form-control form-control-sm" style="margin-top: 1em;">
+            <option>Lantus</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div>   
+
+         <div class="col-md-6"><h3>Units</h3></div>
+
+         <div style="display: inline-flex;">
+         <select class="form-control form-control-sm" style="margin-top: .5em;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>    
+         </select>
+         </div>
+         
+         <div style="clear: both; padding-bottom: 2em"></div> 
+
+</div> 
+
+<script type="text/javascript">
+
+function IMHide() {
+  document.getElementById("IM").style.display = "none";
+}
+
+function IMShow() {
+  document.getElementById("IM").style.display = "";
+}
+
+</script>         
+
+         <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="IMHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete This Injection Medication</a></div>
+         <div style="clear:both"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="IMShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add a Injection Medication</a></div>
+         <div style="clear:both"></div>
+
+        
+
+<div style="clear: both;"></div>
+
+<div id="IA" style="display:none">
+
+         <div class="col-md-6"><h3>If Fasting Plasma Glucose is</h3></div>
+
+         <div style="display: inline-flex;">
+         <select class="form-control form-control-sm" style="margin-top: 1em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div> 
+
+         <div class="col-md-6"><h3>Blood Glucose</h3></div>
+
+         <div style="display: inline-flex;">
+         <select class="form-control form-control-sm" style="margin-top: 1em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div> 
+
+         <div class="col-md-6"><h3>Then Action</h3></div>
+
+         <div style="display: inline-flex;">
+         <select class="form-control form-control-sm" style="margin-top: 1em;">
+            <option>Increase</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div> 
+
+         <div class="col-md-6"><h3>Insulin</h3></div>
+
+         <div style="display: inline-flex;">
+         <select class="form-control form-control-sm" style="margin-top: 1em;">
+            <option>Lantus</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div> 
+
+         <div class="col-md-6"><h3>Units</h3></div>
+
+         <div style="display: inline-flex;">
+         <select class="form-control form-control-sm" style="margin-top: .5em;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>    
+         </select>
+         </div>
+
+</div>
+
+<script type="text/javascript">
+
+function IAHide() {
+  document.getElementById("IA").style.display = "none";
+}
+
+function IAShow() {
+  document.getElementById("IA").style.display = "";
+}
+
+</script>
+
+         <div style="clear: both; padding-bottom: 2em"></div>            
+
+         <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="IAHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete This Insulin Algorithm</a></div>
+         <div style="clear:both"></div>
+
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="IAShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add a Starting Insulin Algorithm </a></div>         
+
+         <div style="clear:both"></div>
+
+        </div>
+        <div class="col-md-6" style="padding-left: 1em; padding-right: 0px">
+
+        <img src="images/Injection-Image1.jpg">
+        <!--<div style="clear: both;"></div>-->
+<br/><br>
+
+<div style="display: inline-flex">
+
+<div class="form-check" style="padding-left: 4em; padding-right: 4em; text-align: center;">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"><br>
+  <label class="form-check-label" for="exampleRadios1">
+    Unselected
+  </label>
+</div> 
+
+<div class="form-check" style="padding-left: 2.5em; padding-right: 2.5em; text-align: center;">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked><br>
+  <label class="form-check-label" for="exampleRadios1">
+    Selected
+  </label>
+</div>  
+
+</div>
+
+
+
+        </div>
+        
+      </div>
+
+
+        </div>
+        <div class="col-md-3" style="margin-left: inherit; margin-top:47em">
+
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+
+        </div>
+      </div>
+
+
+		</div>
+		
+<!-- Insulin Injection (end) -->
+
+		<div class="tab-pane" id="2b">
+
+<!-- Blood Glucose (start) -->
+
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Blood Glucose</h3>           
+           <br>
+           <span style="padding-left: 2.5em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
+
+        </div>
+        <div class="col-md-7" style="padding-top: 2em">
+
+      <div class="row">
+        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
+
+         <h3>Select day for Blood Glucose<br>monitoring</h3>
+         <br>
+       
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Mon</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Tue</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Wed</a></div>
+         <div style="clear: both;"></div>           
+
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Thu</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Fri</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Sat</a></div>
+         <div style="clear: both;"></div>
+
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Sun</a></div>
+         <div class="col-md-4"></div>
+         <div class="col-md-4"></div>
+         <div style="clear: both;"></div>         
+
+          <h3>Notes</h3>
+
+          <p>Blood Glucose Low Protocol*</p>
+
+          <div style="padding:1em;background-color: white">
+<p>Dizziness or lightheadedness, Fainting (syncope), Blurred vision, Nausea, Fatigue, Lack of concentration. Based on the Symptoms the pharmacist or r"gistered nurse at after-hours emergency line will make the decision. If no one is reachable and patient has symptoms please call 9171.</p>
+          </div>
+
+        </div>
+        <div class="col-md-6" style="padding-left: 3em; padding-right: 0px">
+
+          <h3>Blood Glucose monitoring</h3>
+          <br>   
+
+         <div class="col-md-6"><h3>Blood Glucose Minimum*</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div>            
+
+         <div class="col-md-6"><h3>Blood Glucose Maximum*</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>      
+
+         <div style="clear: both;"></div>             
+
+
+          <h3>Notes</h3>
+
+          <p>Blood Glucose High Protocol*</p>
+
+          <div style="padding:1em;background-color: white">
+<p>Please call Pharmacy right away;</p>
+          </div>         
+               
+      </div>
+      </div>
+
+
+        </div>
+        <div class="col-md-3" style="margin-left: inherit; margin-top:35em">
+
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+
+        </div>
+      </div>
+
+
+<!-- Blood Glucose (end) --> 
+
+          
+		</div>
+        
+
+        <div class="tab-pane" id="3b">
+          
+<!-- Blood Pressure (start) -->
+
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Blood Pressure</h3>           
+           <br>
+           <span style="padding-left: 2em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
+
+        </div>
+        <div class="col-md-7" style="padding-top: 4em">
+          
+
+       <div class="row">
+        <div class="col-md-4" style="padding-left: 0px; padding-right: 0px">
+
+         <h3>Select day for blood pressure</h3>
+         <br>
+       
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Mon</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Tue</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Wed</a></div>
+         <div style="clear: both;"></div>           
+
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Thu</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Fri</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Sat</a></div>
+         <div style="clear: both;"></div>
+
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Sun</a></div>
+         <div class="col-md-4"></div>
+         <div class="col-md-4"></div>
+         <div style="clear: both;"></div>         
+
+          <h3>Notes</h3>
+
+          <p>Blood Pressure Low Protocol*</p>
+
+          <div style="padding:1em;background-color: white">
+<p>Dizziness or lightheadedness, Fainting (syncope), Blurred vision, Nausea, Fatigue, Lack of concentration. Based on the Symptoms the pharmacist or registered nurse at after-hours emergency line will make the decision. If no one is reachable and patient has symptoms please call 911.</p>
+          </div>
+
+        </div>
+
+        <div class="col-md-4" style="padding-left: 3em; padding-right: 0px">
+
+          <h3>Blood Pressure monitoring</h3>
+          <br>   
+
+         <div class="col-md-6"><h3>Systolic Minimum*</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div>            
+
+         <div class="col-md-6"><h3>Systolic Maximum*</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>      
+
+         <div style="clear: both;"></div> 
+
+         <div class="col-md-6"><h3>Diastolic Minimum*</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div>            
+
+         <div class="col-md-6"><h3>Diastolic Maximum*</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>      
+
+         <div style="clear: both;"></div>                      
+
+
+          <h3>Notes</h3>
+
+          <p>Blood Pressure High Protocol*</p>
+
+          <div style="padding:1em;background-color: white">
+<p>Severe headache, Fatigue or confusion, Vision problems, Chest pain, Difficulty breathing, Irregular heartbeat, Blood in the urine, Pounding in your chest, neck, or ears.;</p>
+          </div>         
+               
+      </div>
+
+
+        <div class="col-md-4" style="padding-top: 5.8em; padding-left: 3em; padding-right: 0px">
+
+
+         <div class="col-md-6"><h3>Pulse Minimum*</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div style="clear: both;"></div>            
+
+         <div class="col-md-6"><h3>Pulse Maximum*</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>      
+
+         <div style="clear: both;"></div> 
+
+         <div class="col-md-6"><h3>Blood Presurre Emergency treshold</h3></div>
+
+         <div style="display: inline-flex">
+         <select class="form-control form-control-sm" style="margin-top: 1.25em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>      
+
+         <div style="clear: both;"></div>                      
+
+
+          <h3>Notes</h3>
+
+          <p>Blood Pressure Emergency Protocol*</p>
+
+          <div style="padding:1em;background-color: white">
+<p>Call pharmacy right away. Please ask patients if they have the following Symptoms.</p>
+          </div>         
+               
+      </div>
+
+      </div>
+
+        </div>
+        <div class="col-md-3" style="margin-left: inherit; margin-top:50em">
+
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+
+        </div>
+      </div>
+
+<!-- Blood Pressure (end) -->
+
+		</div>
+
+
+<div class="tab-pane" id="4b">
+
+<!-- Orthostatic Hypotention Testing (start) -->
+
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Orthostatic Hypotention Testing</h3>           
+           <br>
+           <span style="padding-left: 2em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
+
+        </div>
+        <div class="col-md-7">
+          
+
+       <div class="row">
+        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
+
+         <h3>Orthostatic Hypotention Testing</h3>
+         <br>
+       
+         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" onclick="dateShow();">Yes</a></div>
+         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" onclick="dateHide();">No</a></div>
+
+         <div style="clear: both;"></div>   
+
+
+<script type="text/javascript">
+
+function dateHide() {
+  document.getElementById("start-end-dates").style.display = "none";
+}
+
+function dateShow() {
+  document.getElementById("start-end-dates").style.display = "";
+}
+
+</script>
+
+
+         <div class="col-md-6" id="start-end-dates" style="display:none;"><h3>Start Date</h3></div>
+
+         <div style="display: inline-flex">
+
+
+<!-- <div class="well">
+  <div id="datetimepicker2" class="input-append">
+    <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
+    <span class="add-on">
+      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+      </i>
+    </span>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function() {
+    $('#datetimepicker2').datetimepicker({
+      language: 'en',
+      pick12HourFormat: true
+    });
+  });
+</script> -->
+
+
+
+         </div>
+
+         <div style="clear: both;"></div> 
+
+
+
+        </div>
+
+
+
+      <div class="col-md-6" style="padding-left: 3em; padding-right: 0px">
+      </div>
+
+
+      </div>
+
+        </div>
+        <div class="col-md-3" style="margin-left: inherit; margin-top:30em">
+
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+
+        </div>
+      </div>
+
+<!-- Orthostatic Hypotention Testing (end) -->
+
+</div>
+
+
+<div class="tab-pane" id="5b">
+<!-- # (start) -->
+<!-- # (end) -->
+Other Injection
+
+</div>
+
+
+<div class="tab-pane" id="6b">
+<!-- # (start) -->
+<!-- # (end) -->
+Patch
+</div>
+
+
+<div class="tab-pane" id="7b">
+<!-- # (start) -->
+<!-- # (end) -->
+High Risk Medication and Medical Condition
+</div>
+
+
+<div class="tab-pane" id="8b">
+<!-- # (start) -->
+<!-- # (end) -->
+Patient Device Teaching
+</div>
+
+
+<div class="tab-pane" id="9b">
+<!-- # (start) -->
+<!-- # (end) -->
+Physical Lab and Assessment
+</div>
+
+
+<div class="tab-pane" id="10b">
+<!-- # (start) -->
+<!-- # (end) -->
+Notes
+</div>
+
+
+
+  </div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="/js/bootstrap-datetimepicker.min.js"></script>--> 
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>	
