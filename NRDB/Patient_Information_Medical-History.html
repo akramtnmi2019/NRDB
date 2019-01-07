@@ -13,18 +13,6 @@
 
 <body>
 
-<div class="side-menu-wrapper">
-<a href="#" class="menu-close">×</a>
-<ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
-
-</ul>
-</div>
 <div id="header" class="container" style="padding-top: 1em; padding-bottom: .5em">	
  
  <div style="float:left">
@@ -34,7 +22,7 @@
 
  <div style="float:right; margin-top:1.2em">
  	<i class="fas fa-arrow-left" style="padding-right: .5em; color:#707070"></i> <a href="#" class="link_back">Back to Patient Directory</a>
- 	<a href="" class="menu-open" ><span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars menu-open"></i></span></a>
+ 	<span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars"></i></span>
  </div>
 
 
@@ -45,9 +33,9 @@
 
   <ul class="nav nav-pills">
     <li><a href="#">Patient Information</a></li>
-    <li class="active"><a href="#">Medical History</a></li>
+    <li class="active"><a href="Patient_Information_Medical-History.html">Medical History</a></li>
     <li><a href="#">Scheduling</a></li>
-    <li><a href="#">Care Plan</a></li>
+    <li><a href="Careplan.html">Care Plan</a></li>
   </ul>
 </div>
 
@@ -311,43 +299,6 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function(){
-	
-	var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
-var open_button 	= ".menu-open"; //Menu Open Button
-var close_button 	= ".menu-close"; //Menu Close Button
-var overlay 		= ".menu-overlay"; //Overlay
 
-//Initial menu position
-$(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
-
-$(open_button).click(function(e){ //On menu open button click
-	e.preventDefault();
-
-	$(slide_wrp).css( {"right": "0px"}); //move menu right position to 0
-	setTimeout(function(){
-		$(slide_wrp).addClass('active'); //add active class
-	},50);
-	$(overlay).css({"opacity":"1", "width":"100%"});
-});
-
-$(close_button).click(function(e){ //on menu close button click
-	e.preventDefault();
-	$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}); //hide menu by setting right position 
-	setTimeout(function(){
-		$(slide_wrp).removeClass('active'); // remove active class
-	},50);
-	$(overlay).css({"opacity":"0", "width":"0"});
-});
-});
-$(document).on('click', function(e) { //Hide menu when clicked outside menu area
-	if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){ // check menu condition
-		$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
-		$(overlay).css({"opacity":"0", "width":"0"});
-	}
-});
-
-</script>
 </body>
 </html>	
