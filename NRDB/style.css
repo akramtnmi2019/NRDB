@@ -359,8 +359,13 @@ display:none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
-
+.container-login100-form-btn p
+ {
+	 margin: 0px 7px 10px !important;
+	 
+}
 .login100-form-btn {
   font-family: Helvetica Neue, Bold;
   font-size: 15px;
