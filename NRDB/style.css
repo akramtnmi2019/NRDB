@@ -7,7 +7,7 @@ body {
 
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     color: #707070;
     font-weight: 500;
 	margin: 0px 0px 10px !important;
@@ -15,7 +15,7 @@ p {
 
 label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     color: #707070;
     font-weight: bold;
 }
@@ -580,8 +580,8 @@ display:none;
     left: 0;
     top: 0;
     margin: 1px;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     transition: transform 0.28s ease;
     border-radius: 3px;
     border: 2px solid #707070;
@@ -598,8 +598,8 @@ display:none;
     -ms-transform: rotate(-45deg) scale(0);
     transform: rotate(-45deg) scale(0);
     position: absolute;
-    top: 12px;
-    left: 10px;
+    top: 7px;
+    left: 5px;
 
 }
 .checkbox input[type="checkbox"]:checked ~ label::before {
