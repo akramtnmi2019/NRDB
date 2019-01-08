@@ -708,5 +708,53 @@ label {
     margin: 130px;	
 }
 }
-
+.div1 {
+  width: 350px;
+  height: 420px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background:#ffffff;
+}
+.form_inline3 {
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 10px 0px 6px 0px !important;
+    width: 200px !important;
+}
+.form_inline4 {
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 10px 0px 6px 0px !important;
+    width: 132px !important;
+}
+.form_inline5 {
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 10px 0px 6px 0px !important;
+    width: 200px !important;
+}
+.in_detail
+{
+margin-top:2em; 
+padding-top: 1em;
+border-bottom: 2px solid #ddd;
+margin: 0px 0px 0px 0px;	
+}
+.in_schedule
+{
+padding-top: 1em !important;
+ border-bottom: 2px solid #ddd !important;
+ margin: 0px 75px 0px 0px !important;
+ float: right !important;
+}
+.in_schedule_right
+{
+float: right !important;	
+}
 /*  Akram Code (end)  */

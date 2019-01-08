@@ -25,56 +25,56 @@
 
 </ul>
 </div>
-<div id="header" class="container">	
+<div id="header" class="container" style="padding-top: 1em; padding-bottom: .5em">	
  
- <div class="fleft">
-   <img src="images/logo.png" class="logo">
+ <div style="float:left">
+   <img src="images/logo.png" style="padding-right: 2em; padding-bottom: .55em">
    <span class="title">Patient Directory</span>
  </div>
 
- <div id="backto">
- 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back">Back to Patient Directory</a>
- 	<span class="menu_bars"><i class="fas fa-bars"></i></span>
+ <div style="float:right; margin-top:1.2em">
+ 	<i class="fas fa-arrow-left" style="padding-right: .5em; color:#707070"></i> <a href="#" class="link_back">Back to Patient Directory</a>
+ 	<a href="" class="menu-open" ><span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars menu-open"></i></span></a>
  </div>
 
+
 </div>
 
 
-<!-- Menu (start) -->
-<div id="menu" class="container">	
+<div id="menu" class="container" style="background-color: white;margin-top:2em">	
+
   <ul class="nav nav-pills">
     <li><a href="#">Patient Information</a></li>
-    <li><a href="Patient_Information_Medical-History.html">Medical History</a></li>
+    <li class="active"><a href="#">Medical History</a></li>
     <li><a href="#">Scheduling</a></li>
-    <li class="active"><a href="Careplan.html">Care Plan</a></li>
+    <li><a href="#">Care Plan</a></li>
   </ul>
 </div>
-<!-- Menu (end) -->
 
-<div id="exTab" class="container">	
+<div id="exTab" class="container" style="padding-top: 2em;">	
 
 <ul  class="nav nav-pills">
 			<li class="active"><a  href="#1b" data-toggle="tab">Interventions</a></li>
 			<li><a href="#2b" data-toggle="tab">Scheduling</a></li>
 		</ul>
 
-	<div class="tab-content clearfix" id="tabs_m">
+	<div class="tab-content clearfix" style="padding-bottom: 2em">
 			  <div class="tab-pane active" id="1b">
        
       <div class="row">
         <div class="col-md-2">
-           <h3 class="tit1">Interventions</h3>           
+           <h3 style="padding-left: 1.5em">Interventions</h3>           
            <br>
-           <span class="icon_tit"><i class="fas fa-hand-holding-heart fa-5x" id="icon_tit_color"></i></span>
+           <span style="padding-left: 3.5em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
 
         </div>
-        <div class="col-md-6" >
+        <div class="col-md-6">
           <br><br>	
           <h3>Add an intervention to list</h3>
           <br>
 
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-left: 0px; padding-right: 0px">
 
         
          <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" id="drag1"  draggable="true" ondragstart="drag(event)">Witnessed Medication</a></div>
@@ -124,15 +124,13 @@
 
 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="margin-left: inherit; ">
 		
 		
           <br><br>	
           <h3>Drag and Drop List Here</h3>
            <br>
-		 
 		 <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		 
          <div class="col-md-12" style="margin-left: inherit; margin-top:2em">
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-edit" style="padding-right: .2em"></i>Edit</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
@@ -148,20 +146,23 @@
 		
 		<div class="tab-pane" id="2b">
 
-<!-- Scheduling (start) -->
- <div class="row" >
+<!-- Social History (start) -->
+
+<div class="row" >
  
          <div class="col-md-2">
            
 
         </div>
 	   
-	   <div class="col-md-9 in_schedule"  style="">
-	 <a class="btn btn-secondary in_schedule_right" href="Scheduling_Add_New.html" role="button">+ Add Schedule</a>
+	   <div class="col-md-9"  style="padding-top: 1em; border-bottom: 2px solid #ddd;margin: 0px 0px 0px 0px;">
+	 
 	   </div>
 	   
       </div>
+       
 
+ 
 
       <div class="row">
         <div class="col-md-2">
@@ -172,7 +173,7 @@
         </div>
         <div class="col-md-9" style="padding-top: 1em">
 
-      <div class="row">
+      <div class="row" >
        <div class="col-md-12">
                             <table class="table">
                                 <thead>
@@ -187,15 +188,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><p>Daily</p></td>
-                                        <td><p>Visit every 1 day(s),during 05:30 pm,from 10/09/2017 go on to indefinetly.Leave Morning doses behind .All tasks will spend 10 minute(s)</p></td>
-                                       <td></td>
-                                        <td></td>
-                                        <td><p>1. Witnessed medications
-										    2. Monitor Blood Pressure </p></td>
-                                         <td>
-										 <a href=""><img src="images/edit.png" /></a>
-										 <a href=""><img src="images/delete.png" /></a></td>
+                                       
                                     </tr>
                                   
                                 </tbody>
@@ -209,127 +202,164 @@
 	  
 	   <div class="row" >
         <div class="col-md-2">
+	   </div>
+	   <div class="col-md-2" >
+	  <h3>Recurrence Type</h3>
+	  
+	  <div class="form-group">
+		  <div class="iflex">
+         <select class="form-control form-control-sm" >
+            <option></option>
+         </select>
+         </div>
+		 </div>
+	  
+	   </div>
+	    <div class="col-md-2" >
+	  <h3>Start Date</h3>
+	  
+	  <div class="form-group">
+		  <div class="iflex">
+         <select class="form-control form-control-sm" >
+            <option></option>
+         </select>
+         </div>
+		 </div>
+	  
+	   </div>
+	    <div class="col-md-2" >
+	  <h3>End Date</h3>
+	  <div class="form-group">
+		  <div class="iflex">
+         <select class="form-control form-control-sm" >
+            <option></option>
+         </select>
+         </div>
+		 </div>
+	  
+	   </div>
+      </div>
 	 
+	   <div class="row" >
+        <div class="col-md-2">
 	   </div>
-	   
-	   <div class="col-md-9 in_detail">
-	  <h3>Details</h3>
+	   <div class="col-md-2" >
+	  <h3>Frequency</h3>
+	  <div class="form-group">
+		  <div class="iflex">
+         <select class="form-control form-control-sm" >
+            <option></option>
+         </select>
+         </div>
+		 </div>
+	  
+	  
 	   </div>
-		
-		
+	    <div class="col-md-2" >
+	  <h3>Route</h3>
+	  
+	  <div class="form-group">
+		  <div class="iflex">
+         <select class="form-control form-control-sm" >
+            <option></option>
+         </select>
+         </div>
+		 </div>
+	  
+	   </div>
+	    <div class="col-md-2" >
+	  <h3>Target Start Time</h3>
+	  <div class="form-group">
+		  <div class="iflex">
+         <select class="form-control form-control-sm" >
+            <option></option>
+         </select>
+         </div>
+		 </div>
+	  
+	   </div>
       </div>
 	  
 	  
-	    <div class="row">
+	  <div class="row" >
         <div class="col-md-2">
-           
+	   </div>
+	   <div class="col-md-2" >
+	   <br>
+	   <div class="checkbox">
+     <input type="checkbox" id="ongoing" name="" value="">
+     <label for="ongoing"><span>Ongoing</span></label>
+  </div>
 
-        </div>
-         <div class="col-md-9" style="padding-top: 1em;">
-		 
-		 
-         
-		   <div class="row">
-		   
-        <div class="col-md-4">
-		 <h3>Witness Dose Time</h3>
+	   </div>
+	    <div class="col-md-2" >
+		<br>
+	  <div class="checkbox">
+     <input type="checkbox" id="ext" name="" value="">
+    <label for="ext"><span>Extended Leave</span></label>
+	  
+  </div>
+	   </div>
+	    <div class="col-md-3">
+	   <h3>Target End Time</h3>
+	   
+	    <div class="form-group">
+		  <div class="iflex">
+         <select class="form-control form-control-sm" >
+            <option></option>
+         </select>
+         </div>
+		 </div>
+      </div>
+      </div>
+	  
+	  
+	   <div class="row" >
+        <div class="col-md-2">
+	   </div>
+	   <div class="col-md-2" >
+	   <br>
+	   <div class="checkbox">
+    <input type="checkbox" id="sht" name="" value="">
+      <label for="sht"><span>Short term</span></label>
+  </div>
+
+	   </div>
+	    <div class="col-md-2" >
+		<br>
+	  <div class="checkbox">
+	   
+     <input type="checkbox" id="ams" name="" value="">
+    <label for="ams"><span>Alternative Medication Schedule</span></label>
+	  
+  </div>
+	   </div>
+	    <div class="col-md-3">
+	 <br>
+	  <div class="checkbox">
+	   
+     <input type="checkbox" id="edu" name="" value="">
+    <label for="edu"><span>Education</span></label>
+	  
+  </div>
+      </div>
+      </div>
+	  
+	  
+	  <div class="row" style="margin-left: inherit; margin-top:2em">
+		   <div class="col-md-2">
+	   </div>
+        <div class="col-md-2">
+		 <a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Add Schedule </a>
         </div>
 		
 		<div class="col-md-2">
-		
+		 <a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Schedule</a>
         </div>
-		
-		 <div class="col-md-4">
-		 <h3>Medication Reminders</h3>
-        </div>
+		 
 		
 		  </div>
-		 
-           <div class="row">
-        <div class="col-md-4">
-        
-
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button">Morning </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button">Afternoon</a></div>
-         
-         <div style="clear: both;"></div>   
-		 
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button">Evening </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button">Bed Time </a></div>
-         <div style="clear: both;"></div> 
-		 
-        </div>
-		
-		<div class="col-md-2">
-		
-        </div>
-        <div class="col-md-6">
-
-         <div class="col-md-6"><label>Select Reminders Type</label></div>
-         <div class="col-md-6"> 
-		  <div class="form-group">
-		  <div class="iflex">
-         <select class="form-control form-control-sm" >
-            <option></option>
-         </select>
-         </div>
-		 </div>
-		 </div>
-        
-         <div style="clear: both;"></div>
-		 
-          <div class="col-md-6"><label>Reminder time</label></div>
-         <div class="col-md-6"> 
-		 <div class="form-group">
-		  <div class="iflex">
-         <select class="form-control form-control-sm" >
-            <option></option>
-         </select>
-         </div>
-		 </div>
-		 </div>
-         
-		 <div style="clear: both;"></div>
-          
-      </div>
-	  
-      </div>
-	  
-	  
-	   <div class="row">
-        <div class="col-md-6">
-         <h3>Are we leaving other doses behind ?</h3>
-
-		 
-         <div class="col-md-6">
-		 <div class="checkbox">
-     <input type="checkbox" id="checkbox" name="" value="">
-     <label for="checkbox"><span>Yes</span></label>
-  </div>
-  
-         <div style="clear: both;"></div>  
- <div class="checkbox">
-     <input type="checkbox" id="checkbox" name="" value="">
-     <label for="checkbox"><span>No</span></label>
-  </div>
-</div>
-      
-        </div>
-		
-		<div class="col-md-2">
-		
-        </div>
-        <div class="col-md-6">
-
-      </div>
-	  
-      </div>
-	  
-	  
-        </div>
-        
-      </div>
-
+	
 
 <!-- Social History (end) --> 
 
@@ -378,7 +408,6 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 		$(overlay).css({"opacity":"0", "width":"0"});
 	}
 });
-
 function allowDrop(ev) {
   ev.preventDefault();
 }
@@ -392,7 +421,6 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
-
 </script>
 </body>
 </html>	
