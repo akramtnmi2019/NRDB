@@ -1,17 +1,162 @@
 /* CSS Made by Mauricio (start) */
 
-body {
-  padding : 10px ;
-  background-color: #f8faf9;
-}
+body { padding : 10px; background-color: #f8faf9 }
 
 p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    color: #707070;
-    font-weight: 500;
-	margin: 0px 0px 10px !important;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 15px;
+   color: #707070;
+   font-weight: 500;
 }
+
+a {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 15px;
+   color: #707070;
+   font-weight: bold;
+}
+
+a:hover,a.link_back:hover { text-decoration: none!important }
+
+a.link_back {
+   font-family: 'Merriweather', serif;    
+   font-size: 15px;
+   font-weight: bold;    
+   color: #707070
+}
+
+
+
+#header { padding-top: 1em; padding-bottom: .5em }
+
+.title {
+   font-family: 'Merriweather', serif;
+   font-weight: bold;
+   font-size: 20px;
+   color:#707070  
+}
+
+.fleft { float:left }
+
+.logo { padding-right: 2em; padding-bottom: .55em }
+
+#backto { float:right; margin-top:1.2em }
+
+#arrow_backto { padding-right: .5em; color:#707070 }
+
+.menu_bars { padding-left: 1.5em; color:#707070 }
+
+
+#exTab .nav-pills > li > a { border-radius: 4px 4px 0 0 }
+
+#exTab .tab-content {
+   color : #33333;
+   background-color: #F1F1F1;
+   padding : 5px 15px
+}
+
+#exTab .nav-pills > li > a {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 15px; 
+   font-weight: 500;  
+   background-color: white!important;
+   color: #707070!important
+}
+
+#exTab .nav-pills > li > a:hover {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 15px; 
+   font-weight: 500;  
+   color: #707070!important;
+   background-color: #f1f1f1!important
+}
+
+#exTab .nav-pills>li.active>a {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 15px; 
+   font-weight: 500;     
+   color: #707070!important;
+   background-color: #f1f1f1!important
+}
+
+.nav-pills>li>a {
+   border-radius: 0px!important;
+   padding-left: 2.5em;
+   padding-right: 2.5em    
+}
+
+#exTab { padding-top: 2em }
+
+#exTab .nav-pills > li > a { border-radius: 10px 10px 0 0!important }
+
+#tabs_m { padding-bottom: 2em }
+
+#menu { background-color: white; margin-top:2em }
+
+#menu .nav-pills>li >a {
+   color: #707070!important;
+   background-color: #ffffff!important;
+}
+
+#menu .nav-pills > li > a:hover, #menu .nav-pills > li.active > a {
+   color: #ffffff!important;
+   background-color: #009688!important
+}
+
+h3 { 
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 15px; 
+   font-weight: 600; 
+   color:#707070
+ }  
+
+h3.tit1 { padding-left: 1.5em }
+
+ .icon_tit { padding-left: 2.5em }
+
+#icon_tit_color { color: #707070 }
+
+#col_II { padding-left: 0px; padding-right: 0px }
+
+.iflex { display: inline-flex }
+
+.iflex_pt_1em { display: inline-flex; padding-top: 1em }
+
+.iflex_pt__5em { display: inline-flex; padding-top: .5em }
+
+#fc_op1 { margin-top: 1em }
+
+.clear { clear: both }
+
+.clear_2em { clear: both; padding-bottom: 2em }
+
+.btn-secondary {
+   color: #009688;
+   background-color: white;
+   border-color: #009688;
+   border-radius: 0px; 
+   margin-bottom: 1em;   
+   font-weight: bold
+}
+
+.btn-secondary-red {
+   color: #ff0000;
+   background-color: white;
+   border-color: #ff0000;
+   border-radius: 0px;    
+   margin-bottom: 1em;
+   font-weight: bold    
+}
+
+a.btn-secondary:hover, a.btn-secondary-red:hover { background-color: #cccccc }
+
+.hidden { display:none }
+
+#Patch-Med { width: 10em }
+
+/* CSS Made by Mauricio (end) */
+
+/* CSS Made by Akram (start) */
 
 label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,127 +164,6 @@ label {
     color: #707070;
     font-weight: bold;
 }
-
-
-
-a {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    color: #707070;
-    font-weight: bold;
-}
-
-a:hover,a.link_back:hover { text-decoration: none!important }
-
-a.link_back {
-    font-family: 'Merriweather', serif;    
-    font-size: 15px;
-    font-weight: bold;    
-    color: #707070;
-}
-
-.title {
-font-family: 'Merriweather', serif;
-font-weight: bold;
-font-size: 20px;
-color:#707070;  
-}
-
-#exTab .nav-pills > li > a {
-  border-radius: 4px 4px 0 0 ;
- 
-}
-
-#exTab .tab-content {
-  color : #33333;
-  background-color: #F1F1F1;
-  padding : 5px 15px;
-}
-
-#exTab .nav-pills > li > a {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-    font-size: 15px; 
-    font-weight: 500;  
-    background-color: white!important;
-    color: #707070!important;
-}
-
-#exTab .nav-pills > li > a:hover {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-    font-size: 15px; 
-    font-weight: 500;  
-    color: #707070!important;
-    background-color: #f1f1f1!important;
-	 
-}
-
-#exTab .nav-pills>li.active>a {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-    font-size: 15px; 
-    font-weight: 500;     
-    color: #707070!important;
-    background-color: #f1f1f1!important;
-	border: 1px solid #009688 !important; /* create by akram */
-}
-
-.nav-pills>li>a {
-    border-radius: 0px!important;
-    padding-left: 2.5em;
-    padding-right: 2.5em    
-}
-
-#exTab .nav-pills > li > a {
-    border-radius: 10px 10px 0 0!important;
-}
-
-#menu .nav-pills>li >a {
-    color: #707070!important;
-    background-color: #ffffff!important;
-}
-
-#menu .nav-pills > li > a:hover, #menu .nav-pills > li.active > a {
-    color: #ffffff!important;
-    background-color: #009688!important;
-}
-
-h3 { 
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-  font-size: 15px; 
-  font-weight: 600; 
-  color:#707070;
- }  
-
-/* Buttons */
-
-.btn-secondary {
-    color: #009688;
-    background-color: white;
-    border-color: #009688;
-    border-radius: 0px; 
-    margin-bottom: 1em;   
-    font-weight: bold
-}
-
-.btn-secondary-red {
-    color: #ff0000;
-    background-color: white;
-    border-color: #ff0000;
-    border-radius: 0px;    
-    margin-bottom: 1em;
-    font-weight: bold    
-}
-
-a.btn-secondary:hover, a.btn-secondary-red:hover {
-    background-color: #cccccc;
-}
-
-.hidden {
-display:none;
-}
-
-/* CSS Made by Mauricio (end) */
-
-/*  Akram Code (start)  */
 
 .form_inline1
 {
@@ -161,8 +185,7 @@ display:none;
     margin: 4px 100px 6px 0px !important;
 }
 
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
+/* [ login ]*/
 
 .limiter {
   width: 100%;
@@ -210,8 +233,7 @@ display:none;
   width: 390px;
   background: transparent;
 }
-/*------------------------------------------------------------------
-[  ]*/
+
 .login100-form {
   width: 100%;
   display: -webkit-box;
@@ -233,8 +255,6 @@ display:none;
   display: block;
    font-weight: bold;
 }
-
-/*---------------------------------------------*/
 .login100-form-avatar {
  width: 60px;
     height: 80px;
@@ -246,7 +266,6 @@ display:none;
   width: 100%;
 }
 
- /*---------------------------------------------*/
 .wrap-input100 {
   position: relative;
   width: 100%;
@@ -267,9 +286,7 @@ display:none;
   border: 1px solid #009688;
   padding: 0 30px 0 53px;
 }
-
-
-.coreplan {
+.careplan_login {
   font-family: Helvetica Neue, Regular;
     font-size: 15px;
     /* line-height: 1.2; */
@@ -281,10 +298,6 @@ display:none;
     /* padding: 0 30px 0 53px; */
 	
 }
-
-
-/*------------------------------------------------------------------
-[ Focus ]*/
 .focus-input100 {
   display: block;
   position: absolute;
@@ -347,9 +360,6 @@ display:none;
   padding-left: 23px;
 }
 
-
-/*------------------------------------------------------------------
-[ Button ]*/
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -424,9 +434,6 @@ display:none;
 .login100-form-btn:hover:before {
   opacity: 1;
 }
-
-/*------------------------------------------------------------------
-[ Button sign in with ]*/
 .btn-face,
 .btn-google {
   font-family: Raleway-Bold;
@@ -558,7 +565,6 @@ display:none;
     padding-right: 15px;
   }
 }
-
 /*//////////////////////////////////////////////////////////////////
 [ profile ]*/
 
@@ -638,9 +644,6 @@ display:none;
     outline: 0;
 }
 
-
-
-  
 .side-menu-wrapper { /* style menu wrapper */
 	background: #F8FAF9;
 	padding: 40px 0 0 40px;
@@ -705,9 +708,5 @@ display:none;
     margin: 130px;	
 }
 }
+
 /*  Akram Code (end)  */
-
-
-
-
- 

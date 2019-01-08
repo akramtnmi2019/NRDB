@@ -2,42 +2,47 @@
 <html lang="en">
 
 <head>
-<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
-        <link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-<!--<link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap-datetimepicker.min.css">-->
-<link rel="stylesheet" type="text/css" href="style.css">
-
 <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
 
-<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>        
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+
+<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
 
-<div id="header" class="container" style="padding-top: 1em; padding-bottom: .5em">	
+<div id="header" class="container">	
  
- <div style="float:left">
-   <img src="images/logo.png" style="padding-right: 2em; padding-bottom: .55em">
+ <div class="fleft">
+   <img src="images/logo.png" class="logo">
    <span class="title">Patient Directory</span>
  </div>
 
- <div style="float:right; margin-top:1.2em">
- 	<i class="fas fa-arrow-left" style="padding-right: .5em; color:#707070"></i> <a href="#" class="link_back">Back to Patient Directory</a>
- 	<span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars"></i></span>
+ <div id="backto">
+ 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back">Back to Patient Directory</a>
+ 	<span class="menu_bars"><i class="fas fa-bars"></i></span>
  </div>
-
 
 </div>
 
-
-<div id="menu" class="container" style="background-color: white;margin-top:2em">	
-
+<!-- Menu (start) -->
+<div id="menu" class="container">	
   <ul class="nav nav-pills">
     <li><a href="#">Patient Information</a></li>
     <li><a href="Patient_Information_Medical-History.html">Medical History</a></li>
@@ -45,8 +50,9 @@
     <li class="active"><a href="Careplan.html">Care Plan</a></li>
   </ul>
 </div>
+<!-- Menu (end) -->
 
-<div id="exTab" class="container" style="padding-top: 2em;">	
+<div id="exTab" class="container">	
 
 <ul  class="nav nav-pills">
 			<li class="active"><a  href="#1b" data-toggle="tab">Insulin Injection</a></li>
@@ -61,43 +67,40 @@
 			<li><a href="#10b" data-toggle="tab">Notes</a></li>			
 		</ul>
 
-	<div class="tab-content clearfix" style="padding-bottom: 2em">
+	<div class="tab-content clearfix" id="tabs_m">
 			  <div class="tab-pane active" id="1b">
        
 <!-- Insulin Injection (start) -->
 
       <div class="row">
         <div class="col-md-2">
-           <h3 style="padding-left: 1.5em">Insulin Injection</h3>           
+           <h3 class="tit1">Insulin Injection</h3>           
            <br>
-           <span style="padding-left: 2.5em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
-
-        </div>
-        <div class="col-md-7">
-          <br><br>	
-          <h3>Select areas to administer injection</h3>
-          <br>
+           <span class="icon_tit"><i class="fas fa-hand-holding-heart fa-5x" id="icon_tit_color"></i></span>
+      </div>
+      <div class="col-md-7"><br><br>	
+          <h3>Select areas to administer injection</h3><br>
 
       <div class="row">
-        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
+        <div class="col-md-6" id="col_II">
 
 <div id="IM" style="display:none">        	
 
          <div class="col-md-6"><h3>Starting Insulin Dosage</h3></div>
 
-         <div style="display: inline-flex;">
-         <select class="form-control form-control-sm" style="margin-top: 1em;">
+         <div class="iflex">
+         <select class="form-control form-control-sm" id="fc_op1">
             <option>Lantus</option>
             <option>op #2</option>
             <option>op #3</option>    
          </select>
          </div>
 
-         <div style="clear: both;"></div>   
+         <div class="clear"></div>   
 
          <div class="col-md-6"><h3>Units</h3></div>
 
-         <div style="display: inline-flex;">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: .5em;">
             <option>1</option>
             <option>2</option>
@@ -105,8 +108,7 @@
          </select>
          </div>
          
-         <div style="clear: both; padding-bottom: 2em"></div> 
-
+         <div class="clear_2em"></div>
 </div> 
 
 <script type="text/javascript">
@@ -122,19 +124,17 @@ function IMShow() {
 </script>         
 
          <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="IMHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete This Injection Medication</a></div>
-         <div style="clear:both"></div>
+         <div class="clear"></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="IMShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add a Injection Medication</a></div>
-         <div style="clear:both"></div>
+         <div class="clear"></div>
 
-        
-
-<div style="clear: both;"></div>
+<div class="clear"></div>
 
 <div id="IA" style="display:none">
 
          <div class="col-md-6"><h3>If Fasting Plasma Glucose is</h3></div>
 
-         <div style="display: inline-flex;">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -142,11 +142,11 @@ function IMShow() {
          </select>
          </div>
 
-         <div style="clear: both;"></div> 
+         <div class="clear"></div>
 
          <div class="col-md-6"><h3>Blood Glucose</h3></div>
 
-         <div style="display: inline-flex;">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -154,11 +154,11 @@ function IMShow() {
          </select>
          </div>
 
-         <div style="clear: both;"></div> 
+         <div class="clear"></div>
 
          <div class="col-md-6"><h3>Then Action</h3></div>
 
-         <div style="display: inline-flex;">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1em;">
             <option>Increase</option>
             <option>op #2</option>
@@ -166,11 +166,11 @@ function IMShow() {
          </select>
          </div>
 
-         <div style="clear: both;"></div> 
+         <div class="clear"></div> 
 
          <div class="col-md-6"><h3>Insulin</h3></div>
 
-         <div style="display: inline-flex;">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1em;">
             <option>Lantus</option>
             <option>op #2</option>
@@ -178,11 +178,11 @@ function IMShow() {
          </select>
          </div>
 
-         <div style="clear: both;"></div> 
+         <div class="clear"></div> 
 
          <div class="col-md-6"><h3>Units</h3></div>
 
-         <div style="display: inline-flex;">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: .5em;">
             <option>1</option>
             <option>2</option>
@@ -204,23 +204,20 @@ function IAShow() {
 
 </script>
 
-         <div style="clear: both; padding-bottom: 2em"></div>            
+         <div class="clear_2em"></div>            
 
          <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="IAHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete This Insulin Algorithm</a></div>
-         <div style="clear:both"></div>
+         <div class="clear"></div>
 
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="IAShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add a Starting Insulin Algorithm </a></div>         
-
-         <div style="clear:both"></div>
+         <div class="clear"></div>
 
         </div>
         <div class="col-md-6" style="padding-left: 1em; padding-right: 0px">
 
-        <img src="images/Injection-Image1.jpg">
-        <!--<div style="clear: both;"></div>-->
-<br/><br>
+        <img src="images/Injection-Image1.jpg"><br/><br>
 
-<div style="display: inline-flex">
+<div class="iflex">
 
 <div class="form-check" style="padding-left: 4em; padding-right: 4em; text-align: center;">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"><br>
@@ -238,12 +235,8 @@ function IAShow() {
 
 </div>
 
-
-
-        </div>
-        
+   </div>
       </div>
-
 
         </div>
         <div class="col-md-3" style="margin-left: inherit; margin-top:47em">
@@ -251,12 +244,10 @@ function IAShow() {
          <div class="col-md-4"></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
          <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
-
         </div>
       </div>
 
-
-		</div>
+</div>
 		
 <!-- Insulin Injection (end) -->
 
@@ -269,7 +260,6 @@ function IAShow() {
            <h3 style="padding-left: 1.5em">Blood Glucose</h3>           
            <br>
            <span style="padding-left: 2.5em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
-
         </div>
         <div class="col-md-7" style="padding-top: 2em">
 
@@ -282,17 +272,17 @@ function IAShow() {
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Mon</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Tue</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Wed</a></div>
-         <div style="clear: both;"></div>           
+         <div class="clear"></div>           
 
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Thu</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Fri</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Sat</a></div>
-         <div style="clear: both;"></div>
+         <div class="clear"></div>
 
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Sun</a></div>
          <div class="col-md-4"></div>
          <div class="col-md-4"></div>
-         <div style="clear: both;"></div>         
+         <div class="clear"></div>         
 
           <h3>Notes</h3>
 
@@ -310,7 +300,7 @@ function IAShow() {
 
          <div class="col-md-6"><h3>Blood Glucose Minimum*</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -318,11 +308,11 @@ function IAShow() {
          </select>
          </div>
 
-         <div style="clear: both;"></div>            
+         <div class="clear"></div>            
 
          <div class="col-md-6"><h3>Blood Glucose Maximum*</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -330,20 +320,18 @@ function IAShow() {
          </select>
          </div>      
 
-         <div style="clear: both;"></div>             
-
+         <div class="clear"></div>
 
           <h3>Notes</h3>
 
           <p>Blood Glucose High Protocol*</p>
 
           <div style="padding:1em;background-color: white">
-<p>Please call Pharmacy right away;</p>
+             <p>Please call Pharmacy right away;</p>
           </div>         
                
       </div>
       </div>
-
 
         </div>
         <div class="col-md-3" style="margin-left: inherit; margin-top:35em">
@@ -351,19 +339,13 @@ function IAShow() {
          <div class="col-md-4"></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
          <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
-
         </div>
       </div>
 
-
 <!-- Blood Glucose (end) --> 
-
-          
-		</div>
+</div>
         
-
-        <div class="tab-pane" id="3b">
-          
+<div class="tab-pane" id="3b">
 <!-- Blood Pressure (start) -->
 
       <div class="row">
@@ -371,50 +353,43 @@ function IAShow() {
            <h3 style="padding-left: 1.5em">Blood Pressure</h3>           
            <br>
            <span style="padding-left: 2em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
-
         </div>
         <div class="col-md-7" style="padding-top: 4em">
-          
 
        <div class="row">
         <div class="col-md-4" style="padding-left: 0px; padding-right: 0px">
-
-         <h3>Select day for blood pressure</h3>
-         <br>
+         <h3>Select day for blood pressure</h3><br>
        
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Mon</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Tue</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Wed</a></div>
-         <div style="clear: both;"></div>           
+         <div class="clear"></div>           
 
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Thu</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Fri</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Sat</a></div>
-         <div style="clear: both;"></div>
+         <div class="clear"></div>
 
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button">Sun</a></div>
          <div class="col-md-4"></div>
          <div class="col-md-4"></div>
-         <div style="clear: both;"></div>         
+         <div class="clear"></div>         
 
           <h3>Notes</h3>
-
           <p>Blood Pressure Low Protocol*</p>
 
           <div style="padding:1em;background-color: white">
 <p>Dizziness or lightheadedness, Fainting (syncope), Blurred vision, Nausea, Fatigue, Lack of concentration. Based on the Symptoms the pharmacist or registered nurse at after-hours emergency line will make the decision. If no one is reachable and patient has symptoms please call 911.</p>
           </div>
-
         </div>
 
         <div class="col-md-4" style="padding-left: 3em; padding-right: 0px">
 
-          <h3>Blood Pressure monitoring</h3>
-          <br>   
+          <h3>Blood Pressure monitoring</h3><br>   
 
          <div class="col-md-6"><h3>Systolic Minimum*</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -422,11 +397,11 @@ function IAShow() {
          </select>
          </div>
 
-         <div style="clear: both;"></div>            
+         <div class="clear"></div>            
 
          <div class="col-md-6"><h3>Systolic Maximum*</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -434,11 +409,11 @@ function IAShow() {
          </select>
          </div>      
 
-         <div style="clear: both;"></div> 
+         <div class="clear"></div> 
 
          <div class="col-md-6"><h3>Diastolic Minimum*</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -446,11 +421,11 @@ function IAShow() {
          </select>
          </div>
 
-         <div style="clear: both;"></div>            
+         <div class="clear"></div>            
 
          <div class="col-md-6"><h3>Diastolic Maximum*</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -458,7 +433,7 @@ function IAShow() {
          </select>
          </div>      
 
-         <div style="clear: both;"></div>                      
+         <div class="clear"></div>                      
 
 
           <h3>Notes</h3>
@@ -471,13 +446,11 @@ function IAShow() {
                
       </div>
 
-
         <div class="col-md-4" style="padding-top: 5.8em; padding-left: 3em; padding-right: 0px">
-
 
          <div class="col-md-6"><h3>Pulse Minimum*</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -485,11 +458,11 @@ function IAShow() {
          </select>
          </div>
 
-         <div style="clear: both;"></div>            
+         <div class="clear"></div>            
 
          <div class="col-md-6"><h3>Pulse Maximum*</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -497,11 +470,11 @@ function IAShow() {
          </select>
          </div>      
 
-         <div style="clear: both;"></div> 
+         <div class="clear"></div> 
 
          <div class="col-md-6"><h3>Blood Presurre Emergency treshold</h3></div>
 
-         <div style="display: inline-flex">
+         <div class="iflex">
          <select class="form-control form-control-sm" style="margin-top: 1.25em;">
             <option>op #1</option>
             <option>op #2</option>
@@ -509,17 +482,14 @@ function IAShow() {
          </select>
          </div>      
 
-         <div style="clear: both;"></div>                      
-
+         <div class="clear"></div>
 
           <h3>Notes</h3>
-
           <p>Blood Pressure Emergency Protocol*</p>
 
           <div style="padding:1em;background-color: white">
-<p>Call pharmacy right away. Please ask patients if they have the following Symptoms.</p>
-          </div>         
-               
+             <p>Call pharmacy right away. Please ask patients if they have the following Symptoms.</p> 
+          </div>        
       </div>
 
       </div>
@@ -533,10 +503,8 @@ function IAShow() {
 
         </div>
       </div>
-
 <!-- Blood Pressure (end) -->
-
-		</div>
+</div>
 
 
 <div class="tab-pane" id="4b">
@@ -548,75 +516,77 @@ function IAShow() {
            <h3 style="padding-left: 1.5em">Orthostatic Hypotention Testing</h3>           
            <br>
            <span style="padding-left: 2em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
-
         </div>
         <div class="col-md-7">
           
-
        <div class="row">
         <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
 
-         <h3>Orthostatic Hypotention Testing</h3>
-         <br>
+         <h3>Orthostatic Hypotention Testing</h3><br>
        
          <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" onclick="dateShow();">Yes</a></div>
          <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" onclick="dateHide();">No</a></div>
 
-         <div style="clear: both;"></div>   
-
+         <div class="clear"></div>   
 
 <script type="text/javascript">
-
 function dateHide() {
   document.getElementById("start-end-dates").style.display = "none";
 }
-
 function dateShow() {
   document.getElementById("start-end-dates").style.display = "";
 }
-
 </script>
 
+<div id="start-end-dates" style="display:none">
+         <div class="col-md-6"><h3>Start Date</h3></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_oht'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_oht').datetimepicker();
+            });
+        </script>
+         </div>
 
-         <div class="col-md-6" id="start-end-dates" style="display:none;"><h3>Start Date</h3></div>
+         <div class="clear"></div> 
 
-         <div style="display: inline-flex">
+         <div class="col-md-6"><h3>End Date</h3></div>
 
-
-<!-- <div class="well">
-  <div id="datetimepicker2" class="input-append">
-    <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
-    <span class="add-on">
-      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-      </i>
-    </span>
-  </div>
-</div>
-<script type="text/javascript">
-  $(function() {
-    $('#datetimepicker2').datetimepicker({
-      language: 'en',
-      pick12HourFormat: true
-    });
-  });
-</script> -->
-
-
+         <div style="display: -webkit-box; padding-top:.5em">
+        
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_oht_ed'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_oht_ed').datetimepicker();
+            });
+        </script>
 
          </div>
 
-         <div style="clear: both;"></div> 
-
-
+         <div class="clear"></div>  
 
         </div>
-
-
+</div>
 
       <div class="col-md-6" style="padding-left: 3em; padding-right: 0px">
       </div>
-
-
       </div>
 
         </div>
@@ -625,36 +595,317 @@ function dateShow() {
          <div class="col-md-4"></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
          <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
-
         </div>
       </div>
 
 <!-- Orthostatic Hypotention Testing (end) -->
-
 </div>
 
 
 <div class="tab-pane" id="5b">
-<!-- # (start) -->
-<!-- # (end) -->
-Other Injection
+<!-- Other Injection (start) -->
+
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Other Injection</h3>           
+           <br>
+           <span style="padding-left: 2.5em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
+        </div>
+        <div class="col-md-7">
+          <br><br>	
+          <h3>Select areas to administer injection</h3><br>
+
+      <div class="row">
+        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
+
+<div id="OIM" style="display:none">        	
+
+         <div class="col-md-6"><h3>Injection Medications</h3></div>
+
+         <div class="iflex">
+         <select class="form-control form-control-sm" style="margin-top: 1em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>
+
+         <div class="clear"></div>   
+
+         <div class="col-md-6"><h3>Dose field for each injection medication line</h3></div>
+
+         <div class="iflex">
+         <select class="form-control form-control-sm" style="margin-top: .5em;">
+            <option>op #1</option>
+            <option>op #2</option>
+            <option>op #3</option>    
+         </select>
+         </div>         
+         <div class="clear_2em"></div>
+</div> 
+
+<script type="text/javascript">
+function OIMHide() {
+  document.getElementById("OIM").style.display = "none";
+}
+function OIMShow() {
+  document.getElementById("OIM").style.display = "";
+}
+</script>         
+
+         <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="OIMHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete This Injection Medication</a></div>
+         <div class="clear"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="OIMShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add a Injection Medication</a></div>
+         <div class="clear"></div>
+        </div>
+        <div class="col-md-6" style="padding-left: 1em; padding-right: 0px">
+
+        <img src="images/Injection-Image1.jpg"><br/><br>
+
+<div class="iflex">
+
+<div class="form-check" style="padding-left: 4em; padding-right: 4em; text-align: center;">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"><br>
+  <label class="form-check-label" for="exampleRadios1">
+    Unselected
+  </label>
+</div> 
+
+<div class="form-check" style="padding-left: 2.5em; padding-right: 2.5em; text-align: center;">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked><br>
+  <label class="form-check-label" for="exampleRadios1">
+    Selected
+  </label>
+</div>  
 
 </div>
-
+</div>
+        
+      </div>
+        </div>
+        <div class="col-md-3" style="margin-left: inherit; margin-top:47em">
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+      </div>
+<!-- Other Injection (end) -->
+</div>
 
 <div class="tab-pane" id="6b">
-<!-- # (start) -->
-<!-- # (end) -->
-Patch
-</div>
+<!-- Patch (start) -->
 
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Patch Location</h3>           
+           <br>
+           <span style="padding-left: 2.5em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
+
+        </div>
+        <div class="col-md-7">
+          <br><br>  
+          <h3>Patch Details</h3><br>
+
+      <div class="row">
+        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
+
+<div id="PIM" style="display:none">         
+
+         <div class="col-md-6"><h3>Patch<br>Medication</h3></div>
+
+         <div class="iflex_pt_1em">
+            <input type="text" class="form-control" id="Patch-Med" placeholder="Patch Medic. #1">
+         </div>
+         <div class="clear"></div>   
+
+         <div class="col-md-6"><h3>Frequency</h3></div>
+
+         <div class="iflex">
+         <select class="form-control form-control-sm" style="margin-top: .5em;">
+            <option>Every 1 Day(s)</option>
+            <option>Every 2 Day(s)</option>
+            <option>Every 3 Day(s)</option>    
+         </select>
+         </div>
+
+         <div class="clear"></div>            
+
+         <div class="col-md-6"><h3>Start Date</h3></div>
+
+         <div style="display: -webkit-box; padding-top:.5em">
+        
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+
+         </div>
+         <div class="clear"></div>            
+
+         <div class="col-md-6"><h3>Remove</h3></div>
+
+         <div class="iflex_pt__5em">
+            <input type="checkbox" checked data-toggle="toggle">
+         </div>
+         
+         <div class="clear_2em"></div> 
+</div> 
+
+<script type="text/javascript">
+function PIMHide() {
+  document.getElementById("PIM").style.display = "none";
+}
+function PIMShow() {
+  document.getElementById("PIM").style.display = "";
+}
+</script>         
+
+         <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="PIMHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete This Patch Medication</a></div>
+         <div class="clear"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="PIMShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add a Patch</a></div>
+         <div class="clear"></div>       
+        </div>
+        <div class="col-md-6" style="padding-left: 1em; padding-right: 0px">
+
+        <div style="padding-bottom: 1em"><img src="images/Patch_pic_1.jpg"></div>
+        <img src="images/Patch_pic_2.jpg"><br/><br>
+
+<div class="iflex">
+
+<div class="form-check" style="padding-left: 4em; padding-right: 4em; text-align: center;">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"><br>
+  <label class="form-check-label" for="exampleRadios1">
+    Unselected
+  </label>
+</div> 
+
+<div class="form-check" style="padding-left: 2.5em; padding-right: 2.5em; text-align: center;">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked><br>
+  <label class="form-check-label" for="exampleRadios1">
+    Selected
+  </label>
+</div>  
+</div>
+        </div>       
+      </div>
+
+        </div>
+        <div class="col-md-3" style="margin-left: inherit; margin-top:47em">
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+      </div>
+<!-- Patch (end) -->
+
+</div>
 
 <div class="tab-pane" id="7b">
-<!-- # (start) -->
-<!-- # (end) -->
-High Risk Medication and Medical Condition
-</div>
+<!-- High Risk Medication and Medical Condition (start) -->
 
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Medication</h3>           
+           <br>
+           <span style="padding-left: 2.5em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
+        </div>
+        <div class="col-md-5">
+          <br><br>  
+          <h3>Pill Medication</h3>
+          <br>
+      <div class="row">
+        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
+
+<div id="HRMMC" style="display:none">         
+
+         <div class="col-md-6"></div>
+
+         <div class="iflex">
+
+  <div class="input-group margin-bottom-sm">
+    <input class="form-control" type="text" placeholder="Pill Medication">
+    <span class="input-group-addon"><i class="fas fa-pills fa-fw"></i></span>
+  </div>
+
+         </div>
+
+         <div class="clear_2em"></div> 
+</div> 
+
+<script type="text/javascript">
+function HRMMCHide() {
+  document.getElementById("HRMMC").style.display = "none";
+}
+function HRMMCShow() {
+  document.getElementById("HRMMC").style.display = "";
+}
+</script>         
+
+         <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="HRMMCHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete This Medication</a></div>
+         <div class="clear"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="HRMMCShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add a Medication</a></div>
+         <div class="clear"></div>       
+        </div>
+
+        <div class="col-md-6" style="padding-left: 1em; padding-right: 0px">
+        
+          <h3>Notes</h3>
+
+          <div style="padding:1em;background-color: white">
+<p>Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. "It's not Latin, though it looks like it, and it actually says nothing,"" Before & After magazine answered a curious reader, "Its 'words' loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real."</p>
+          </div>        
+
+        </div>        
+      </div>
+
+        </div>
+        <div class="col-md-5" style="margin-left: inherit; ">
+
+        <h3 style="padding-bottom: 2em">Medication & Patient Conditions</h3>  
+
+        <div class="col-md-5">
+        <p><b>Sign/Symp./Side Eff:</b></p>
+        <p><b>Medical Condition:</b></p>
+        <p><b>Medical Condition:</b></p>
+        <p><b>Medical Condition:</b></p>  
+        </div>
+
+        <div class="col-md-6">
+        <p>Lorem Ipsum</p>
+        <p>Mood Disorder (Parionoia)</p>
+        <p>Mood Disorder (Parionoia)</p>
+        <p>Mood Disorder (Parionoia)</p>            
+        </div>
+
+        <div class="col-md-1">
+        <p style="padding-bottom: 1.5em"></p>
+        <p><span style="color: red"><i class="fas fa-trash-alt"></i></span></p>
+        <p><span style="color: red"><i class="fas fa-trash-alt"></i></span></p>
+        <p><span style="color: red"><i class="fas fa-trash-alt"></i></span></p>  
+        </div>  
+
+        <div class="clear"></div>      
+
+         <div style="padding-top: 15em">
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+         </div>
+        </div>
+      </div>
+
+<!-- High Risk Medication and Medical Condition (end) -->
+</div>
 
 <div class="tab-pane" id="8b">
 <!-- # (start) -->
@@ -662,13 +913,11 @@ High Risk Medication and Medical Condition
 Patient Device Teaching
 </div>
 
-
 <div class="tab-pane" id="9b">
 <!-- # (start) -->
 <!-- # (end) -->
 Physical Lab and Assessment
 </div>
-
 
 <div class="tab-pane" id="10b">
 <!-- # (start) -->
@@ -676,20 +925,7 @@ Physical Lab and Assessment
 Notes
 </div>
 
-
-
-  </div>
-
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
-    <!--<script type="text/javascript" src="/js/bootstrap-datetimepicker.min.js"></script>--> 
-
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
+</div>
 
 </body>
 </html>	
