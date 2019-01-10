@@ -52,6 +52,15 @@
 
 </div>
 
+<div id="menu" class="container">	
+
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#">Care Plan</a></li>
+    <li><a href="#">User</a></li>
+    <li><a href="#">Pharmacies</a></li>
+  </ul>
+</div>
+
 <div id="exTab" class="container ">	
     <div class="tab-content clearfix" id="tabs_m">
  <div class="row p-5">
@@ -62,38 +71,44 @@
 
 
                          <form class="navbar-form navbar-left" role="search">
-                   <div class="col-md-3 col-sm-3">
+                  
+					<div class="col-md-2 col-sm-2" >
+					<label class="start_date">Filter By Role</label>
+					 </div>
+					<div class="col-md-2 col-sm-2" >
+                    <div class="form-group">
+					
+					<div class="iflex">
+         <select class="form-control form-control-sm form_inline6" id="sel_mt_1em">
+            <option></option>
+            <option></option>
+            <option></option>    
+         </select>
+         </div>		
+                    </div>
+                    </div>
+                    
+					 <div class="col-md-4 col-sm-4" >
+					
+					
+					 </div>
+					
+					
+					
+					<div class="col-md-2 col-sm-2">
 				   <div class="form-group">
-				   <div class="fake-input">
-                        <input type="text" class="form_inline3" name="username" placeholder="Search patient directory" />
+				   <div class="fake-input_i">
+                        <input type="text" class="form_inline7" name="username" placeholder="Search patient directory" />
 						 <img src="images/find.png" width=15 />
                     </div>
                     </div>
                     </div>
 					
-					<div class="col-md-2 col-sm-2" >
-					<label class="start_date">Start Date</label>
-					 </div>
-					<div class="col-md-2 col-sm-2" >
-                    <div class="form-group">
-					<input type="text" id="enable"  class="form_inline4" name="password" placeholder="">
-                    </div>
-                    </div>
-                    
-					<div class="col-md-1 col-sm-1" >
-	<p class="to">To</p>
-					
-					 </div>
 					 <div class="col-md-2 col-sm-2" >
-					<h3 class="end_date">End Date</h3>
+					<a class="btn btn-secondary add_user" href="#" role="button"> + Add User </a>
 					
 					 </div>
 					 
-					<div class="col-md-1 col-sm-1" >
-                    <div class="form-group">
-					<input type="text" id="enable"  class="form_inline5" name="password" placeholder="">
-                    </div>
-                    </div>
 					
                 </form>
                     </div>

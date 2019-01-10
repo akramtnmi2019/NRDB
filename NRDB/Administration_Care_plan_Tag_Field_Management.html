@@ -36,18 +36,7 @@
 
 </ul>
 </div>
-<div class="side-menu-wrapper">
-<a href="#" class="menu-close">x</a>
-<ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
 
-</ul>
-</div>
 <div id="header" class="container">	
  
  <div class="fleft">
@@ -66,18 +55,17 @@
 <div id="menu" class="container">	
 
   <ul class="nav nav-pills">
-    <li><a href="#">Patient Information</a></li>
-    <li class="active"><a href="#">Medical History</a></li>
-    <li><a href="#">Scheduling</a></li>
-    <li><a href="#">Care Plan</a></li>
+    <li class="active"><a href="#">Care Plan</a></li>
+    <li><a href="#">User</a></li>
+    <li><a href="#">Pharmacies</a></li>
   </ul>
 </div>
 
 <div id="exTab" class="container">	
 
 <ul  class="nav nav-pills">
-			<li class="active"><a  href="#1b" data-toggle="tab">Interventions</a></li>
-			<li><a href="#2b" data-toggle="tab">Scheduling</a></li>
+			<li class="active"><a  href="#1b" data-toggle="tab">Care Plan Tag</a></li>
+			<li><a href="#2b" data-toggle="tab">Field Management</a></li>
 		</ul>
 
 	<div class="tab-content clearfix" id="tabs_m">
@@ -85,82 +73,113 @@
        
       <div class="row">
         <div class="col-md-2">
-           <h3 style="padding-left: 1.5em">Interventions</h3>           
+           <h3 style="padding-left: 1.5em">Care Plan Tag</h3>           
            <br>
            <span style="padding-left: 3.5em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
 
         </div>
-        <div class="col-md-6">
-          <br><br>	
-          <h3>Add an intervention to list</h3>
-          <br>
-
-       <div class="row">
-        <div class="col-md-12">
-
-        
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" id="drag1"  draggable="true" ondragstart="drag(event)">Witnessed Medication</a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag2"  draggable="true" ondragstart="drag(event)">Document FBG</a></div>    
-         <div style="clear: both;"></div> 
-
-		  <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" id="drag3"  draggable="true" ondragstart="drag(event)">Administer Insulin</a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag4"  draggable="true" ondragstart="drag(event)" >Check Weight</a></div>    
-         <div style="clear: both;"></div>  
-		 
-		 <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag5"  draggable="true" ondragstart="drag(event)">Instill Eye Drops </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag6"  draggable="true" ondragstart="drag(event)" >Orthostatic Hypotension Testing</a></div>    
-         <div style="clear: both;"></div> 
-
-			 <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" id="drag7"  draggable="true" ondragstart="drag(event)">Apply Patch </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag8"  draggable="true" ondragstart="drag(event)" >Apply Cream</a></div>    
-         <div style="clear: both;"></div>  
-
-		 <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag9"  draggable="true" ondragstart="drag(event)" >Administer Puffer </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag10"  draggable="true" ondragstart="drag(event)">Clozapine</a></div>    
-         <div style="clear: both;"></div> 
-
-			 <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" id="drag11"  draggable="true" ondragstart="drag(event)">Administer Other Injection </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag12"  draggable="true" ondragstart="drag(event)">Is Behaviour Normal?</a></div>    
-         <div style="clear: both;"></div> 
-
-           <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" id="drag13"  draggable="true" ondragstart="drag(event)">Change Dressing </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag14"  draggable="true" ondragstart="drag(event)">Is Predial Insulin</a></div>    
-         <div style="clear: both;"></div>  
-
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag15"  draggable="true" ondragstart="drag(event)">Monitor Blood Pressure </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag16"  draggable="true" ondragstart="drag(event)">Is Prefilled Syringes</a></div>    
-         <div style="clear: both;"></div> 
-
-
- <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" id="drag17"  draggable="true" ondragstart="drag(event)">Monitor Blood Glucose </a></div>
-         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"id="drag18"  draggable="true" ondragstart="drag(event)">Is Apply Compression Stockings</a></div>    
-         <div style="clear: both;"></div>  			 
-                 		 
-                 
+        <div class="col-md-9">
+          	
+          <h3 class="add_intervention">Add an intervention to list</h3>
+          
+		  
+		   <form class="navbar-form navbar-left" role="search">
+                   <div class="col-md-3 col-sm-3">
+				   <div class="form-group">
+				   
+                        <input type="text" class="form_inline6" name="username" placeholder="" />
+						<a href="" class="add_intervention_edit"><img src="images/edit.png" /></a>
+					    <a href="" class="add_intervention_delete"><img src="images/delete.png" /></a>
+						 
+                   
+                    </div>
+					<div style="clear: both;"></div> 
+					<div class="col-md-2">
+		
+					<a class="btn btn-secondary" style="margin: 1em 0em 0em 0em;" href="#" role="button"> + Add Tag </a>
+					
+                    </div>
+                    </div>
+				
+                </form>
+				
+				
 
         </div>
         
-        
       </div>
-
+	  
+	   <div class="row">
+        <div class="col-md-2">
 
         </div>
         <div class="col-md-4">
+		<div class="table-responsive" style="overflow-y:auto;">   
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th></th>  
+                                      <th></th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+                                    <tr>
+                                         <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+									 <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                         
+                                    </tr>
+									 <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									
+                                </tbody>
+                            </table>
+							
+							
+                        </div>
 		
-		
-          <br><br>	
-          <h3>Drag and Drop List Here</h3>
-           <br>
-		 <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-         <div class="col-md-12" style="margin-left: inherit; margin-top:2em">
-         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-edit" style="padding-right: .2em"></i>Edit</a></div>
-         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
-         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a>
-		 </div> 
-		 </div> 
-
-        </div>
-      </div>
+	  </div>
+	  </div>
+	  
+	  
 
 
 		</div>

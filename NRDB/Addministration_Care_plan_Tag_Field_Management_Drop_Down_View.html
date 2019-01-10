@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+
+<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">    
+</head>
+
+<body>
+<div class="side-menu-wrapper">
+<a href="#" class="menu-close">x</a>
+<ul>
+	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
+
+</ul>
+</div>
+<div class="side-menu-wrapper">
+<a href="#" class="menu-close">x</a>
+<ul>
+	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
+
+</ul>
+</div>
+<div id="header" class="container">	
+ 
+ <div class="fleft">
+   <img src="images/logo.png" class="logo">
+   <span class="title">Patient Directory</span>
+ </div>
+
+ <div id="backto">
+ 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
+ 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
+ </div>
+
+</div>
+
+
+<div id="menu" class="container">	
+
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#">Care Plan</a></li>
+    <li><a href="#">User</a></li>
+    <li><a href="#">Pharmacies</a></li>
+  </ul>
+</div>
+
+<div id="exTab" class="container">	
+
+<ul  class="nav nav-pills">
+			<li class="active"><a  href="#1b" data-toggle="tab">Care Plan Tag</a></li>
+			<li><a href="#2b" data-toggle="tab">Field Management</a></li>
+		</ul>
+
+	<div class="tab-content clearfix" id="tabs_m">
+			  <div class="tab-pane active" id="1b">
+       
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Care Plan Tag</h3>           
+           <br>
+           <span style="padding-left: 3.5em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
+
+        </div>
+        <div class="col-md-9">
+          	
+          <h3 class="add_intervention">Add an intervention to list</h3>
+          
+		  
+		   <form class="navbar-form navbar-left" role="search">
+                   <div class="col-md-3 col-sm-3">
+				   <div class="form-group">
+				   
+                        <input type="text" class="form_inline6" name="username" placeholder="" />
+						<a href="" class="add_intervention_edit"><img src="images/edit.png" /></a>
+					    <a href="" class="add_intervention_delete"><img src="images/delete.png" /></a>
+						 
+                   
+                    </div>
+					<div style="clear: both;"></div> 
+					<div class="col-md-2">
+		
+					<a class="btn btn-secondary" style="margin: 1em 0em 0em 0em;" href="#" role="button"> + Add Tag </a>
+					
+                    </div>
+                    </div>
+				
+                </form>
+				
+				
+
+        </div>
+        
+      </div>
+	  
+	   <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4">
+		<div class="table-responsive" style="overflow-y:auto;">   
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th></th>  
+                                      <th></th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+                                    <tr>
+                                         <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+									 <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                         
+                                    </tr>
+									 <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									
+                                </tbody>
+                            </table>
+							
+							
+                        </div>
+		
+	  </div>
+	  </div>
+	  
+	  
+
+
+		</div>
+		
+		<div class="tab-pane" id="2b">
+
+<!-- Scheduling (start) -->
+  <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Care Plan Tag</h3>           
+           <br>
+           <span style="padding-left: 3.5em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
+
+        </div>
+        <div class="col-md-7">
+          	
+          <h3 class="add_intervention">Add an intervention to list</h3>
+          <br>
+		  
+		   <form class="navbar-form navbar-left" role="search">
+                   <div class="col-md-3 col-sm-3">
+				   <div class="form-group">
+				   
+                      <div class="iflex">
+         <select class="form-control form-control-sm form_inline6" id="sel_mt_1em">
+            <option>Field Management</option>
+            <option>Insulin</option>
+            <option>Injectable</option>    
+            <option>Doctor Speciality</option>    
+            <option>If not home or not answering</option>    
+            <option>Patient Profile</option>    
+            <option>Case Manager - Type</option>    
+            <option>Case Manager - Refered By</option>    
+            <option>Case Manager - Reason For Referral</option>    
+            <option>MD Contacts - Speciality</option>    
+            <option>Preferences - Prefered Language</option>    
+            <option>Medication Reminders - Type</option>    
+            <option>Parmacies - Name</option>    
+            <option>Care Plan Tags</option>    
+            <option>Schedule - care Tasks</option>    
+            <option>Care Tasks - Patch Frequency</option>    
+         </select>
+         </div>		   
+						 
+                   
+                    </div>
+					
+					
+                    </div>
+					
+					
+                </form>
+			
+        </div>
+		
+		<div class="col-md-3 col-sm-3 add_schedule">
+					<a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a>
+					<a class="btn btn-secondary" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a>
+					
+				    </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+           
+
+        </div>
+        <div class="col-md-9">
+		
+		<div class="table-responsive" style="overflow-y:auto;">   
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th></th>  
+                                      <th></th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+                                    <tr>
+                                         <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                    </tr>
+									 <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>
+                                         
+                                    </tr>
+									 <tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									<tr>
+                                        <td><p>Tag description</td>
+                                        <td><a href=""><img src="images/edit.png" /></a>
+										 <a href=""><img src="images/delete.png" /></a></td>  
+                                    </tr>
+									
+                                </tbody>
+                            </table>
+							
+							
+                        </div>
+		
+        </div>
+        
+      </div>
+	 
+<!-- Schedule (end) --> 
+
+          
+		</div>
+  </div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+var open_button 	= ".menu-open"; //Menu Open Button
+var close_button 	= ".menu-close"; //Menu Close Button
+var overlay 		= ".menu-overlay"; //Overlay
+
+//Initial menu position
+$(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
+
+$(open_button).click(function(e){ //On menu open button click
+	e.preventDefault();
+
+	$(slide_wrp).css( {"right": "0px"}); //move menu right position to 0
+	setTimeout(function(){
+		$(slide_wrp).addClass('active'); //add active class
+	},50);
+	$(overlay).css({"opacity":"1", "width":"100%"});
+});
+
+$(close_button).click(function(e){ //on menu close button click
+	e.preventDefault();
+	$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}); //hide menu by setting right position 
+	setTimeout(function(){
+		$(slide_wrp).removeClass('active'); // remove active class
+	},50);
+	$(overlay).css({"opacity":"0", "width":"0"});
+});
+});
+$(document).on('click', function(e) { //Hide menu when clicked outside menu area
+var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+var open_button 	= ".menu-open"; //Menu Open Button
+var close_button 	= ".menu-close"; //Menu Close Button
+var overlay 		= ".menu-overlay"; //Overlay
+
+
+	if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){ // check menu condition
+		$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
+		$(overlay).css({"opacity":"0", "width":"0"});
+	}
+});
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+</body>
+</html>	

@@ -101,7 +101,7 @@
          <div class="col-md-6"><h3>Units</h3></div>
 
          <div class="iflex">
-         <select class="form-control form-control-sm" style="margin-top: .5em;">
+         <select class="form-control form-control-sm" id="sel_mt__5em">
             <option>1</option>
             <option>2</option>
             <option>3</option>    
@@ -112,15 +112,12 @@
 </div> 
 
 <script type="text/javascript">
-
 function IMHide() {
   document.getElementById("IM").style.display = "none";
 }
-
 function IMShow() {
   document.getElementById("IM").style.display = "";
 }
-
 </script>         
 
          <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="IMHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete This Injection Medication</a></div>
@@ -135,7 +132,7 @@ function IMShow() {
          <div class="col-md-6"><h3>If Fasting Plasma Glucose is</h3></div>
 
          <div class="iflex">
-         <select class="form-control form-control-sm" style="margin-top: 1em;">
+         <select class="form-control form-control-sm" id="sel_mt_1em">
             <option>op #1</option>
             <option>op #2</option>
             <option>op #3</option>    
@@ -147,7 +144,7 @@ function IMShow() {
          <div class="col-md-6"><h3>Blood Glucose</h3></div>
 
          <div class="iflex">
-         <select class="form-control form-control-sm" style="margin-top: 1em;">
+         <select class="form-control form-control-sm" id="sel_mt_1em">
             <option>op #1</option>
             <option>op #2</option>
             <option>op #3</option>    
@@ -159,7 +156,7 @@ function IMShow() {
          <div class="col-md-6"><h3>Then Action</h3></div>
 
          <div class="iflex">
-         <select class="form-control form-control-sm" style="margin-top: 1em;">
+         <select class="form-control form-control-sm" id="sel_mt_1em">
             <option>Increase</option>
             <option>op #2</option>
             <option>op #3</option>    
@@ -171,7 +168,7 @@ function IMShow() {
          <div class="col-md-6"><h3>Insulin</h3></div>
 
          <div class="iflex">
-         <select class="form-control form-control-sm" style="margin-top: 1em;">
+         <select class="form-control form-control-sm" id="sel_mt_1em">
             <option>Lantus</option>
             <option>op #2</option>
             <option>op #3</option>    
@@ -183,7 +180,7 @@ function IMShow() {
          <div class="col-md-6"><h3>Units</h3></div>
 
          <div class="iflex">
-         <select class="form-control form-control-sm" style="margin-top: .5em;">
+         <select class="form-control form-control-sm" id="sel_mt__5em">
             <option>1</option>
             <option>2</option>
             <option>3</option>    
@@ -819,7 +816,7 @@ function PIMShow() {
            <br>
            <span style="padding-left: 2.5em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
           <br><br>  
           <h3>Pill Medication</h3>
           <br>
@@ -855,6 +852,95 @@ function HRMMCShow() {
          <div class="clear"></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="HRMMCShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add a Medication</a></div>
          <div class="clear"></div>       
+        
+        <h3>Clozapine</h3>
+
+<!-- Clozapine (start) -->
+
+<div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" onclick="dateShow_Clozapine();">Yes</a></div>
+         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button" onclick="dateHide_Clozapine();">No</a></div>
+
+         <div class="clear"></div>   
+
+<script type="text/javascript">
+function dateHide_Clozapine() {
+  document.getElementById("Clozapine").style.display = "none";
+}
+function dateShow_Clozapine() {
+  document.getElementById("Clozapine").style.display = "";
+}
+</script>
+
+<div id="Clozapine" style="display:none">
+         <div class="col-md-6"><h3>Start Date</h3></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_cloz_sd'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_cloz_sd').datetimepicker();
+            });
+        </script>
+         </div>
+
+         <div class="clear"></div> 
+
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-upload" style="padding-right: .5em"></i>Upload Clozapine Test Result PDF</a></div>
+         <div class="clear"></div>         
+
+         <div class="col-md-6"><h3>Last Date</h3></div>
+
+         <div style="display: -webkit-box; padding-top:.5em">
+        
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_cloz_ed'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_cloz_ed').datetimepicker();
+            });
+        </script>
+
+         </div>
+
+         <div class="clear"></div>  
+
+<ul class="clozapine_options">
+  <li>
+    <span class="clozapine_op_c1"><i class="fas fa-square fa-2x"></i></span><br>
+    <input type="checkbox" class="form-check-input" id="cb_c1" checked="yes">
+  </li>  
+  <li>
+    <span class="clozapine_op_c2"><i class="fas fa-square fa-2x"></i></span><br>
+    <input type="checkbox" class="form-check-input" id="cb_c2">
+  </li>  
+  <li>
+    <span class="clozapine_op_c3"><i class="fas fa-square fa-2x"></i></span><br>
+    <input type="checkbox" class="form-check-input" id="cb_c3">
+  </li>  
+  <li><span class="clozapine_op_c4"><i class="fas fa-download"></i></span></li>
+  <li><span class="clozapine_op_c5"><i class="fas fa-trash-alt"></i></span></li>  
+</ul>         
+
+        </div>
+
+
+<!-- Clozapine (end) -->        
+
+
         </div>
 
         <div class="col-md-6" style="padding-left: 1em; padding-right: 0px">
@@ -869,7 +955,7 @@ function HRMMCShow() {
       </div>
 
         </div>
-        <div class="col-md-5" style="margin-left: inherit; ">
+        <div class="col-md-4" style="margin-left: inherit; ">
 
         <h3 style="padding-bottom: 2em">Medication & Patient Conditions</h3>  
 
@@ -880,7 +966,7 @@ function HRMMCShow() {
         <p><b>Medical Condition:</b></p>  
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-5">
         <p>Lorem Ipsum</p>
         <p>Mood Disorder (Parionoia)</p>
         <p>Mood Disorder (Parionoia)</p>
@@ -908,21 +994,536 @@ function HRMMCShow() {
 </div>
 
 <div class="tab-pane" id="8b">
-<!-- # (start) -->
-<!-- # (end) -->
-Patient Device Teaching
+<!-- Patient Device Teaching (start) -->
+
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Patient Device Teaching</h3>           
+           <br>
+           <span style="padding-left: 2em"><i class="fas fa-list-ul fa-5x" style="color: #707070"></i></span>
+        </div>
+        <div class="col-md-7">
+          
+       <div class="row">
+        <div class="col-md-12" style="padding-left: 0px; padding-right: 0px">
+
+<ul class="Patient_Device_Teaching_op1">
+  <li>
+    <input type="checkbox" class="form-check-input" id="BG_Monitor" checked="yes">
+    <label class="form-check-label" for="BG_Monitor">BG Monitor</label>
+  </li>  
+  <li>
+    <input type="checkbox" class="form-check-input" id="BG_Monitor" checked="yes">
+    <label class="form-check-label" for="BG_Monitor">Inhaler</label>
+  </li>  
+  <li>
+    <input type="checkbox" class="form-check-input" id="BG_Monitor">
+    <label class="form-check-label" for="BG_Monitor">Nasal Spray</label>
+  </li>
+  <br>  
+  <li>    
+    <input type="checkbox" class="form-check-input" id="BG_Monitor">
+    <label class="form-check-label" for="BG_Monitor">BP Monitor</label>
+  </li>
+  <li>
+    <input type="checkbox" class="form-check-input" id="BG_Monitor">
+    <label class="form-check-label" for="BG_Monitor">Eye/Ear drops</label>
+  </li> 
+  <li id="f_other">
+    <label for="fother" class="f_other_label">Other:</label>
+    <input type="text" class="form-control" id="other">
+  </li> 
+  <br>
+    <li>
+    <input type="checkbox" class="form-check-input" id="BG_Monitor">
+    <label class="form-check-label" for="BG_Monitor">Insulin</label>
+  </li> 
+    <li>
+    <input type="checkbox" class="form-check-input" id="BG_Monitor">
+    <label class="form-check-label" for="BG_Monitor">Nebulizer</label>
+  </li> 
+</ul>  
+
+        </div>
+      </div>
+
+        </div>
+        <div class="col-md-3" style="margin-left: inherit; margin-top:30em">
+
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+      </div>
+
+<!-- Patient Device Teaching (end) -->
 </div>
 
 <div class="tab-pane" id="9b">
-<!-- # (start) -->
-<!-- # (end) -->
-Physical Lab and Assessment
+<!-- Physical Lab and Assessment (start) -->
+
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Physical Lab and Assessment</h3>           
+           <br>
+           <span style="padding-left: 2.5em"><i class="fas fa-file-medical fa-5x" style="color: #707070"></i></span>
+        </div>
+        <div class="col-md-7">
+          <br><br>  
+          <h3>Physical & Lab Assessment</h3><br>
+
+      <div class="row">
+        <div class="col-md-12" style="padding-left: 0px; padding-right: 0px">
+
+<div id="PLA" style="display:none">     
+
+
+<div class="col-md-4">
+
+         <div class="col-md-6"><p>Create Date</p></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_create_date'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_create_date').datetimepicker();
+            });
+        </script>
+         </div>
+
+         <div class="clear"></div>  
+
+         <div class="col-md-6"><p>Height (cm)</p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="height_cm">
+         </div>
+
+         <div class="clear"></div>
+
+         <div class="col-md-6"><p>Weight (kg)</p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="weight_kg">
+         </div>
+
+         <div class="clear"></div>
+
+         <div class="col-md-6"><p>BMI(kg/m 2)</p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="bmi" placeholder="Waist Circumference (cm)">
+         </div>
+
+         <div class="clear"></div>
+
+         <div class="col-md-6"><p>HBA1C(%)</p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="HBA1C">
+         </div>
+
+         <div class="clear"></div>   
+
+         <div class="iflex">
+            
+         <div class="col-md-6"><p>Date Measured</p></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_date_measured'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_date_measured').datetimepicker();
+            });
+        </script>
+         </div>
+
+         <div class="clear"></div> 
+
+
+         </div>
+
+         <div class="clear_2em"></div>
+
+</div>
+
+<div class="col-md-4">
+
+         <div class="col-md-6"><p>LDL<br>(mmol/L)</p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="LDL">
+         </div>
+
+         <div class="clear"></div>
+
+         <div class="col-md-6"><p>Date Measured</p></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_date_measured_2'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_date_measured_2').datetimepicker();
+            });
+        </script>
+         </div>
+
+         <div class="clear"></div> 
+
+         <div class="col-md-6"><p>HDL<br>(mmol/L)</p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="HDL">
+         </div>
+
+         <div class="clear"></div>
+
+         <div class="col-md-6"><p>Date Measured</p></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_date_measured_3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_date_measured_3').datetimepicker();
+            });
+        </script>
+         </div>
+
+         <div class="clear"></div>  
+
+         <div class="col-md-6"><p>eGFR<br><span style="font-size: .7em">(ml/min/1.73m2)</span></p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="eGFR">
+         </div>
+
+         <div class="clear"></div>
+
+         <div class="col-md-6"><p>Date Measured</p></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_date_measured_4'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_date_measured_4').datetimepicker();
+            });
+        </script>
+         </div>
+
+         <div class="clear"></div>           
+
+
+</div>
+
+<div class="col-md-4">
+
+         <div class="col-md-6"><p>Total Cholesterol <span style="font-size: .7em">(mmol/L)</span></p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="HDL">
+         </div>
+
+         <div class="clear"></div>
+
+         <div class="col-md-6"><p>Date Measured</p></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_date_measured_5'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_date_measured_5').datetimepicker();
+            });
+        </script>
+         </div>
+
+         <div class="clear"></div>  
+
+         <div class="col-md-6"><p>ACR <span style="font-size: .7em">(mg/mmol)</span></p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="ACR">
+         </div>
+
+         <div class="clear"></div>
+
+         <div class="col-md-6"><p>Date Measured</p></div>
+         <div style="display: -webkit-box; padding-top:.5em">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker_date_measured_6'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker_date_measured_6').datetimepicker();
+            });
+        </script>
+         </div>
+
+         <div class="col-md-6"><p>hs-CPR <span style="font-size: .7em">(mg/dl)</span></p></div>
+
+         <div class="iflex">
+            <input type="text" class="form-control" id="hs-CPR">
+         </div>
+
+         <div class="clear"></div>
+
+
+</div>      
+
+</div> 
+
+<script type="text/javascript">
+function PLAHide() {
+  document.getElementById("PLA").style.display = "none";
+}
+function PLAShow() {
+  document.getElementById("PLA").style.display = "";
+}
+</script>         
+
+<div class="clear"></div>
+
+         <div class="col-md-4"><a class="btn btn-secondary-red" href="#" role="button" onclick="PLAHide();"><i class="fas fa-trash-alt" style="padding-right: .5em"></i>Delete this Physical & Lab Assessment</a></div>
+         <div class="clear"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button" onclick="PLAShow();"><i class="fas fa-plus" style="padding-right: .5em"></i>Add Physical & Lab Assessment</a></div>
+         <div class="clear"></div>
+     
+        <h3 style="padding-left: 1em">Care Plan Tags</h3>
+
+        <div class="col-md-4"><p>Additional Comment:</p></div>
+
+        <div class="col-md-8">
+         <div class="iflex">
+            <input type="text" class="form-control" id="additional_comment">
+         </div>
+        </div>
+
+         <div class="clear"></div>
+
+        </div>
+
+<div class="row">
+  <div class="col-md-6" style="padding-top: 2em; padding-left: 1em">
+    <div class="col-md-3"><a class="btn btn-secondary" href="#" role="button" onclick="CPTShow();">Yes</a></div>
+    <div class="col-md-3"><a class="btn btn-secondary" href="#" role="button" onclick="CPTHide();">No</a></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>         
+    <div class="clear"></div>   
+
+    <script type="text/javascript">
+     function CPTHide() {
+     document.getElementById("CPT").style.display = "none";
+     }
+     function CPTShow() {
+     document.getElementById("CPT").style.display = "";
+     }
+    </script>
+
+    <div id="CPT" style="display:none; margin-top:3em">
+
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-plus" style="padding-right: .5em"></i>Add Medical Condition</a></div>
+         <div class="clear"></div>
+
+    </div>
+  </div>
+</div>
+        
+      </div>
+        </div>
+        <div class="col-md-3" style="margin-left: inherit; margin-top:47em">
+         <div class="col-md-4"></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+      </div>
+
+<!-- Physical Lab and Assessment (end) -->
 </div>
 
 <div class="tab-pane" id="10b">
-<!-- # (start) -->
-<!-- # (end) -->
-Notes
+<!-- Notes (start) -->
+
+      <div class="row">
+        <div class="col-md-2">
+           <h3 style="padding-left: 1.5em">Notes</h3>           
+           <br>
+           <span style="padding-left: 1.5em"><i class="fas fa-notes-medical fa-5x" style="color: #707070"></i></span>
+        </div>
+        <div class="col-md-8">
+          
+       <div class="row">
+        <div class="col-md-3" style="padding-left: 0px; padding-right: 0px">
+
+         <h3>Message to LPN (Instructions for Nurses)</h3>
+         <p>Additional Message for Visiting LPN</p>
+         <div style="background-color: white; padding: 1em">
+          <p>witness PM meds and leave AM meds, measure BP daily</p>
+         </div>
+         <br>       
+         <h3>LPN Medication Instructions</h3>
+         <p>Blood Glucose Monitor Download toggle-on</p>       
+         <div style="background-color: white; padding: 1em">
+          <p>Instruction Content</p>
+         </div>
+
+</div>
+
+      <div class="col-md-9" style="padding-left: 3em; padding-right: 0px">
+
+         <h3>Patient Chart Notes (Confidential)</h3>
+
+         <a class="btn btn-secondary" href="#" role="button"><i class="fas fa-plus" style="padding-right: .2em"></i>Add Note</a>
+         <div class="clear"></div>
+
+         <div class="col-md-12" id="notes_container">
+          <div class="col-md-3" id="notes_container_col_1">                          
+              <div id="notes_container_icon"><i class="fas fa-calendar-alt"></i></div>
+              <div id="notes_container_datetime"><span class="sm">09-12-2018</span></i></div>
+              <div class="clear"></div>
+              <div id="notes_container_icon"><i class="fas fa-clock"></i></div>
+              <div id="notes_container_datetime"><span class="sm">17:45:03</span></i></div>
+              <div class="clear"></div> 
+          </div>
+          <div class="col-md-8" id="notes_container_col_2">Leave dinner and bedtime meds in marked containers on Tv stand / AM Meds on night stand</div>
+          <div class="col-md-1" id="notes_container_col_3"><i class="fas fa-archive"></i></div>
+         </div> 
+
+         <div class="col-md-12" id="notes_container">
+          <div class="col-md-3" id="notes_container_col_1">                          
+              <div id="notes_container_icon"><i class="fas fa-calendar-alt"></i></div>
+              <div id="notes_container_datetime"><span class="sm">09-12-2018</span></i></div>
+              <div class="clear"></div>
+              <div id="notes_container_icon"><i class="fas fa-clock"></i></div>
+              <div id="notes_container_datetime"><span class="sm">17:45:03</span></i></div>
+              <div class="clear"></div> 
+          </div>
+          <div class="col-md-8" id="notes_container_col_2">Leave dinner and bedtime meds in marked containers on Tv stand / AM Meds on night stand</div>
+          <div class="col-md-1" id="notes_container_col_3"><i class="fas fa-archive"></i></div>
+         </div> 
+
+         <div class="col-md-12" id="notes_container">
+          <div class="col-md-3" id="notes_container_col_1">                          
+              <div id="notes_container_icon"><i class="fas fa-calendar-alt"></i></div>
+              <div id="notes_container_datetime"><span class="sm">09-12-2018</span></i></div>
+              <div class="clear"></div>
+              <div id="notes_container_icon"><i class="fas fa-clock"></i></div>
+              <div id="notes_container_datetime"><span class="sm">17:45:03</span></i></div>
+              <div class="clear"></div> 
+          </div>
+          <div class="col-md-8" id="notes_container_col_2">Leave dinner and bedtime meds in marked containers on Tv stand / AM Meds on night stand</div>
+          <div class="col-md-1" id="notes_container_col_3"><i class="fas fa-archive"></i></div>
+         </div>          
+
+         <div class="col-md-12" id="notes_container">
+          <div class="col-md-3" id="notes_container_col_1">                          
+              <div id="notes_container_icon"><i class="fas fa-calendar-alt"></i></div>
+              <div id="notes_container_datetime"><span class="sm">09-12-2018</span></i></div>
+              <div class="clear"></div>
+              <div id="notes_container_icon"><i class="fas fa-clock"></i></div>
+              <div id="notes_container_datetime"><span class="sm">17:45:03</span></i></div>
+              <div class="clear"></div> 
+          </div>
+          <div class="col-md-8" id="notes_container_col_2">Leave dinner and bedtime meds in marked containers on Tv stand / AM Meds on night stand</div>
+          <div class="col-md-1" id="notes_container_col_3"><i class="fas fa-archive"></i></div>
+         </div>   
+
+         <div class="col-md-12" id="notes_container">
+          <div class="col-md-3" id="notes_container_col_1">                          
+              <div id="notes_container_icon"><i class="fas fa-calendar-alt"></i></div>
+              <div id="notes_container_datetime"><span class="sm">09-12-2018</span></i></div>
+              <div class="clear"></div>
+              <div id="notes_container_icon"><i class="fas fa-clock"></i></div>
+              <div id="notes_container_datetime"><span class="sm">17:45:03</span></i></div>
+              <div class="clear"></div> 
+          </div>
+          <div class="col-md-8" id="notes_container_col_2">Leave dinner and bedtime meds in marked containers on Tv stand / AM Meds on night stand</div>
+          <div class="col-md-1" id="notes_container_col_3"><i class="fas fa-archive"></i></div>
+         </div>            
+
+      </div>
+      </div>
+
+        </div>
+        <div class="col-md-2" style="margin-left: inherit">
+
+         <div class="col-md-12">
+
+  <div class="form-group">
+    <label for="months_label" id="months_label">Archives</label>
+    <select multiple class="form-control" id="months_select">
+      <option>January 2019</option>
+      <option>December 2018</option>
+      <option>November 2018</option>
+      <option>October 2018</option>
+      <option>September 2018</option>
+      <option>August 2018</option>
+      <option>July 2018</option>
+      <option>June 2018</option>
+      <option>May 2018</option>
+      <option>April 2018</option>
+      <option>March 2018</option>
+      <option>February 2018</option>
+      <option>January 2018 </option>
+    </select>
+  </div>
+
+         </div>
+         <div class="clear"></div>
+
+         <!--<div class="col-md-2"></div>-->
+         <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-6" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+      </div>
+
+<!-- Notes (end) -->
 </div>
 
 </div>

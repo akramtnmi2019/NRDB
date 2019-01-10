@@ -6,14 +6,21 @@ p {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: 15px;
    color: #707070;
-   font-weight: 500;
+   font-weight: 500
+}
+
+.sm {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 12px;
+   color: #707070;
+   font-weight: 500
 }
 
 a {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: 15px;
    color: #707070;
-   font-weight: bold;
+   font-weight: bold
 }
 
 a:hover,a.link_back:hover { text-decoration: none!important }
@@ -24,8 +31,6 @@ a.link_back {
    font-weight: bold;    
    color: #707070
 }
-
-
 
 #header { padding-top: 1em; padding-bottom: .5em }
 
@@ -46,6 +51,8 @@ a.link_back {
 
 .menu_bars { padding-left: 1.5em; color:#707070 }
 
+#sel_mt__5em { margin-top: .5em }
+#sel_mt_1em { margin-top: 1em }
 
 #exTab .nav-pills > li > a { border-radius: 4px 4px 0 0 }
 
@@ -153,6 +160,71 @@ a.btn-secondary:hover, a.btn-secondary-red:hover { background-color: #cccccc }
 .hidden { display:none }
 
 #Patch-Med { width: 10em }
+
+.clozapine_options {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.clozapine_options li {
+  display: inline-block;  
+  padding: 10px;
+}
+
+.clozapine_op_c1 { color:#de00b1 }
+.clozapine_op_c2 { color:#ff6f00 }
+.clozapine_op_c3 { color:#11ff00 }
+.clozapine_op_c4 { color:#009688 }
+.clozapine_op_c5 { color: red }
+
+.Patient_Device_Teaching_op1 {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding-top: 3em
+}
+
+.Patient_Device_Teaching_op1 li {
+  display: inline-block;  
+  padding: 10px;
+  width:  10em
+}
+
+#f_other { display:-webkit-inline-box }
+
+.f_other_label { padding-top: .5em; padding-right: 1em }
+
+#height_cm, #weight_kg, #bmi, #HBA1C, #LDL, #HDL, #eGFR, #ACR, #hs-CPR { width: 6.5em }
+
+#months_select { 
+  width: 11em;
+  height: 15em;
+  margin-bottom: 3.5em    
+}
+
+#months_label { 
+  background-color: #d2d2d2;
+  color: #707070;
+  width: 11em;
+  text-align: center;
+  height: 1.8em;
+  line-height: 1.8em;
+  margin-top: 3.5em
+}
+
+#notes_container {
+  background-color: white; 
+  border:1px solid #707070;
+  margin-bottom: .5em
+}
+
+#notes_container_col_1 { padding-top: 1.8em }
+#notes_container_col_2 { padding: 1em }
+#notes_container_col_3 { padding-top: 2.2em }
+#notes_container_icon { float:left; padding-right: .5em }
+#notes_container_datetime { float:left }
 
 /* CSS Made by Mauricio (end) */
 
@@ -548,23 +620,6 @@ label {
   opacity: 1;
 }
 
-@media (max-width: 992px) {
-  .alert-validate::before {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-/*//////////////////////////////////////////////////////////////////
-[ responsive ]*/
-
-@media (max-width: 576px) {
-  .wrap-login100 {
-    padding-top: 80px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
 /*//////////////////////////////////////////////////////////////////
 [ profile ]*/
 
@@ -696,18 +751,7 @@ label {
     transition: opacity 1s;
 	opacity: 0.5 !important;
 }
-@media (min-width: 320px) and (max-width: 1024px) {
-.txt2
-{
-    margin: 35px;	
-}
-}
-@media (min-width: 1024px) and (max-width: 5000px) {
-.txt2
-{
-    margin: 130px;	
-}
-}
+
 .div1 {
   width: 350px;
   height: 420px;
@@ -715,22 +759,8 @@ label {
   border: 1px solid #ddd;
   background:#ffffff;
 }
-.form_inline3 {
-    border: 0 !important;
-    outline: 0 !important;
-    background: transparent !important;
-    border-bottom: 1px solid #707070 !important;
-    margin: 10px 0px 6px 0px !important;
-    width: 200px !important;
-}
-.form_inline4 {
-    border: 0 !important;
-    outline: 0 !important;
-    background: transparent !important;
-    border-bottom: 1px solid #707070 !important;
-    margin: 10px 0px 6px 0px !important;
-    width: 132px !important;
-}
+
+
 .form_inline5 {
     border: 0 !important;
     outline: 0 !important;
@@ -757,4 +787,423 @@ padding-top: 1em !important;
 {
 float: right !important;	
 }
+.fake-input { position: relative; width:240px; }
+
+.patient_info 
+{ 
+padding-top: 2em !important;
+background: #F1F1F1 !important;
+border-bottom: 1px solid #707070 !important;
+ }
+ 
+.address 
+{ 
+padding-top: 4em;
+ }
+.address_row 
+{ 
+padding-left: 0px; padding-right: 0px;
+ } 
+ 
+.phone_number 
+{ 
+padding-top: 4em;
+ } 
+ .phone_number_row 
+{ 
+padding-left: 0px; padding-right: 0px;
+ } 
+.type 
+{ 
+padding-left: 1em; padding-right: 0px;
+ } 
+.delete_phone_no 
+{ 
+width: 32%!important; margin-top:2em;
+ } 
+.primary_contact_no 
+{ 
+padding-left: 0px; padding-right: 0px;
+ }
+.sec_contact 
+{ 
+margin-top:2em;
+ } 
+.relationship 
+{ 
+padding-left: 1em; padding-right: 0px;
+ }
+.case_manager 
+{ 
+padding-top: 4em;
+ }
+.case_manager_name 
+{ 
+padding-left: 0px; padding-right: 0px;
+ }
+.sec_case 
+{ 
+margin-top:2em;
+ }
+.health_unit 
+{ 
+padding-left: 1em; padding-right: 0px
+ }
+
+.full 
+{ 
+padding-top: 4em;
+ }
+.full_name 
+{ 
+padding-left: 0px; padding-right: 0px;
+ } 
+ .delete_phone_con 
+{ 
+width: 32%!important;margin-top:5em;
+ }
+
+ .add_sec
+{
+margin-top:2em;
+}
+.add_phone_no
+{
+margin-top:2em;margin-left: 6em;
+}
+.delete_phone_md 
+{ 
+padding-left: 1em; padding-right: 0px
+ } 
+.route 
+{ 
+padding-left: 1.5em;
+ } 	
+.preference 
+{ 
+padding-left: 0px; padding-right: 0px
+ }
+.preferred 
+{ 
+padding-left: 0px; padding-right: 0px;
+ } 
+ .route_a 
+{ 
+padding-left: 1em; padding-right: 0px;
+ } 
+ .street_address 
+{ 
+padding-top: 1em; border-bottom: 1px solid #707070;margin: 0px 0px 0px 0px;
+ } 
+.street_address_info 
+{ 
+padding-left: 0px; padding-right: 0px;
+ } 
+.unit 
+{ 
+padding-left: 1em; padding-right: 0px;
+ }  
+ .street_address2 
+{ 
+padding-top: 1em; border-bottom: 1px solid #707070;margin: 0px 0px 0px 0px;
+ } 
+ .street_address_info 
+{ 
+padding-left: 0px; padding-right: 0px;
+ } 
+ .unit2 
+{ 
+padding-left: 1em; padding-right: 0px;
+ } 
+ .unit2 
+{ 
+padding-left: 1em; padding-right: 0px;
+ } 
+ .delete_address 
+{ 
+padding-left: 1em; padding-right: 0px;margin-top:8em;
+ } 
+.address_sec 
+{ 
+margin-left: inherit; margin-top:2em;
+ } 
+ .phone_number_pro 
+{ 
+padding-top: 1em; border-bottom: 1px solid #707070;margin: 0px 0px 0px 0px;
+ } 
+.phone_number_info 
+{ 
+padding-left: 0px; padding-right: 0px;
+ } 
+
+.type_pro 
+{ 
+padding-left: 1em; padding-right: 0px
+ } 
+.delete_phone_pro 
+{ 
+padding-left: 1em; padding-right: 0px;margin-top:4em;
+ }
+.sec_phone2 
+{ 
+margin-left: inherit; margin-top:2em;
+ } 
+ .sec_phone2_pro 
+{ 
+padding-top: 1em; border-bottom: 1px solid #707070;margin: 0px 0px 0px 0px;
+ } 
+.sec_phone2_info_pro 
+{ 
+padding-left: 0px; padding-right: 0px;
+ } 
+ .type_pro_info 
+{ 
+padding-left: 1em; padding-right: 0px;
+ } 
+.add_schedule 
+{ 
+margin-left: inherit; margin-top:2em
+ } 
+ .patient_client {
+    padding-top: 1em !important;
+    background: #F1F1F1 !important;
+    
+    
+ }
+ 
+ .patient_medication {
+    padding-top: 1em !important;
+    background: #FFF !important;
+    
+    margin: 0px 0px 0px 0px;
+ }
+ 
+ /* patient_visit*/
+ #patient_visit_textarea {
+   width: 22em !important;
+    height: 11em !important;
+    /* margin-bottom: 3.5em; */
+    margin: 5em 0em 2em 3em !important;
+ }
+ .blood_pressure {
+  margin: 34px 0px 6px 26px;
+ }
+  .arm_desig {
+  margin: 10px;
+ }
+ .add_intervention {
+  margin: 34px 0px 7px 40px !important; 
+ }
+ 
+ 
+ 
+ 
+/* Media Css */	
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media (max-width: 576px) {
+  .wrap-login100 {
+    padding-top: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+.txt2
+{
+    margin: 35px;	
+}
+}
+@media (min-width: 1024px) and (max-width: 5000px) {
+.txt2
+{
+    margin: 130px;	
+}
+}
+@media (min-width: 320px) and (max-width: 792px) 
+{
+	.form_inline3 {
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important; 
+    border-bottom: 1px solid #707070 !important;
+    margin: 10px 0px 6px 65px !important;
+    width: 200px !important;
+	
+}
+.form_inline4 
+{
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 10px 0px 6px 65px !important;
+    width: 200px !important;
+}
+.form_inline5 
+{
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 10px 0px 6px 65px !important;
+    width: 200px !important;
+}	
+.form_inline6 
+{
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 0px 56px 2px 12px !important;
+    width: 200px !important;
+}
+.form_inline7 {
+   border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+   margin: 15px 55px 7px 14px !important;
+    width: 200px !important;
+	}
+	
+
+.fake-input img {     
+    position: absolute;
+    top: 12px;
+    right: -22px; 
+	}
+
+.fake-input_i img {     
+    position: absolute;
+    top: 24px;
+    right: 162px; 
+	}	
+	
+.add_intervention_edit img {     
+       position: absolute;
+    top: 5px;
+    right: 150px;
+	}
+   .add_intervention_delete img {     
+        position: absolute;
+    top: 5px;
+    right: 135px;
+	}	
+	
+	
+.add_user {
+   margin: 1em 11em 0em 3em;
+	}
+	
+	
+}
+@media (min-width: 792px) and (max-width: 5000px) {
+	.form_inline3 {
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important; 
+    border-bottom: 1px solid #707070 !important;
+    margin: 7px 0px 6px 0px !important;
+    width: 200px !important;
+	}
+	.form_inline4 {
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 5px 0px 6px 0px !important;
+    width: 132px !important;
+	}	
+	.form_inline5 {
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 5px 0px 0px 0px !important;
+    width: 132px !important;
+	}	
+	
+	.form_inline6 
+{
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 0px 56px 2px 12px !important;
+    width: 200px !important;
+}	
+.form_inline7 {
+   border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid #707070 !important;
+    margin: 14px 4px 0px 0px !important;
+    width: 162px !important;
+	}
+
+	.fake-input img {     
+    position: absolute;
+    top: 12px;
+    right: 42px; 
+	}
+	.fake-input_i img {     
+        position: absolute;
+    top: 20px;
+    right: -12px;
+	}	
+	
+	.add_intervention_edit img {     
+       position: absolute;
+    top: 5px;
+    right: -136px;
+	}
+   .add_intervention_delete img {     
+        position: absolute;
+    top: 5px;
+    right: -152px;
+	}	
+	.add_user {
+   margin: 1em 11em 0em 1em;
+	}
+	
+}
+
+@media (min-width: 320px) and (max-width: 792px)
+{
+.start_date {     
+    margin: 15px 65px 0px;
+	}
+.to
+{     
+margin: 15px 65px;
+font-size:20px;
+}
+.end_date 
+{     
+margin: 15px 65px 0px;
+}
+}		
+@media (min-width: 792px) and (max-width: 5000px) 
+{
+.start_date
+{     
+margin: 10px 8px !important;
+}
+.to
+{     
+       margin: 12px 10px;
+    font-size: 20px;
+}
+.end_date
+{     
+    margin: 18px 8px 3px 0px;
+ 
+}	
+}	
+
 /*  Akram Code (end)  */
