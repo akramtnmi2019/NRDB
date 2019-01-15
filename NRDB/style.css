@@ -450,7 +450,7 @@ label {
 }
 .login100-form-btn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.5;
   color: #e0e0e0;
   font-weight:bold;
@@ -1015,7 +1015,7 @@ margin-left: inherit; margin-top:2em
 @media (min-width: 320px) and (max-width: 1024px) {
 .txt2
 {
-    margin: 35px;	
+    margin: 77px;	
 }
 }
 @media (min-width: 1024px) and (max-width: 5000px) {
