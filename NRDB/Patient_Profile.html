@@ -257,33 +257,31 @@
            <span style="padding-left: 3.5em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
 
         </div>
-        <div class="col-md-6" style="padding-top: 4em">
-
+       <div class="col-md-4" style="padding-top: 4em">
           
       <div class="row">
-	
-					<div class="checkbox">
+	<div class="checkbox">
      <input type="checkbox" id="checkbox11" name="" value="">
-     <label for="checkbox11"><span> Referral form  <a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></span> </label> 
+     <label for="checkbox11"><span> Referral form </span> </label> 
   </div>
 
   <div class="checkbox">
      <input type="checkbox" id="checkbox22" name="" value="">
-     <label for="checkbox22"><span>Patient Expectations Letter <a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></span></label>
+     <label for="checkbox22"><span>Patient Expectations Letter</span></label>
   </div>
 		<div class="checkbox">
      <input type="checkbox" id="checkbox33" name="" value="">
-     <label for="checkbox33"><span>Checklist <a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></span></label>
+     <label for="checkbox33"><span>Checklist</span></label>
   </div>
 
 <div class="checkbox">
      <input type="checkbox" id="checkbox44" name="" value="">
-     <label for="checkbox44"><span>Health Information Consent <a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></span></label>
+     <label for="checkbox44"><span>Health Information Consent </span></label>
   </div>
 
 <div class="checkbox">
      <input type="checkbox" id="checkbox55" name="" value="">
-     <label for="checkbox55"><span>Vial Of Life <a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></span></label>
+     <label for="checkbox55"><span>Vial Of Life</span></label>
   </div>
 
 
@@ -312,11 +310,17 @@
 
 
         </div>
-        <div class="col-md-3" style="margin-left: inherit; margin-top:2em">
+        <div class="col-md-1" style="margin-left: inherit; margin-top:2em">
 
-         
+         <p style="padding-bottom: 1.5em"></p>
+        <p><a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></p>
+        <p><a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></p>
+        <p><a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></p> 
+        <p><a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></p> 
+        <p><a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></p> 
 
         </div>
+      
       </div>
 	  
 	  <div class="row">
@@ -367,7 +371,26 @@
 		 
          <div style="clear: both;"></div>
 		 
-       <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button">Add Secondary Address </a></div>
+		<script type="text/javascript">
+function IMHide() {
+  document.getElementById("add_s").style.display = "";
+  document.getElementById("add_sec_a").style.display = "";
+  
+  x = document.getElementsByClassName("sec_address");
+ x[0].style.display = "none";
+ x[1].style.display = "none";
+}
+function IMShow() {
+  document.getElementById("add_s").style.display = "none";
+  document.getElementById("add_sec_a").style.display = "none";
+ x = document.getElementsByClassName("sec_address");
+ x[0].style.display = "";
+ x[1].style.display = "";
+}
+</script>    
+		 
+		 
+       <div class="col-md-6"><a class="btn btn-secondary" href="javascript:void(0)" id ="add_sec_a" role="button" onclick="IMShow();">Add Secondary Address </a></div>
 		 
          <div style="clear: both;"></div>
 
@@ -391,7 +414,7 @@
       </div>
         </div>
 		
-        <div class="col-md-3" style="margin-left: inherit; margin-top:13em">
+        <div class="col-md-3" id="add_s" style="margin-left: inherit; margin-top:13em">
 
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-edit" style="padding-right: .2em"></i>Edit</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
@@ -399,7 +422,231 @@
 
         </div>
       </div>
+	  
+	   <div class="row sec_address" id="IM" style="display:none">
+        <div class="col-md-3">
+	 
+	   </div>
+	   
+	   <div class="col-md-9" style="margin-top:2em">
+	  <a class="btn-secondary" href="ja" role="button">Secondary Address </a>
+	   </div>
+		
+		
+      </div>
+	  
+	  <div class="row sec_address" style="display:none">
+        <div class="col-md-3">
+           
+
+        </div>
+        <div class="col-md-6 address">
+
+           <div class="row">
+        <div class="col-md-6 address_row" >
+
+         <div class="col-md-6"><label>Street Address</label></div>
+         <div class="col-md-6"><p>15501, 16 Avenue</p></div>
+         
+         <div style="clear: both;"></div>   
+		 
+         <div class="col-md-6"><label>City</label></div>
+         <div class="col-md-6"><p>Surrey</p></div>
+         <div style="clear: both;"></div> 
+		 
+          <div class="col-md-6"><label>Additional Information</label></div>
+         <div class="col-md-6"><p>Lorem Ipsum</p></div>
+		 
+         <div style="clear: both;"></div>
+		 
+      
+
+        </div>
+        <div class="col-md-6">
+
+         <div class="col-md-6"><label>Unit</label></div>
+         <div class="col-md-6"><p>163</p></div>
+        
+         <div style="clear: both;"></div>
+		 
+          <div class="col-md-6"><label>Province</label></div>
+         <div class="col-md-6"><p>9856741337</p></div>
+         
+		 <div style="clear: both;"></div>
+          <div class="col-md-6"><label>Zip Code</label></div>
+         <div class="col-md-6"><p>BKVO56G4</p></div>
+         <div style="clear: both;"></div>
+		
+      </div>
+      </div>
+        </div>
+		
+        <div class="col-md-3" style="margin-left: inherit; margin-top:13em">
+
+        <a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="IMHide();"><i class="fas fa-undo" style="padding-right: .2em" ></i>Delete This Address </a>
+
+        </div>
+      </div>
+	  
+	  
+	   <div class="row sec_address2" style="display:none">
+        <div class="col-md-3">
+	 
+	   </div>
+	   
+	   <div class="col-md-8" style="margin-left: inherit; margin-top:2em">
+	  <a class="btn-secondary" href="#" role="button">Secondary Address #2 </a>
+	   </div>
+		
+		
+      </div>
+	  
+	  
+	  <div class="row sec_address2" style="display:none">
+        <div class="col-md-3">
+           
+
+        </div>
+        <div class="col-md-6 address">
+
+           <div class="row">
+        <div class="col-md-6 address_row" >
+
+         <div class="col-md-6"><label>Street Address</label></div>
+         <div class="col-md-6"><p>15501, 16 Avenue</p></div>
+         
+         <div style="clear: both;"></div>   
+		 
+         <div class="col-md-6"><label>City</label></div>
+         <div class="col-md-6"><p>Surrey</p></div>
+         <div style="clear: both;"></div> 
+		 
+          <div class="col-md-6"><label>Additional Information</label></div>
+         <div class="col-md-6"><p>Lorem Ipsum</p></div>
+		 
+         <div style="clear: both;"></div>
+		 
+      
+
+        </div>
+        <div class="col-md-6">
+
+         <div class="col-md-6"><label>Unit</label></div>
+         <div class="col-md-6"><p>163</p></div>
+        
+         <div style="clear: both;"></div>
+		 
+          <div class="col-md-6"><label>Province</label></div>
+         <div class="col-md-6"><p>9856741337</p></div>
+         
+		 <div style="clear: both;"></div>
+          <div class="col-md-6"><label>Zip Code</label></div>
+         <div class="col-md-6"><p>BKVO56G4</p></div>
+         <div style="clear: both;"></div>
+		
+      </div>
+      </div>
+        </div>
+		
+        <div class="col-md-3" style="margin-left: inherit; margin-top:13em">
+
+        <a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Delete This Address </a>
+
+        </div>
+      </div>
+	  
 	   <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6 first_phone">
+
+           <div class="row">
+        <div class="col-md-6 phone_number_row">
+
+         <div class="col-md-6"><label>Phone Number</label></div>
+         <div class="col-md-6"><p>9856541237</p></div>
+         
+         <div style="clear: both;"></div>   
+		 
+         <div class="col-md-6"><label>Extension</label></div>
+         <div class="col-md-6"><p>1235</p></div>
+         <div style="clear: both;"></div> 
+		 
+		 <script type="text/javascript">
+		 
+	function PhoneHide1() {
+   document.getElementById("add_phone_a").style.display = "";
+  x1 = document.getElementsByClassName("first_phone");
+ x1[0].style.display = "none";
+ x1[1].style.display = "none";
+}	 
+		 
+function PhoneHide() {
+  document.getElementById("add_phone").style.display = "";
+  document.getElementById("add_phone_a").style.display = "";
+  document.getElementById("add_phone_s").style.display = "";
+  
+  x1 = document.getElementsByClassName("sec_phone");
+ x1[0].style.display = "none";
+ x1[1].style.display = "none";
+}
+function PhoneShow() {
+  document.getElementById("add_phone").style.display = "none";
+  document.getElementById("add_phone_a").style.display = "none";
+  document.getElementById("add_phone_s").style.display = "none";
+ x1 = document.getElementsByClassName("sec_phone");
+ x1[0].style.display = "";
+ x1[1].style.display = "";
+}
+</script> 
+		 
+          <div class="col-md-6"><a class="btn btn-secondary" href="javascript:void(0)" id ="add_phone_a" role="button" onclick="PhoneShow();">Add Phone Number </a></div>
+         <div style="clear: both;"></div>
+        </div>
+        <div class="col-md-6 type">
+
+         <div class="col-md-6"><label>Type</label></div>
+         <div class="col-md-6"><p>Home</p></div>
+        
+         <div style="clear: both;"></div>
+		 
+          <div class="col-md-6"></div>
+         <div class="col-md-6"></div>
+         
+		 <div style="clear: both;"></div>
+           
+		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="PhoneHide1();"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Phone Number </a></div> 
+         <div style="clear: both;"></div>
+		
+      </div>
+      </div>
+
+
+        </div>
+        <div class="col-md-3 first_phone" id="add_phone" style="margin-left: inherit; margin-top:13em">
+
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-edit" style="padding-right: .2em"></i>Edit</a></div>
+         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+
+        </div>
+		
+      </div>
+	  
+	   <div class="row sec_phone" style="display:none">
+        <div class="col-md-3">
+	 
+	   </div>
+	   
+	   <div class="col-md-6 sec_phone2">
+	  <a class="btn-secondary" href="#" role="button">Secondary Phone #2 </a>
+	   </div>
+		  
+		
+      </div>
+	  
+        <div class="row sec_phone" style="display:none">
         <div class="col-md-3">
 
         </div>
@@ -417,7 +664,8 @@
          <div class="col-md-6"><p>1235</p></div>
          <div style="clear: both;"></div> 
 		 
-          <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button">Add Phone Number </a></div>
+		 
+          <div class="col-md-6"><a class="btn btn-secondary" href="javascript:void(0)" id ="add_phone_s" role="button" onclick="PhoneShoaw();">Add Phone Number </a></div>
          <div style="clear: both;"></div>
         </div>
         <div class="col-md-6 type">
@@ -432,7 +680,7 @@
          
 		 <div style="clear: both;"></div>
            
-		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Phone Number </a></div> 
+		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="PhoneHide();"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Phone Number </a></div> 
          <div style="clear: both;"></div>
 		
       </div>
@@ -449,8 +697,6 @@
         </div>
 		
       </div>
-
-
 <!-- Address & Contact Info (end) -->
 
           
