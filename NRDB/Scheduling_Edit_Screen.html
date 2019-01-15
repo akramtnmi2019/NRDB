@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 
@@ -24,33 +22,8 @@
 </head>
 
 <body>
-
-<div class="side-menu-wrapper">
-<a href="#" class="menu-close">x</a>
-<ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
-
-</ul>
-</div>
-<div class="side-menu-wrapper">
-<a href="#" class="menu-close">x</a>
-<ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
-
-</ul>
-</div>
+<!-- Header (start) -->
 <div id="header" class="container">	
- 
  <div class="fleft">
    <img src="images/logo.png" class="logo">
    <span class="title">Patient Directory</span>
@@ -58,12 +31,24 @@
 
  <div id="backto">
  	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
- 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
+ 	<span class="menu_bars"><i class="fas fa-bars menu-open"></i></span>
  </div>
 
 </div>
+<div class="side-menu-wrapper">
+<a href="#" class="menu-close">x</a>
+<ul>
+	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
 
-
+</ul>
+</div>
+<!-- Side Bar Menu (End) -->
+<!-- Menu (start) -->
 <div id="menu" class="container">	
 
   <ul class="nav nav-pills">
@@ -73,6 +58,8 @@
     <li><a href="#">Care Plan</a></li>
   </ul>
 </div>
+<!-- Menu (End) -->
+<!-- Middle part (start) -->
 
 <div id="exTab" class="container">	
 
@@ -83,7 +70,7 @@
 
 	<div class="tab-content clearfix" id="tabs_m">
 			  <div class="tab-pane active" id="1b">
-       
+      <!-- Interventions (start) --> 
       <div class="row">
         <div class="col-md-2">
            <h3 style="padding-left: 1.5em">Interventions</h3>           
@@ -159,14 +146,12 @@
 
         </div>
       </div>
-
+<!-- Interventions (end) --> 
 
 		</div>
 		
 		<div class="tab-pane" id="2b">
-
-<!-- Social History (start) -->
-
+<!-- Scheduling (start) --> 
 <div class="row" >
  
          <div class="col-md-2">
@@ -179,10 +164,7 @@
 	   </div>
 	   
       </div>
-       
-
- 
-
+      
       <div class="row">
         <div class="col-md-2">
            <h3 style="padding-left: 1.5em">Scheduling</h3>           
@@ -375,23 +357,19 @@
 		<div class="col-md-2">
 		 <a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Schedule</a>
         </div>
-		 
-		
 		  </div>
-	
-
-<!-- Social History (end) --> 
-
-          
+<!-- Scheduling (end) --> 
 		</div>
   </div>
 
+<!-- Middle part (end) -->
+<!-- Footer  part (start) -->
 <!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	
+	<script>
 $(document).ready(function(){
 	
 	var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
@@ -420,34 +398,33 @@ $(close_button).click(function(e){ //on menu close button click
 	},50);
 	$(overlay).css({"opacity":"0", "width":"0"});
 });
+
+$("#pd").click(function(e){ //on menu close button click
+	
+	$("#enable").hide();
+	
+	 $(".col-md-3").removeClass("col-md-3");
+	 $(".col-sm-3").addClass("col-md-4");
+	 $(".col-md-4").removeClass("col-md-4");
+	 $(".col-sm-4").addClass("col-md-6");
+	
+});
+
+$("#inl").click(function(e){ //on menu close button click
+	
+	$("#enable").show();
+	 
+	
+});
 });
 $(document).on('click', function(e) { //Hide menu when clicked outside menu area
-var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
-var open_button 	= ".menu-open"; //Menu Open Button
-var close_button 	= ".menu-close"; //Menu Close Button
-var overlay 		= ".menu-overlay"; //Overlay
-
-
 	if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){ // check menu condition
 		$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
 		$(overlay).css({"opacity":"0", "width":"0"});
 	}
 });
 
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-
 </script>
 </body>
 </html>	
+<!-- Footer  part (end) -->	
