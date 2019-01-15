@@ -1,5 +1,4 @@
 /* CSS Made by Mauricio (start) */
-
 body { padding : 10px; background-color: #f8faf9 }
 
 p {
@@ -109,6 +108,14 @@ a.link_back {
    color: #ffffff!important;
    background-color: #009688!important
 }
+
+h2 { 
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 18px; 
+   font-weight: 600; 
+   color:#707070;
+   margin-top: .9em
+ }
 
 h3 { 
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
@@ -225,6 +232,289 @@ a.btn-secondary:hover, a.btn-secondary-red:hover { background-color: #cccccc }
 #notes_container_col_3 { padding-top: 2.2em }
 #notes_container_icon { float:left; padding-right: .5em }
 #notes_container_datetime { float:left }
+
+#Patient_Chart_Notes {
+  padding-top: 3em; 
+  padding-left: 3em; 
+  padding-right: 0px
+}
+
+.fl_pr_2em { float:left; padding-right: 2em }
+.fl_pt_1em { float:left; padding-top: 1em }
+
+/* Nurse Routing*/
+
+.Routing_Setting {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+}
+
+.Routing_Setting li {
+  display: inline-block;  
+  padding: 10px
+}
+
+#container_Nurse_Routing {
+  background-color: #f1f1f1; 
+  padding-left: 2.2em; 
+  padding-right: 2.2em;
+  padding-bottom: 3em
+}
+
+.Nurse_Routing_accordion {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+}
+
+.Nurse_Routing_accordion li {
+  display: inline-block;  
+}
+
+#card_content { 
+  background-color: white; 
+  margin-left: 1.5em; 
+  border-bottom-left-radius: 30px; 
+  padding: 1em
+ }
+
+#accordionNR { padding-bottom: .7em }
+
+.accordion_edit {
+  float: right; 
+  color: #009688; 
+  margin-top: 1em
+}
+
+.accordion_save {
+  /*float: right;*/ 
+  color: #009688; 
+  margin-top: 1em
+}
+
+.accordion_remove {
+  /*float: right;*/ 
+  color: #ff0000;
+  margin-left: 1em; 
+  margin-top: 1em
+}
+
+#accordion_BRV {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #4E79A7
+}
+
+#accordion_BRV2 {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #BAB0AC
+}
+
+#accordion_GRV {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #F28E2C
+}
+
+#accordion_ORV {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #E15659
+}
+
+#accordion_CLD {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #76B7B2
+}
+
+#accordion_LGY {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #59A14F
+}
+
+#accordion_CRV {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #EDC948
+}
+
+#accordion_STR {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #B07AA1
+}
+
+#accordion_ARV {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #FF9DA7
+}
+
+#accordion_SMT {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #9C755F
+}
+
+#accordion_add_route_name {
+  background-color: white; 
+  border-top-left-radius: 30px; 
+  border-bottom-left-radius: 30px; 
+  border-right: 10px solid #707070
+}
+
+#accordion_shadow {
+  width: 99%!important;
+  border: none; 
+  outline:none; 
+  box-shadow: 8px 15px 10px -15px #111
+}
+
+.circle_BRV {
+  color: #4E79A7; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_BRV2 {
+  color: #BAB0AC; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_GRV {
+  color: #F28E2C; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_ORV {
+  color: #E15659; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_CLD {
+  color: #76B7B2; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_LGY {
+  color: #59A14F; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_CRV {
+  color: #EDC948; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_STR {
+  color: #B07AA1; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_ARV {
+  color: #FF9DA7; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_SMT {
+  color: #9C755F; 
+  float: left; 
+  margin-top: .3em
+}
+
+.circle_add_route_name {
+  color: #707070; 
+  float: left; 
+  margin-top: .3em
+}
+
+.tit_BRV {
+  color:#4E79A7; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_BRV2 {
+  color:#BAB0AC; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_GRV {
+  color:#F28E2C; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_ORV {
+  color:#E15659; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_CLD {
+  color:#76B7B2; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_LGY {
+  color:#59A14F; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_CRV {
+  color:#EDC948; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_STR {
+  color:#B07AA1; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_ARV {
+  color:#FF9DA7; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_SMT {
+  color:#9C755F; 
+  text-align: left; 
+  text-decoration: none
+}
+
+.tit_add_route_name {
+  color:#707070; 
+  text-align: left; 
+  text-decoration: none
+}
 
 /* CSS Made by Mauricio (end) */
 

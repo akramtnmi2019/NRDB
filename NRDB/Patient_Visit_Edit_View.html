@@ -1,25 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-
-<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
 .nav-pills>li>a
@@ -31,23 +15,8 @@
 	}
 </style>
 </head>
-
 <body>
-
-<div class="side-menu-wrapper">
-<a href="#" class="menu-close">x</a>
-<ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
-
-</ul>
-</div>
-
-
+<!-- Header (start) -->
 <div id="header" class="container">	
  
  <div class="fleft">
@@ -61,10 +30,25 @@
  </div>
 
 </div>
+<div class="side-menu-wrapper">
+<a href="#" class="menu-close">x</a>
+<ul>
+	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
 
-
+</ul>
+</div>
+<!-- Side Bar Menu (End) -->
+<!-- Header (End) -->
+<!-- Middle part (start) -->
 <div id="exTab patient_info" class="container">	
  <div class="row p-5 patient_info" >
+ <!-- patient_info (start) -->
+ 
 	  <div class="col-md-12">
 	  
         <div class="col-md-2">
@@ -238,7 +222,7 @@
 		</div>
 		</div>
 		
-     
+   <!-- patient_info (end) -->
 	  
 	  <div class="row patient_client">
        <div class="col-md-6">
@@ -275,9 +259,7 @@
 	  
 	  </div>
 	 
-	  
-	  
-	  
+	 
 	  <div id="menu" class="container">	
   <ul class="nav nav-pills">
     <li class="active"><a href="#1b" data-toggle="tab">Medication</a></li>
@@ -294,6 +276,8 @@
   
   <div class="tab-content clearfix" id="tabs_m">
 			  <div class="tab-pane active" id="1b">
+		<!-- Medication (start) -->	  
+			  
 		<div class="row">
        <div class="col-md-12">
          <h3 class="blood_pressure">Medication</h3>
@@ -312,10 +296,11 @@
            </div></div>
 </div>
 	  </div>	  
-			  
+	<!-- Medication (end) -->	 		  
   </div>
   
   <div class="tab-pane" id="2b">
+  <!-- Blood Pressure Test (start) -->	 
 <div class="row">
        <div class="col-md-12">
          <h3 class="blood_pressure">Blood Pressure Test</h3>
@@ -382,9 +367,11 @@
            </div></div>
 </div>
 	  </div> 
+	   <!-- Blood Pressure Test (end) -->	 
   </div>
   
   <div class="tab-pane" id="3b">
+   <!-- Blood Sugar (start) -->	 
   <div class="row">
        <div class="col-md-12">
          <h3 class="blood_pressure">Blood Sugar</h3>
@@ -417,9 +404,11 @@
            </div></div>
 </div>
 	  </div>
+	 <!-- Blood Sugar (end) -->	   
   </div>
   
   <div class="tab-pane" id="4b">
+   <!-- Weight (start) -->	 
   <div class="row">
        <div class="col-md-12">
          <h3 class="blood_pressure">Weight</h3>
@@ -452,9 +441,11 @@
            </div></div>
 </div>
 	  </div>
+	   <!-- Weight (end) -->	 
   </div>
   
   <div class="tab-pane" id="5b">
+   <!-- Insulin (start) -->	 
   <div class="row">
         <div class="col-md-6" >
 
@@ -534,11 +525,11 @@
 	  
 	  
 	  </div>
-  
+  <!-- Insulin (end) -->	 
   </div>
   
   <div class="tab-pane" id="6b">
-  
+  <!-- Document FBG (start) -->	 
   <div class="row">
        <div class="col-md-12">
          <h3 class="blood_pressure">Document FBG</h3>
@@ -555,9 +546,11 @@
            </div></div>
 </div>
 	  </div>
+	  <!-- Document FBG (end) -->	 
   </div>
   
   <div class="tab-pane" id="7b">
+  <!-- Other Injection (start) -->	 
   <div class="row">
         <div class="col-md-6" >
 
@@ -585,12 +578,12 @@
         <img src="images/Injection-Image1.jpg"><br/><br>
 
    </div>
-	  
-	  
 	  </div> 
+	   <!-- Other Injection (end) -->	
   </div>
   
   <div class="tab-pane" id="8b">
+   <!-- Ortho Static Hypotension (start) -->	
   <div class="row">
        <div class="col-md-8">
          <h3 class="blood_pressure">OrthoStaticHypotension</h3>
@@ -634,10 +627,11 @@
 </div>
 	  </div>  
 	  	  
-	  
+	 <!-- Ortho Static Hypotension (end) -->	  
   </div>
   
   <div class="tab-pane" id="9b">
+   <!-- Special Drug (start) -->	
   <div class="row">
         <div class="col-md-6" >
 
@@ -664,14 +658,13 @@
 
         <img src="images/Injection-Image1.jpg"><br/><br>
 
-   </div>
-	  
-	  
+   </div> 
 	  </div> 
+	  <!-- Special Drug (end) -->	
   </div>
   
   <div class="tab-pane" id="10b">
-  
+   <!-- Treatments (start) -->	
 <div class="row">
         <div class="col-md-4" >
 	
@@ -785,11 +778,7 @@
 	  
 	  </div> 
 	  
-	<!-- Notes (start) -->
-	
-<!-- Notes (end) -->  
-	  
-	  
+	<!-- Treatments (end) -->	
 	  
   </div>
   
@@ -803,15 +792,13 @@
 </div>
 </div>
 	  
-
+<!-- Middle part (end) -->
+<!-- Footer  part (start) -->
 <!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	
-	
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	
 	<script>
 $(document).ready(function(){
 	
@@ -868,6 +855,6 @@ $(document).on('click', function(e) { //Hide menu when clicked outside menu area
 });
 
 </script>
-
 </body>
 </html>	
+<!-- Footer  part (end) -->

@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-
-<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="style.css">      
-
+<link rel="stylesheet" type="text/css" href="style.css">     
 </head>
-
 <body>
+<!-- Header (start) -->
+<div id="header" class="container">	
+ <div class="fleft">
+   <img src="images/logo.png" class="logo">
+   <span class="title">Patient Directory</span>
+ </div>
+ <div id="backto">
+ 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
+ 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
+ </div>
+</div>
+
+<!-- Side Bar Menu (start) -->
 <div class="side-menu-wrapper">
 <a href="#" class="menu-close">x</a>
 <ul>
@@ -34,26 +29,12 @@
 	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
 	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
 	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
-
 </ul>
 </div>
-<div id="header" class="container">	
- 
- <div class="fleft">
-   <img src="images/logo.png" class="logo">
-   <span class="title">Patient Directory</span>
- </div>
+<!-- Side Bar Menu (End) -->
 
- <div id="backto">
- 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
- 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
- </div>
-
-</div>
-
-
+<!-- Menu (start) -->
 <div id="menu" class="container">	
-
   <ul class="nav nav-pills">
     <li><a href="#">Patient Information</a></li>
     <li><a href="Patient_Information_Medical-History.html">Medical History</a></li>
@@ -61,9 +42,9 @@
     <li class="active"><a href="Careplan.html">Care Plan</a></li>
   </ul>
 </div>
-
+<!-- Menu (End) -->
+<!-- Middle part (start) -->
 <div id="exTab" class="container">	
-
 <ul  class="nav nav-pills">
 			<li class="active"><a  href="#1b" data-toggle="tab">Patient Profile</a></li>
 			<li><a href="#2b" data-toggle="tab">Address & Contact Info</a></li>
@@ -77,7 +58,7 @@
 	<div class="tab-content clearfix" id="tabs_m">
 			  <div class="tab-pane active" id="1b">
        
-<!-- Insulin Injection (start) -->
+<!-- Patient Profile (start) -->
 
       <div class="row" >
 	  
@@ -352,21 +333,14 @@
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-edit" style="padding-right: .2em"></i>Edit</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
          <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
-
         </div>
-	  
 	  </div>
-
-
 		</div>
 		
-<!-- Insulin Injection (end) -->
+<!-- Patient Profile (end) -->
 
 		<div class="tab-pane" id="2b">
-
-
 <!-- Address & Contact Info (start) -->
-
       <div class="row">
         <div class="col-md-3">
            <h3 style="padding-left: 1.5em">Address & Contact Info</h3>           
@@ -396,8 +370,6 @@
        <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button">Add Secondary Address </a></div>
 		 
          <div style="clear: both;"></div>
-		 
-         
 
         </div>
         <div class="col-md-6">
@@ -417,10 +389,7 @@
 		
       </div>
       </div>
-
-
         </div>
-		
 		
         <div class="col-md-3" style="margin-left: inherit; margin-top:13em">
 
@@ -429,13 +398,9 @@
          <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
 
         </div>
-		
       </div>
-	  
-	  
 	   <div class="row">
         <div class="col-md-3">
-           
 
         </div>
         <div class="col-md-6 phone_number">
@@ -453,12 +418,7 @@
          <div style="clear: both;"></div> 
 		 
           <div class="col-md-6"><a class="btn btn-secondary" href="#" role="button">Add Phone Number </a></div>
-		
-		 
          <div style="clear: both;"></div>
-		 
-         
-
         </div>
         <div class="col-md-6 type">
 
@@ -569,15 +529,9 @@
 
         </div>
       </div>
-
 <!-- Contact (end) -->
-
-
 		</div>
-
-
 <div class="tab-pane" id="4b">
-
 <!-- Case Manager(s) (start) -->
       <div class="row">
         <div class="col-md-3">
@@ -652,12 +606,8 @@
 
         </div>
       </div>
-
 <!-- Case Manager(s) (end) -->
-
-
 </div>
-
 
 <div class="tab-pane" id="5b">
 <!-- MD Contacts(s) (start) -->
@@ -735,15 +685,10 @@
       </div>
 
 <!-- MD Contacts(s) (end) -->
-
-
-
 </div>
-
 
 <div class="tab-pane" id="6b">
 <!-- Economic Data(s) (start) -->
-
       <div class="row">
         <div class="col-md-3">
            <h3 style="padding-left: 1.5em">Economic Data</h3>           
@@ -780,16 +725,10 @@
                         <label for="checkbox33">
                              Out of Pocket (No drug Coverage)
                         </label>
-                    </div>
-					
-					
-					
+                    </div>		
 		</div>
-		
         </div>
-	
       </div>
-
         </div>
         <div class="col-md-3" style="margin-left: inherit; margin-top:20em">
 
@@ -799,10 +738,8 @@
 
         </div>
       </div>
-
 <!-- Economic Data (end) -->
 </div>
-
 
 <div class="tab-pane" id="7b">
 <!-- Route (start) -->
@@ -911,16 +848,13 @@
 
         </div>
       </div>
-
 <!-- Route (end) -->
-
 </div>
-
-
+  </div>
   </div>
   
-  
-
+  <!-- Middle part (end) -->
+  <!-- Footer part (start)-->
 <!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -986,3 +920,4 @@ function drop(ev) {
 </script>
 </body>
 </html>	
+<!-- Footer part (end) -->
