@@ -1361,7 +1361,15 @@ margin-left: inherit; margin-top:2em
    margin: 15px 55px 7px 14px !important;
     width: 200px !important;
 	}
+.form_inline8 {
+   border: 0 !important;
+    outline: 0 !important;
+    /* background: transparent !important; */
+    border-bottom: 1px solid #707070 !important;
+        margin: 0px 2px 14px 2px !important;
+    width: 100px !important;
 	
+	}		
 
 .fake-input img {     
     position: absolute;
@@ -1436,6 +1444,16 @@ margin-left: inherit; margin-top:2em
     margin: 14px 4px 0px 0px !important;
     width: 162px !important;
 	}
+	
+.form_inline8 {
+   border: 0 !important;
+    outline: 0 !important;
+    /* background: transparent !important; */
+    border-bottom: 1px solid #707070 !important;
+    /* margin: 7px 0px 6px 0px !important; */
+    width: 100px !important;
+	
+	}	
 
 	.fake-input img {     
     position: absolute;
@@ -1495,6 +1513,7 @@ margin: 10px 8px !important;
     margin: 18px 8px 3px 0px;
  
 }	
-}	
+}
+	
 
 /*  Akram Code (end)  */
