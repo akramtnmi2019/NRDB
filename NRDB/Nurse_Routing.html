@@ -6,7 +6,12 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<script src="js/bootstrap-colorselector.min.js"></script>
+
 <link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap-colorselector.min.css" />
 
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 
@@ -27,19 +32,33 @@
 
 <body>
 
-<div id="header" class="container" style="padding-top: 1em; padding-bottom: .5em">	
- 
- <div style="float:left">
-   <img src="images/logo.png" style="padding-right: 2em; padding-bottom: .55em">
+<!-- Header (start) -->
+<div id="header" class="container">	
+ <div class="fleft">
+   <img src="images/logo.png" class="logo">
    <span class="title">Patient Directory</span>
  </div>
-
- <div style="float:right; margin-top:1.2em">
- 	<i class="fas fa-arrow-left" style="padding-right: .5em; color:#707070"></i> <a href="#" class="link_back">Back to Patient Directory</a>
- 	<span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars"></i></span>
+ <div id="backto">
+ 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
+ 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
  </div>
 </div>
 
+<!-- Side Bar Menu (start) -->
+<div class="side-menu-wrapper">
+<a href="#" class="menu-close">x</a>
+<ul>
+	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
+</ul>
+</div>
+<!-- Side Bar Menu (End) -->
+<!-- header part (end) -->
+<!-- Middle part (start) -->
 <div class="container" id="container_Nurse_Routing">	
 
 <ul class="Routing_Setting">
@@ -96,9 +115,202 @@
     </div>
 
     <div id="collapseBRV" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_BRV">
-      <div class="card-body" id="card_content">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="card-body" id="card_content" style="height: -webkit-fill-available;">
+
+
+        <div class="col-md-6">
+
+          <div class="col-md-2">
+
+
+<select id="colorselector">
+    <option value="106" data-color="#A0522D">sienna</option>
+    <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
+    <option value="87" data-color="#FF4500">orangered</option>
+    <option value="15" data-color="#DC143C">crimson</option>
+    <option value="24" data-color="#FF8C00">darkorange</option>
+    <option value="78" data-color="#C71585">mediumvioletred</option>
+</select>
+ 
+<script>
+    $('#colorselector').colorselector();
+</script>
+
+             
+          </div>
+
+          <div class="col-md-10">
+           
+           <h3 class="reg">Pharmacy Location: 108-1710, East Pender Street, Vancouver</h3>
+           <div class="col-md-6">            
+
+             <div class="form-group">
+              <label><h3>Start Time</h3></label>
+              <select class="form-control" id="st_NR_c1">
+                <option>08:00 hs</option>
+                <option>09:00 hs</option>
+                <option>10:00 hs</option>
+                <option>11:00 hs</option>
+                <option>12:00 hs</option>                  
+              </select>
+             </div>
+
+           </div>
+           <div class="col-md-6">             
+
+             <div class="form-group">
+              <label><h3>End Work Time</h3></label>
+              <select class="form-control" id="ewt_NR_c1">
+                <option>16:00 hs</option>
+                <option>17:00 hs</option>
+                <option>18:00 hs</option>
+                <option>19:00 hs</option>
+                <option>20:00 hs</option>                  
+              </select>
+             </div>
+
+            <div style="padding-top: .5em; float: right">
+              <span class="accordion_save"><i class="fas fa-save"></i></span>
+              <span class="accordion_remove"><i class="fas fa-times"></i></span>
+            </div>             
+
+           </div>  
+
+
+          </div>
+
+<div style="padding-top: 15em; padding-bottom: 7em"> 
+        
+<div class="col-md-3"><h3>Nurse Name</h3></div>
+<div class="col-md-6">
+
+      <div class="input-group margin-bottom-sm" style="margin-top: .5em">
+      <input class="form-control" type="text" placeholder="Keyword to Search" style="background-color: #ffffff; border: 0px; border-radius: 0px; border-bottom: 1px solid #707070; box-shadow: none; transition: none">
+      <span class="input-group-addon" style="background-color: #ffffff; border: 0px; border-radius: 0px; border-bottom: 1px solid #707070; box-shadow: none; transition: none"><i class="fas fa-search"></i></span>
       </div>
+
+</div>
+
+<div class="col-md-3" style="margin-top: .6em">  
+  <a class="btn btn-secondary" href="#" role="button"><i class="fas fa-plus" style="padding-right: .2em"></i>Add</a>
+</div>  
+
+</div>
+
+
+  <div class="input-group margin-bottom-sm">
+    <input class="form-control" type="text" placeholder="Balbir kaur Minhas" id="nurse_names">
+    <span class="input-group-addon" id="xtimes"><i class="fas fa-times"></i></span>
+  </div>
+
+  <div class="input-group margin-bottom-sm">
+    <input class="form-control" type="text" placeholder="Balbir kaur Minhas" id="nurse_names">
+    <span class="input-group-addon" id="xtimes"><i class="fas fa-times"></i></span>
+  </div>
+
+
+        </div>
+
+        <div class="col-md-4">        
+          
+           <h3 class="reg">Route Breaks:</h3>
+           <div class="col-md-6">            
+
+             <div class="form-group">
+              <label><h3>Start Time</h3></label>
+              <select class="form-control" id="st_NR_c2">
+                <option>08:00 hs</option>
+                <option>09:00 hs</option>
+                <option>10:00 hs</option>
+                <option>11:00 hs</option>
+                <option>12:00 hs</option>                  
+              </select>
+             </div>
+
+           </div>
+           <div class="col-md-6">             
+
+             <div class="form-group">
+              <label><h3>End Work Time</h3></label>
+              <select class="form-control" id="ewt_NR_c2">
+                <option>16:00 hs</option>
+                <option>17:00 hs</option>
+                <option>18:00 hs</option>
+                <option>19:00 hs</option>
+                <option>20:00 hs</option>                  
+              </select>
+             </div>
+
+            <div style="padding-top: .5em; float: right">
+              <span class="accordion_save"><i class="fas fa-save"></i></span>
+              <span class="accordion_remove"><i class="fas fa-times"></i></span>
+            </div>    
+
+           </div>  
+
+            <div style="margin-top: 12em">   
+
+
+<div class="col-md-3"><h3>Patient Names</h3></div>
+<div class="col-md-6">
+
+      <div class="input-group margin-bottom-sm" style="width:10em; margin-top: 1em">
+      <input class="form-control" type="text" placeholder="" style="background-color: #ffffff; border: 0px; border-radius: 0px; border-bottom: 1px solid #707070; box-shadow: none; transition: none">
+      <span class="input-group-addon" style="background-color: #ffffff; border: 0px; border-radius: 0px; border-bottom: 1px solid #707070; box-shadow: none; transition: none"><i class="fas fa-search"></i></span>
+      </div>
+
+</div>
+
+<div class="col-md-3" style="margin-top: 1.2em">  
+  <a class="btn btn-secondary" href="#" role="button"><i class="fas fa-plus" style="padding-right: .2em"></i>Add</a>
+</div>      
+
+     </div>
+
+
+<div class="clear"></div>
+
+  <div style="margin-top:1em; overflow-y: scroll; min-width: 200px; height: 380px">
+    
+
+<div style="border-bottom: 1px solid #707070; padding-bottom: .5em">
+<h3>Lorraine Ludwig</h3>
+<i class="fas fa-map-marker-alt" style="color:#707070"></i> <span style="color:#707070">Buzzer #1630, 206, 1625 West 13th Avenue, Vancouver</span> <br>
+<i class="fas fa-clock" style="color:#707070"></i> <span style="color:#707070">06:45 AM ~ 07:00 AM</span>
+</div>
+
+<div style="border-bottom: 1px solid #707070; padding-bottom: .5em">
+<h3>Dawn Lockhart</h3>
+<i class="fas fa-map-marker-alt" style="color:#707070"></i> <span style="color:#707070">Buzzer #222, 106, 1515 West 1st Avenue, Vancouver</span> <br>
+<i class="fas fa-clock" style="color:#707070"></i> <span style="color:#707070">07:00 AM ~ 07:15 AM</span>
+</div>
+
+<div style="border-bottom: 1px solid #707070; padding-bottom: .5em">
+<h3>Lois Daigle</h3>
+<i class="fas fa-map-marker-alt" style="color:#707070"></i> <span style="color:#707070">408, 1570 West 7th Avenue, Vancouver</span> <br>
+<i class="fas fa-clock" style="color:#707070"></i> <span style="color:#707070">11:30 AM ~ 11:45 AM</span>
+</div>
+
+<div style="border-bottom: 1px solid #707070; padding-bottom: .5em">
+<h3>Lorraine Ludwig</h3>
+<i class="fas fa-map-marker-alt" style="color:#707070"></i> <span style="color:#707070">Buzzer #1630, 206, 1625 West 13th Avenue, Vancouver</span> <br>
+<i class="fas fa-clock" style="color:#707070"></i> <span style="color:#707070">06:45 AM ~ 07:00 AM</span>
+</div>
+
+
+    
+  </div>
+
+
+        </div>
+
+        <div class="col-md-2">
+          <a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-trash-alt" style="padding-right: .3em"></i>Remove Route</a>          
+        </div>                
+
+
+     </div>
+     
     </div>
   </div>
 </div>
@@ -384,5 +596,71 @@
 <!-- BROWN ROUTE VANCOUVER 2 (end) -->
 
 </div>
+<!-- Middle part (end) -->
+  <!-- Footer part (start)-->
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+var open_button 	= ".menu-open"; //Menu Open Button
+var close_button 	= ".menu-close"; //Menu Close Button
+var overlay 		= ".menu-overlay"; //Overlay
+
+//Initial menu position
+$(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
+
+$(open_button).click(function(e){ //On menu open button click
+	e.preventDefault();
+
+	$(slide_wrp).css( {"right": "0px"}); //move menu right position to 0
+	setTimeout(function(){
+		$(slide_wrp).addClass('active'); //add active class
+	},50);
+	$(overlay).css({"opacity":"1", "width":"100%"});
+});
+
+$(close_button).click(function(e){ //on menu close button click
+	e.preventDefault();
+	$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}); //hide menu by setting right position 
+	setTimeout(function(){
+		$(slide_wrp).removeClass('active'); // remove active class
+	},50);
+	$(overlay).css({"opacity":"0", "width":"0"});
+});
+});
+$(document).on('click', function(e) { //Hide menu when clicked outside menu area
+var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+var open_button 	= ".menu-open"; //Menu Open Button
+var close_button 	= ".menu-close"; //Menu Close Button
+var overlay 		= ".menu-overlay"; //Overlay
+
+
+	if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){ // check menu condition
+		$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
+		$(overlay).css({"opacity":"0", "width":"0"});
+	}
+});
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
 </body>
 </html>	
+<!-- Footer part (end) -->

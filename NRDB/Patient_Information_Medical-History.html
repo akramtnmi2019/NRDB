@@ -7,19 +7,19 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
 <!-- Header (start) -->
 <div id="header" class="container">	
- <div style="float:left">
-   <img src="images/logo.png" style="padding-right: 2em; padding-bottom: .55em">
+ <div class="fleft">
+   <img src="images/logo.png" class="logo">
    <span class="title">Patient Directory</span>
  </div>
-
- <div style="float:right; margin-top:1.2em">
- <div class="menu-overlay"></div>
- 	<i class="fas fa-arrow-left" style="padding-right: .5em; color:#707070"></i> <a href="#" class="link_back">Back to Patient Directory</a>
- 	<a href="" class="menu-open" ><span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars menu-open"></i></span></a>
+ <div id="backto">
+ 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
+ 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
  </div>
 </div>
+
 <!-- Side Bar Menu (start) -->
 <div class="side-menu-wrapper">
 <a href="#" class="menu-close">x</a>
@@ -33,8 +33,8 @@
 </ul>
 </div>
 <!-- Side Bar Menu (End) -->
-<!--  Menu (start) -->
-<div id="menu" class="container">	
+<!-- Menu (start) -->
+<div id="menu" class="container" style="background-color: white;margin-top:2em">	
 
   <ul class="nav nav-pills">
     <li><a href="#">Patient Information</a></li>
@@ -43,11 +43,11 @@
     <li><a href="Careplan.html">Care Plan</a></li>
   </ul>
 </div>
-
-<!-- Menu   (End) -->
-<!-- Header (End) -->
+<!-- Menu (end) -->
+<!-- header part (end) -->
 <!-- Middle part (start) -->
-<div id="exTab" class="container">	
+<div id="exTab" class="container" style="padding-top: 2em;">	
+
 <ul  class="nav nav-pills">
 			<li class="active"><a  href="#1b" data-toggle="tab">Medical History</a></li>
 			<li><a href="#2b" data-toggle="tab">Social History</a></li>
@@ -56,7 +56,6 @@
 
 	<div class="tab-content clearfix" style="padding-bottom: 2em">
 			  <div class="tab-pane active" id="1b">
-       <!-- Medical History (start) -->
       <div class="row">
         <div class="col-md-3">
            <h3 style="padding-left: 1.5em">Medical History</h3>           
@@ -131,17 +130,9 @@
     <a class="dropdown-item" href="#">three</a>
   </div>
 </div>   
-
- 
-
          </div>
-     	
-
         </div>
-        
       </div>
-
-
         </div>
         <div class="col-md-3" style="margin-left: inherit; margin-top:32em">
 
@@ -151,27 +142,18 @@
 
         </div>
       </div>
-
-  <!-- Medical History (end) -->
 		</div>
 		
 		<div class="tab-pane" id="2b">
-
 <!-- Social History (start) -->
-
       <div class="row">
         <div class="col-md-3">
            <h3 style="padding-left: 1.5em">Social History</h3>           
            <br>
            <span style="padding-left: 3.5em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
-
         </div>
         <div class="col-md-6" style="padding-top: 4em">
-
-          
       <div class="row">
-
-
         <div class="col-md-2"><h3>Tobacco Use Status</h3></div>
         <div class="col-md-10" style="padding-left: 0px; padding-right: 0px">
          <div style="display:inline"><a class="btn btn-secondary" href="#" role="button">Current</a> <a class="btn btn-secondary" href="#" role="button">Former</a> <a class="btn btn-secondary" href="#" role="button">Never</a>
@@ -199,11 +181,7 @@
          </div>
         </div>
          <div style="clear: both;"></div>                     
-
-        
       </div>
-
-
         </div>
         <div class="col-md-3" style="margin-left: inherit; margin-top:32em">
 
@@ -213,16 +191,10 @@
 
         </div>
       </div>
-
-
-<!-- Social History (end) --> 
-
-          
+<!-- Social History (end) -->   
 		</div>
-        
-
-        <div class="tab-pane" id="3b">
-          
+       
+        <div class="tab-pane" id="3b">     
 <!-- Family History (start) -->
 
       <div class="row">
@@ -293,11 +265,13 @@
       </div>
 
 <!-- Family History (end) -->
+
+
 		</div>
   </div>
   </div>
 
-  <!-- Middle part (end) -->
+<!-- Middle part (end) -->
   <!-- Footer part (start)-->
 <!-- Bootstrap core JavaScript
     ================================================== -->

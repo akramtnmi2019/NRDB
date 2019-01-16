@@ -1,4 +1,5 @@
 /* CSS Made by Mauricio (start) */
+
 body { padding : 10px; background-color: #f8faf9 }
 
 p {
@@ -117,12 +118,28 @@ h2 {
    margin-top: .9em
  }
 
+h2.reg { 
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 18px; 
+   font-weight: 400; 
+   color:#707070;
+   margin-top: .9em
+ }
+
 h3 { 
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
    font-size: 15px; 
    font-weight: 600; 
    color:#707070
  }  
+
+h3.reg { 
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 13px; 
+   font-weight: 400; 
+   color:#707070
+ }  
+
 
 h3.tit1 { padding-left: 1.5em }
 
@@ -210,6 +227,7 @@ a.btn-secondary:hover, a.btn-secondary-red:hover { background-color: #cccccc }
   height: 15em;
   margin-bottom: 3.5em    
 }
+
 
 #months_label { 
   background-color: #d2d2d2;
@@ -514,6 +532,25 @@ a.btn-secondary:hover, a.btn-secondary-red:hover { background-color: #cccccc }
   color:#707070; 
   text-align: left; 
   text-decoration: none
+}
+
+#st_NR_c1, #ewt_NR_c1, #st_NR_c2, #ewt_NR_c2, #nurse_names {
+  border-bottom: 1px solid #707070;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+#xtimes {
+    background-color: #ffffff;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid #707070;
+    box-shadow: none;
+    transition: none;
 }
 
 /* CSS Made by Mauricio (end) */
@@ -1001,6 +1038,7 @@ label {
 	width: 250px;
 	font: 20px "Courier New", Courier, monospace;
 	box-sizing: border-box;
+	    z-index: 99999999;
 }
 .side-menu-wrapper > ul{ /* css ul list style */
 	list-style:none;
@@ -1286,7 +1324,21 @@ margin-left: inherit; margin-top:2em
  }
  
  
+ #card_content_tag { 
+  background-color: white;
+    margin-left: 0.5em;
+    /* border-bottom-left-radius: 30px; */
+    padding: 1em;
+    /* border: 1px solid #ff6600; */
+    border-left: 1px solid #DC4726;
+    border-left-width: 6px;
+ }
  
+#pharmacy_select { 
+  width: 15em;
+  height: 5em;
+  margin-bottom: 3.5em    
+} 
  
 /* Media Css */	
 @media (max-width: 992px) {
@@ -1369,7 +1421,17 @@ margin-left: inherit; margin-top:2em
         margin: 0px 2px 14px 2px !important;
     width: 100px !important;
 	
-	}		
+	}
+
+.form_inline9 
+{
+       border: 0 !important;
+    outline: 0 !important;
+    background: #4D4DFB;
+    border-bottom: 1px solid #707070 !important;
+    margin: 0px 56px 2px 12px !important;
+    width: 200px !important;
+}	
 
 .fake-input img {     
     position: absolute;
@@ -1380,7 +1442,7 @@ margin-left: inherit; margin-top:2em
 .fake-input_i img {     
     position: absolute;
     top: 24px;
-    right: 162px; 
+    right: 94px; 
 	}	
 	
 .add_intervention_edit img {     
@@ -1454,6 +1516,43 @@ margin-left: inherit; margin-top:2em
     width: 100px !important;
 	
 	}	
+select.form_inline9 
+{
+	 
+      -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+	
+    width: 200px !important;
+	 margin: 5px 56px 2px 12px !important;
+    background: #4D4DFB;
+   background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, #C9C9C9, #C9C9C9);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
+    
+	
+}
+
+
+	
+ option:not(:checked) { 
+        background-color: #FFF; 
+    }
+	
+	
 
 	.fake-input img {     
     position: absolute;
@@ -1477,7 +1576,7 @@ margin-left: inherit; margin-top:2em
     right: -152px;
 	}	
 	.add_user {
-   margin: 1em 11em 0em 1em;
+      margin: 0em 18em 0em 0em;
 	}
 	
 }
