@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-<script src="js/bootstrap-colorselector.min.js"></script>
+<script src="dist/bootstrap-colorselector.min.js"></script>4
 
 <link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 
-<link rel="stylesheet" type="text/css" href="css/bootstrap-colorselector.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/bootstrap-colorselector.min.css" />
 
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 
@@ -32,33 +31,19 @@
 
 <body>
 
-<!-- Header (start) -->
-<div id="header" class="container">	
- <div class="fleft">
-   <img src="images/logo.png" class="logo">
+<div id="header" class="container" style="padding-top: 1em; padding-bottom: .5em">	
+ 
+ <div style="float:left">
+   <img src="images/logo.png" style="padding-right: 2em; padding-bottom: .55em">
    <span class="title">Patient Directory</span>
  </div>
- <div id="backto">
- 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
- 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
+
+ <div style="float:right; margin-top:1.2em">
+ 	<i class="fas fa-arrow-left" style="padding-right: .5em; color:#707070"></i> <a href="#" class="link_back">Back to Patient Directory</a>
+ 	<span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars"></i></span>
  </div>
 </div>
 
-<!-- Side Bar Menu (start) -->
-<div class="side-menu-wrapper">
-<a href="#" class="menu-close">x</a>
-<ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
-</ul>
-</div>
-<!-- Side Bar Menu (End) -->
-<!-- header part (end) -->
-<!-- Middle part (start) -->
 <div class="container" id="container_Nurse_Routing">	
 
 <ul class="Routing_Setting">
@@ -120,16 +105,27 @@
 
         <div class="col-md-6">
 
-          <div class="col-md-2">
+          <div class="col-md-3">
 
-
+<label style="background-color: #009688; padding: .3em; font-size: .8em; color: white">Select a Color</label>
 <select id="colorselector">
-    <option value="106" data-color="#A0522D">sienna</option>
-    <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
-    <option value="87" data-color="#FF4500">orangered</option>
-    <option value="15" data-color="#DC143C">crimson</option>
-    <option value="24" data-color="#FF8C00">darkorange</option>
-    <option value="78" data-color="#C71585">mediumvioletred</option>
+  <option value="106" data-color="#A0522D">sienna</option>
+  <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
+  <option value="87" data-color="#FF4500">orangered</option>
+  <option value="17" data-color="#008B8B">darkcyan</option>
+  <option value="18" data-color="#B8860B">darkgoldenrod</option>
+  <option value="68" data-color="#32CD32">limegreen</option>
+  <option value="42" data-color="#FFD700">gold</option>
+  <option value="77" data-color="#48D1CC">mediumturquoise</option>
+  <option value="107" data-color="#87CEEB">skyblue</option>
+  <option value="46" data-color="#FF69B4">hotpink</option>
+  <option value="47" data-color="#CD5C5C">indianred</option>
+  <option value="64" data-color="#87CEFA">lightskyblue</option>
+  <option value="13" data-color="#6495ED">cornflowerblue</option>
+  <option value="15" data-color="#DC143C">crimson</option>
+  <option value="24" data-color="#FF8C00">darkorange</option>
+  <option value="78" data-color="#C71585">mediumvioletred</option>
+  <option value="123" data-color="#000000">black</option>    
 </select>
  
 <script>
@@ -139,7 +135,7 @@
              
           </div>
 
-          <div class="col-md-10">
+          <div class="col-md-9">
            
            <h3 class="reg">Pharmacy Location: 108-1710, East Pender Street, Vancouver</h3>
            <div class="col-md-6">            
@@ -596,71 +592,5 @@
 <!-- BROWN ROUTE VANCOUVER 2 (end) -->
 
 </div>
-<!-- Middle part (end) -->
-  <!-- Footer part (start)-->
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function(){
-	
-	var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
-var open_button 	= ".menu-open"; //Menu Open Button
-var close_button 	= ".menu-close"; //Menu Close Button
-var overlay 		= ".menu-overlay"; //Overlay
-
-//Initial menu position
-$(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
-
-$(open_button).click(function(e){ //On menu open button click
-	e.preventDefault();
-
-	$(slide_wrp).css( {"right": "0px"}); //move menu right position to 0
-	setTimeout(function(){
-		$(slide_wrp).addClass('active'); //add active class
-	},50);
-	$(overlay).css({"opacity":"1", "width":"100%"});
-});
-
-$(close_button).click(function(e){ //on menu close button click
-	e.preventDefault();
-	$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}); //hide menu by setting right position 
-	setTimeout(function(){
-		$(slide_wrp).removeClass('active'); // remove active class
-	},50);
-	$(overlay).css({"opacity":"0", "width":"0"});
-});
-});
-$(document).on('click', function(e) { //Hide menu when clicked outside menu area
-var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
-var open_button 	= ".menu-open"; //Menu Open Button
-var close_button 	= ".menu-close"; //Menu Close Button
-var overlay 		= ".menu-overlay"; //Overlay
-
-
-	if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){ // check menu condition
-		$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
-		$(overlay).css({"opacity":"0", "width":"0"});
-	}
-});
-
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-
-</script>
 </body>
 </html>	
-<!-- Footer part (end) -->

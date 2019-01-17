@@ -27,33 +27,19 @@
 
 <body>
 
-<!-- Header (start) -->
-<div id="header" class="container">	
- <div class="fleft">
-   <img src="images/logo.png" class="logo">
+<div id="header" class="container" style="padding-top: 1em; padding-bottom: .5em">	
+ 
+ <div style="float:left">
+   <img src="images/logo.png" style="padding-right: 2em; padding-bottom: .55em">
    <span class="title">Patient Directory</span>
  </div>
- <div id="backto">
- 	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
- 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
+
+ <div style="float:right; margin-top:1.2em">
+ 	<i class="fas fa-arrow-left" style="padding-right: .5em; color:#707070"></i> <a href="#" class="link_back">Back to Patient Directory</a>
+ 	<span style="padding-left: 1.5em; color:#707070"><i class="fas fa-bars"></i></span>
  </div>
 </div>
 
-<!-- Side Bar Menu (start) -->
-<div class="side-menu-wrapper">
-<a href="#" class="menu-close">x</a>
-<ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
-</ul>
-</div>
-<!-- Side Bar Menu (End) -->
-<!-- header part (end) -->
-<!-- Middle part (start) -->
 <div class="container" id="container_Nurse_Routing">	
 
 <ul class="Routing_Setting">
@@ -400,70 +386,5 @@
 <!-- BROWN ROUTE VANCOUVER 2 (end) -->
 
 </div>
-<!-- Middle part (end) -->
-  <!-- Footer part (start)-->
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	
-<script>
-$(document).ready(function(){
-	
-	var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
-var open_button 	= ".menu-open"; //Menu Open Button
-var close_button 	= ".menu-close"; //Menu Close Button
-var overlay 		= ".menu-overlay"; //Overlay
-
-//Initial menu position
-$(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
-
-$(open_button).click(function(e){ //On menu open button click
-	e.preventDefault();
-
-	$(slide_wrp).css( {"right": "0px"}); //move menu right position to 0
-	setTimeout(function(){
-		$(slide_wrp).addClass('active'); //add active class
-	},50);
-	$(overlay).css({"opacity":"1", "width":"100%"});
-});
-
-$(close_button).click(function(e){ //on menu close button click
-	e.preventDefault();
-	$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}); //hide menu by setting right position 
-	setTimeout(function(){
-		$(slide_wrp).removeClass('active'); // remove active class
-	},50);
-	$(overlay).css({"opacity":"0", "width":"0"});
-});
-});
-$(document).on('click', function(e) { //Hide menu when clicked outside menu area
-var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
-var open_button 	= ".menu-open"; //Menu Open Button
-var close_button 	= ".menu-close"; //Menu Close Button
-var overlay 		= ".menu-overlay"; //Overlay
-
-
-	if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){ // check menu condition
-		$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
-		$(overlay).css({"opacity":"0", "width":"0"});
-	}
-});
-
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-
-</script>
 </body>
 </html>	
-<!-- Footer part (end) -->
