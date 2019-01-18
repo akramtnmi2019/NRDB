@@ -4,6 +4,7 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/util.css">
 <link rel="stylesheet" type="text/css" href="style.css">     
 </head>
 <body>
@@ -23,11 +24,11 @@
 <div class="side-menu-wrapper">
 <a href="#" class="menu-close">x</a>
 <ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
+	<li><a href="Careplan.html" target="_blank" rel="nofollow">Care Plan</a></li>
+	<li><a href="Nurse_Routing.html" target="_blank" rel="nofollow">Nurse Routing</a></li>
+	<li><a href="Patient_Visit.html" target="_blank" rel="nofollow">Patient Visit</a></li>
+	<li><a href="Addministration_Care_plan_Tag.html" target="_blank" rel="nofollow">Administration</a></li>
+	<li><a href="Data_Entry.html" target="_blank" rel="nofollow">Data Entry</a></li>
 	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
 </ul>
 </div>
@@ -36,9 +37,9 @@
 <!-- Menu (start) -->
 <div id="menu" class="container">	
   <ul class="nav nav-pills">
-    <li><a href="#">Patient Information</a></li>
+    <li><a href="Patient_profile.html">Patient Information</a></li>
     <li><a href="Patient_Information_Medical-History.html">Medical History</a></li>
-    <li><a href="#">Scheduling</a></li>
+    <li><a href="Scheduling_Edit_Screen.html">Scheduling</a></li>
     <li class="active"><a href="Careplan.html">Care Plan</a></li>
   </ul>
 </div>
@@ -64,8 +65,8 @@
 	  
         <div class="col-md-2">
 		<br><br>	
-          <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt="" width="160" height="180"/>
+          <div>
+                            <img class="profile-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
                         </div>
 
         </div>
@@ -251,12 +252,12 @@
 	  
 	  <div class="row">
         <div class="col-md-3">
-           <h3 style="padding-left: 1.5em">Upload Document</h3>           
+           <h3 class="route">Upload Document</h3>           
            <br>
-           <span style="padding-left: 3.5em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
+           <span  class="field_manage_icon"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
 
         </div>
-       <div class="col-md-4" style="padding-top: 4em">
+       <div class="col-md-4 referral_form">
           
       <div class="row">
 	<div class="checkbox">
@@ -309,9 +310,9 @@
 
 
         </div>
-        <div class="col-md-1" style="margin-left: inherit; margin-top:2em">
+        <div class="col-md-1 address_sec">
 
-         <p style="padding-bottom: 1.5em"></p>
+         <p class="patient_info_edit"></p>
         <p><a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></p>
         <p><a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></p>
         <p><a href=""><img src="images/edit.png" /></a> <a href=""><img src="images/delete.png" /></a></p> 
@@ -344,17 +345,17 @@
 
 		<div class="tab-pane" id="2b">
 <!-- Address & Contact Info (start) -->
-      <div class="row">
-        <div class="col-md-3">
-           <h3 style="padding-left: 1.5em">Address & Contact Info</h3>           
+	    <div class="row" >
+        <div class="col-md-2">
+          <h3 class="route">Address & Contact Info</h3>           
            <br>
-           <span style="padding-left: 3.5em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
+           <span class="field_manage_icon"><i class="fas fa-address-card fa-5x" style="color: #707070"></i></span>
 
         </div>
-        <div class="col-md-6 address">
+        <div class="col-md-7 street_address">
 
            <div class="row">
-        <div class="col-md-6 address_row" >
+        <div class="col-md-6 street_address_info">
 
          <div class="col-md-6"><label>Street Address</label></div>
          <div class="col-md-6"><p>15501, 16 Avenue</p></div>
@@ -367,10 +368,8 @@
 		 
           <div class="col-md-6"><label>Additional Information</label></div>
          <div class="col-md-6"><p>Lorem Ipsum</p></div>
-		 
-         <div style="clear: both;"></div>
-		 
-		<script type="text/javascript">
+		  <div style="clear: both;"></div>
+		  <script type="text/javascript">
 function IMHide() {
   document.getElementById("add_s").style.display = "";
   document.getElementById("add_sec_a").style.display = "";
@@ -382,19 +381,18 @@ function IMHide() {
 function IMShow() {
   document.getElementById("add_s").style.display = "none";
   document.getElementById("add_sec_a").style.display = "none";
+  document.getElementById("add_s1").style.display = "none";
  x = document.getElementsByClassName("sec_address");
  x[0].style.display = "";
  x[1].style.display = "";
 }
-</script>    
+</script>
+		 
+		 <div class="col-md-6" style="margin-top:2em"><a class="btn btn-secondary" href="javascript:void(0)" id ="add_sec_a" role="button" onclick="IMShow();">Add Secondary Address </a></div>
 		 
 		 
-       <div class="col-md-6"><a class="btn btn-secondary" href="javascript:void(0)" id ="add_sec_a" role="button" onclick="IMShow();">Add Secondary Address </a></div>
-		 
-         <div style="clear: both;"></div>
-
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 unit">
 
          <div class="col-md-6"><label>Unit</label></div>
          <div class="col-md-6"><p>163</p></div>
@@ -410,39 +408,45 @@ function IMShow() {
          <div style="clear: both;"></div>
 		
       </div>
+	  
+	   <div class="col-md-4">
+
+    
+      </div>
       </div>
         </div>
 		
-        <div class="col-md-3" id="add_s" style="margin-left: inherit; margin-top:13em">
+		<div class="col-md-3 street_address" id="add_s" style="margin-left: inherit; margin-top:10em">
 
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-edit" style="padding-right: .2em"></i>Edit</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
-         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="javascript:void(0)" role="button"onclick="IMShow();" ><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
 
         </div>
+		
       </div>
 	  
+	  
 	   <div class="row sec_address" id="IM" style="display:none">
-        <div class="col-md-3">
+        <div class="col-md-2">
 	 
 	   </div>
 	   
 	   <div class="col-md-9" style="margin-top:2em">
-	  <a class="btn-secondary" href="ja" role="button">Secondary Address </a>
+	  <a class="btn-secondary" href="#" role="button">Secondary Address </a>
 	   </div>
 		
 		
       </div>
 	  
-	  <div class="row sec_address" style="display:none">
-        <div class="col-md-3">
-           
-
+	  <div class="row sec_address" style="display:none" >
+        <div class="col-md-2">
+          
         </div>
-        <div class="col-md-6 address">
+        <div class="col-md-7" style="padding-top: 1em; border-bottom: 1px solid #707070;margin: 0px 0px 0px 0px;">
 
            <div class="row">
-        <div class="col-md-6 address_row" >
+        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px">
 
          <div class="col-md-6"><label>Street Address</label></div>
          <div class="col-md-6"><p>15501, 16 Avenue</p></div>
@@ -458,10 +462,9 @@ function IMShow() {
 		 
          <div style="clear: both;"></div>
 		 
-      
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-left: 1em; padding-right: 0px">
 
          <div class="col-md-6"><label>Unit</label></div>
          <div class="col-md-6"><p>163</p></div>
@@ -477,93 +480,36 @@ function IMShow() {
          <div style="clear: both;"></div>
 		
       </div>
-      </div>
-        </div>
-		
-        <div class="col-md-3" style="margin-left: inherit; margin-top:13em">
-
-        <a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="IMHide();"><i class="fas fa-undo" style="padding-right: .2em" ></i>Delete This Address </a>
-
-        </div>
-      </div>
 	  
-	  
-	   <div class="row sec_address2" style="display:none">
-        <div class="col-md-3">
-	 
-	   </div>
+	   <div class="col-md-4" style="padding-left: 1em; padding-right: 0px;margin-top:2em">
+
+	    <a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="IMHide();" style="margin-left: 10em;"><i class="fas fa-undo" style="padding-right: .2em" ></i>Delete This Address </a>
 	   
-	   <div class="col-md-8" style="margin-left: inherit; margin-top:2em">
-	  <a class="btn-secondary" href="#" role="button">Secondary Address #2 </a>
-	   </div>
 		
+      </div>
+      </div>
+        </div>
+		
+        <div class="col-md-3" style="margin-left: inherit; margin-top:1em">
+         
+
+        </div>
 		
       </div>
 	  
-	  
-	  <div class="row sec_address2" style="display:none">
-        <div class="col-md-3">
-           
+	 
+	  <!-- phone  -->
+	   <div class="row" >
+        <div class="col-md-2">
+          
 
         </div>
-        <div class="col-md-6 address">
+        <div class="col-md-7 phone_number_pro">
 
            <div class="row">
-        <div class="col-md-6 address_row" >
+        <div class="col-md-6 phone_number_info">
 
-         <div class="col-md-6"><label>Street Address</label></div>
-         <div class="col-md-6"><p>15501, 16 Avenue</p></div>
-         
-         <div style="clear: both;"></div>   
-		 
-         <div class="col-md-6"><label>City</label></div>
-         <div class="col-md-6"><p>Surrey</p></div>
-         <div style="clear: both;"></div> 
-		 
-          <div class="col-md-6"><label>Additional Information</label></div>
-         <div class="col-md-6"><p>Lorem Ipsum</p></div>
-		 
-         <div style="clear: both;"></div>
-		 
-      
-
-        </div>
-        <div class="col-md-6">
-
-         <div class="col-md-6"><label>Unit</label></div>
-         <div class="col-md-6"><p>163</p></div>
-        
-         <div style="clear: both;"></div>
-		 
-          <div class="col-md-6"><label>Province</label></div>
-         <div class="col-md-6"><p>9856741337</p></div>
-         
-		 <div style="clear: both;"></div>
-          <div class="col-md-6"><label>Zip Code</label></div>
-         <div class="col-md-6"><p>BKVO56G4</p></div>
-         <div style="clear: both;"></div>
-		
-      </div>
-      </div>
-        </div>
-		
-        <div class="col-md-3" style="margin-left: inherit; margin-top:13em">
-
-        <a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Delete This Address </a>
-
-        </div>
-      </div>
-	  
-	   <div class="row">
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-6 first_phone">
-
-           <div class="row">
-        <div class="col-md-6 phone_number_row">
-
-         <div class="col-md-6"><label>Phone Number</label></div>
+        <div class="col-md-6"><label>Phone Number</label></div>
          <div class="col-md-6"><p>9856541237</p></div>
          
          <div style="clear: both;"></div>   
@@ -571,39 +517,29 @@ function IMShow() {
          <div class="col-md-6"><label>Extension</label></div>
          <div class="col-md-6"><p>1235</p></div>
          <div style="clear: both;"></div> 
-		 
-		 <script type="text/javascript">
-		 
-	function PhoneHide1() {
-   document.getElementById("add_phone_a").style.display = "";
-  x1 = document.getElementsByClassName("first_phone");
- x1[0].style.display = "none";
- x1[1].style.display = "none";
-}	 
-		 
-function PhoneHide() {
-  document.getElementById("add_phone").style.display = "";
-  document.getElementById("add_phone_a").style.display = "";
-  document.getElementById("add_phone_s").style.display = "";
+		  <script type="text/javascript">
+function IMHide1() {
+  document.getElementById("add_s1").style.display = "";
+  document.getElementById("add_sec_a1").style.display = "";
   
-  x1 = document.getElementsByClassName("sec_phone");
+  x1 = document.getElementsByClassName("sec_phone1");
  x1[0].style.display = "none";
  x1[1].style.display = "none";
 }
-function PhoneShow() {
-  document.getElementById("add_phone").style.display = "none";
-  document.getElementById("add_phone_a").style.display = "none";
-  document.getElementById("add_phone_s").style.display = "none";
- x1 = document.getElementsByClassName("sec_phone");
+function IMShow1() {
+  document.getElementById("add_s1").style.display = "none";
+  document.getElementById("add_sec_a1").style.display = "none";
+ x1 = document.getElementsByClassName("sec_phone1");
  x1[0].style.display = "";
  x1[1].style.display = "";
 }
-</script> 
+</script>
 		 
-          <div class="col-md-6"><a class="btn btn-secondary" href="javascript:void(0)" id ="add_phone_a" role="button" onclick="PhoneShow();">Add Phone Number </a></div>
-         <div style="clear: both;"></div>
+		 <div class="col-md-6" style="margin-top:2em"><a class="btn btn-secondary" href="javascript:void(0)" id ="add_sec_a1" role="button" onclick="IMShow1();">Add Phone Number</a></div>
+		 
+		 
         </div>
-        <div class="col-md-6 type">
+        <div class="col-md-6 unit">
 
          <div class="col-md-6"><label>Type</label></div>
          <div class="col-md-6"><p>Home</p></div>
@@ -615,46 +551,50 @@ function PhoneShow() {
          
 		 <div style="clear: both;"></div>
            
-		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="PhoneHide1();"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Phone Number </a></div> 
+		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="IMHide1();"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Phone Number </a></div> 
          <div style="clear: both;"></div>
 		
       </div>
+	  
+	   <div class="col-md-4">
+
+    
       </div>
-
-
+      </div>
         </div>
-        <div class="col-md-3 first_phone" id="add_phone" style="margin-left: inherit; margin-top:13em">
+		
+		<div class="col-md-3 phone_number_pro phone_number_delete" id="add_s1" style="margin-left: inherit; margin-top:7em">
 
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-edit" style="padding-right: .2em"></i>Edit</a></div>
          <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
-         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="IMShow1();"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
 
         </div>
 		
       </div>
 	  
-	   <div class="row sec_phone" style="display:none">
-        <div class="col-md-3">
+	  
+	   <div class="row sec_phone1" id="IM" style="display:none">
+        <div class="col-md-2">
 	 
 	   </div>
 	   
-	   <div class="col-md-6 sec_phone2">
-	  <a class="btn-secondary" href="#" role="button">Secondary Phone #2 </a>
+	   <div class="col-md-9 m-t-15">
+	  <a class="btn-secondary" href="#" role="button">Phone Number #1  </a>
 	   </div>
-		  
+		
 		
       </div>
 	  
-        <div class="row sec_phone" style="display:none">
-        <div class="col-md-3">
-
+	  <div class="row sec_phone1" style="display:none" >
+        <div class="col-md-2">
+          
         </div>
-        <div class="col-md-6 phone_number">
+        <div class="col-md-7 phone_number_pro">
 
            <div class="row">
-        <div class="col-md-6 phone_number_row">
-
-         <div class="col-md-6"><label>Phone Number</label></div>
+        <div class="col-md-6">
+        <div class="col-md-6"><label>Phone Number</label></div>
          <div class="col-md-6"><p>9856541237</p></div>
          
          <div style="clear: both;"></div>   
@@ -662,14 +602,11 @@ function PhoneShow() {
          <div class="col-md-6"><label>Extension</label></div>
          <div class="col-md-6"><p>1235</p></div>
          <div style="clear: both;"></div> 
-		 
-		 
-          <div class="col-md-6"><a class="btn btn-secondary" href="javascript:void(0)" id ="add_phone_s" role="button" onclick="PhoneShoaw();">Add Phone Number </a></div>
-         <div style="clear: both;"></div>
+       
         </div>
-        <div class="col-md-6 type">
+        <div class="col-md-6 type_pro">
 
-         <div class="col-md-6"><label>Type</label></div>
+          <div class="col-md-6"><label>Type</label></div>
          <div class="col-md-6"><p>Home</p></div>
         
          <div style="clear: both;"></div>
@@ -679,25 +616,29 @@ function PhoneShow() {
          
 		 <div style="clear: both;"></div>
            
-		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="PhoneHide();"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Phone Number </a></div> 
+		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="javascript:void(0)" role="button" onclick="IMHide1();"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Phone Number </a></div> 
          <div style="clear: both;"></div>
+          
 		
       </div>
+	  
+	   <div class="col-md-4">
       </div>
-
-
+      </div>
         </div>
-        <div class="col-md-3" style="margin-left: inherit; margin-top:13em">
-
-         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-edit" style="padding-right: .2em"></i>Edit</a></div>
-         <div class="col-md-4"><a class="btn btn-secondary" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a></div>
-         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+		
+        <div class="col-md-3">
+         
 
         </div>
 		
       </div>
+
+	  <!-- phone  -->
+	  
+	  
 <!-- Address & Contact Info (end) -->
-
+  
           
 		</div>
         
@@ -708,12 +649,12 @@ function PhoneShow() {
 
       <div class="row">
         <div class="col-md-3">
-           <h3 style="padding-left: 1.5em">Contact</h3>           
+           <h3 class="route">Contact</h3>           
            <br>
            <span style="padding-left: 2em"><i class="fas fa-users fa-5x" style="color: #707070"></i></span>
 
         </div>
-        <div class="col-md-6" style="padding-top: 4em">
+        <div class="col-md-6 contact_p">
           
 
       <div class="row">
@@ -760,7 +701,7 @@ function PhoneShow() {
 		 
 		 
 		  
-		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-trash" style="padding-right: .2em"></i>Delete This Phone Number </a></div> 
+		   <div class="col-md-6 delete_phone_no"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-trash"></i>Delete This Phone Number </a></div> 
                
       </div>
       </div>
@@ -780,9 +721,9 @@ function PhoneShow() {
 <!-- Case Manager(s) (start) -->
       <div class="row">
         <div class="col-md-3">
-           <h3 style="padding-left: 1.5em">Case Manager(s)</h3>           
+           <h3 class="route">Case Manager(s)</h3>           
            <br>
-           <span style="padding-left: 2em"><i class="fas fa-users fa-5x" style="color: #707070"></i></span>
+           <span style="padding-left: 2em"><i class="fas fa-hand-holding-heart fa-5x" style="color: #707070"></i></span>
 
         </div>
         <div class="col-md-6 case_manager">
@@ -859,9 +800,9 @@ function PhoneShow() {
 
       <div class="row">
         <div class="col-md-3">
-           <h3 style="padding-left: 1.5em">MD Contacts</h3>           
+           <h3 class="route">MD Contacts</h3>           
            <br>
-           <span style="padding-left: 2em"><i class="fas fa-users fa-5x" style="color: #707070"></i></span>
+           <span style="padding-left: 2em"><i class="fas fa-user-md fa-5x" style="color: #707070"></i></span>
 
         </div>
         <div class="col-md-6 full">
@@ -936,9 +877,9 @@ function PhoneShow() {
 <!-- Economic Data(s) (start) -->
       <div class="row">
         <div class="col-md-3">
-           <h3 style="padding-left: 1.5em">Economic Data</h3>           
+           <h3 class="route">Economic Data</h3>           
            <br>
-           <span style="padding-left: 2em"><i class="fas fa-users fa-5x" style="color: #707070"></i></span>
+           <span style="padding-left: 2em"><i class="fas fa-file-archive fa-5x" style="color: #707070"></i></span>
 
         </div>
         <div class="col-md-6" style="padding-top: 4em">
@@ -992,7 +933,7 @@ function PhoneShow() {
         <div class="col-md-3">
            <h3 class="route" >Route</h3>           
            <br>
-           <span style="padding-left: 2em"><i class="fas fa-users fa-5x" style="color: #707070"></i></span>
+           <span style="padding-left: 2em"><i class="fas fa-list-ul fa-5x" style="color: #707070"></i></span>
 
         </div>
         <div class="col-md-6" style="padding-top: 4em">
