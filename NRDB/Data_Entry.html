@@ -27,80 +27,16 @@
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="data_entry_style.css">
- <style>
-/* The container */
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 12px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
+<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.css" />
 
-/* Create a custom checkbox */
-.checkmark 
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-</style>
 </head>
 
 <body>
 
+ <input type="hidden" class="form-control" id="startDate" value="07/01/2015">
+            
 <!-- Header (start) -->
 <div id="header" class="container">	
  <div class="fleft">
@@ -133,21 +69,15 @@
 <div class="row">
 <div class="col-md-9">
 	<form class="navbar-form navbar-left" role="search">
-                   <div class="col-md-4 col-sm-4">
-				   <div class="iflex">
-         <select class="form-control form-control-sm form_inline6" id="fc_op1">
-            <option>Jan 1,2016-March 1,2016</option>
-            <option>op #2</option>
-            <option>op #3</option>    
-         </select>
-         </div>
+                   <div class="col-md-5 col-sm-5">
+				   <input type="text" id="config-demo" class="form-control form-control-sm form_inline6">
                     </div>
 					
 					
 					<div class="col-md-3 col-sm-3"><a class="btn btn-secondary" href="#" role="button">Download Report</a>
 					
 					</div>
-					<div class="col-md-3 col-sm-3" >
+					<div class="col-md-2 col-sm-2" >
 					
 					<div class="iflex">
 					<p>Pharmacy</p>
@@ -160,10 +90,10 @@
          </div>
                     
 					
-					<div class="col-md-2 col-sm-2" >
+					<div class="col-md-1 col-sm-1" >
 					
 					<div class="iflex">
-					<p>Pharmacy</p>
+					<p>Type</p>
          <select class="form-control form-control-sm form_inline10" id="fc_op1">
             <option>All</option>
             <option>op #2</option>
@@ -208,7 +138,7 @@
       </div>
 
         </div>
-        <div class="col-md-3" style="margin-left: inherit">
+        <div class="col-md-3">
 
          <div class="col-md-12" id="notes_container">
 		
@@ -216,48 +146,48 @@
 		 <label class="container">
 		 Rx Count
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>Yes
+  <span class="checkmark"></span><span class="checkbox_ab">Yes</span>
 </label>
 <label class="container">Revenue 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Walk in RX 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">% Of Total Prescription 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Blister Pack 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">% Of Total BP 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Smart Blister Pack
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">% Of Total SBP 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Home Monitoring 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 	<label class="container">Rx Tranfers in 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 
 <label class="container">Rx Tranfers Out 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>		
          </div>
          <div class="clear"></div>
@@ -265,30 +195,30 @@
          <!--<div class="col-md-2"></div>-->
 		 <label for="data_entry_label" id="data_entry_label">Compund</label>
        <div class="col-md-12" id="notes_container">
-        
+	   
 		 <label class="container">Rx Count
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>Yes
+  <span class="checkmark"></span><span class="checkbox_ab">Yes</span>
 </label>
 <label class="container">Internal Rx Count 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">External Rx Count 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Well 3 Coumpound 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">External 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Internal 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>		
          </div>
         </div>
@@ -319,7 +249,7 @@
 	<div id="notes_container1">	    
 	 <div class="row">  
 	 <div class="col-md-12">
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Rx Count</p>
 </div>
  <div class="col-md-3" id=""> 
@@ -329,73 +259,73 @@
   </div>
 
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Walk In RX</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>15678</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>% Of Total Prescription</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>64</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Blister Pack</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>15648</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>% Of Total BP</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>45</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Smart Blister Pack</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>78654</p>
   </div>
   </div>
   
   <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>% Of Total SBP</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>22</p>
   </div>
   </div>
   
   <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Rx Tranfers In</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>4695</p>
   </div>
   </div>
   
   <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Rx Tranfers Out</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>4695</p>
   </div>
   </div>
@@ -414,55 +344,55 @@
 	   
 	<div id="notes_container1">	    
 	 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Rx Count</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>122549</p>
   </div>
   </div>
 
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Internal Rx Count</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>15678</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>External Rx Count</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>1563</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Well 3 Compound</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>20659</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>External</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>4569</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Internal</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>4569</p>
   </div>
   </div>
@@ -480,46 +410,46 @@
 	   
 	<div id="notes_container1">	    
 	 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Med Review Std</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>122549</p>
   </div>
   </div>
 
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Med Review Consutant</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>15678</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Med Review Follow up</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>1563</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Local Count 	Of Med Reviews</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>20659</p>
   </div>
   </div>
   
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>% of Med Reviews</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>73</p>
   </div>
   </div>
@@ -537,19 +467,19 @@
 	   
 	<div id="notes_container1">	    
 	 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Total Sales RX</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>122549</p>
   </div>
   </div>
 
 <div class="row">  
-  <div class="col-md-6" id="">        
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
 <p>Total Sales OTC</p>
 </div>
- <div class="col-md-6" id=""> 
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
 <p>15678</p>
   </div>
   </div>
@@ -564,7 +494,7 @@
 		
 		
 		
-        <div class="col-md-3"  style="margin-left: inherit">
+        <div class="col-md-3" >
 		
 		<div class="row">  
 	 <div class="col-md-12">
@@ -577,47 +507,47 @@
         
 		 <label class="container">Med Review Std
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>Yes
+  <span class="checkmark"></span><span class="checkbox_ab">Yes</span>
 </label>
 <label class="container">Med Review Consultant 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Med Review Follow Up  
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Total Count of Med Reviews 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">% of Med Reviews  
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 <label class="container">Adaptation 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 
 <label class="container">Emergancy Supplies 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 
 <label class="container">Flu Vaccine 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 
 <label class="container">Other Vaccine 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 
 <label class="container">My DNA 
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 		
          </div>
@@ -647,7 +577,7 @@
 	 <div class="row">  
 	 <div class="col-md-12">
   <div class="col-md-12" id="">        
-<h3>RX Count</h3>
+<h3 class="rx_count">RX Count</h3>
 <br>
 </div>
  
@@ -655,11 +585,11 @@
   </div>
 
 <div class="row">  
-  <div class="col-md-6" id="">        
-<p></p>
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
+<p class="rx_count_value"></p>
 </div>
- <div class="col-md-6" id=""> 
-<p>$787391</p>
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
+<h2>$789321</h2>
   </div>
   </div>
   
@@ -679,7 +609,7 @@
 	 <div class="row">  
 	 <div class="col-md-12">
   <div class="col-md-12" id="">        
-<h3>Total Sales OTC</h3>
+<h3 class="total_sales_otc">Total Sales OTC</h3>
 <br>
 </div>
  
@@ -687,11 +617,11 @@
   </div>
 
 <div class="row">  
-  <div class="col-md-6" id="">        
-<p></p>
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
+<p class="total_sales_otc_value"></p>
 </div>
- <div class="col-md-6" id=""> 
-<p>98987</p>
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
+<h2>98987</h2>
   </div>
   </div>
   
@@ -708,7 +638,7 @@
 	 <div class="row">  
 	 <div class="col-md-12">
   <div class="col-md-12" id="">        
-<h3>Total Med Reviews</h3>
+<h3 class="total_med">Total Med Reviews</h3>
 <br>
 </div>
  
@@ -716,11 +646,11 @@
   </div>
 
 <div class="row">  
-  <div class="col-md-6" id="">        
-<p></p>
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
+<p class="total_med_value"></p>
 </div>
- <div class="col-md-6" id=""> 
-<p>795647</p>
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
+<h2>795647</h2>
   </div>
   </div>
   
@@ -739,7 +669,7 @@
 	 <div class="row">  
 	 <div class="col-md-12">
   <div class="col-md-12" id="">        
-<h3>Total Profit</h3>
+<h3 class="total_profit" >Total Profit</h3>
 <br>
 </div>
  
@@ -747,11 +677,11 @@
   </div>
 
 <div class="row">  
-  <div class="col-md-6" id="">        
-<p></p>
+  <div class="col-md-6 col-sm-6 col-sx-6" id="">        
+<p class="total_profit_value"></p>
 </div>
- <div class="col-md-6" id=""> 
-<p>$86594</p>
+ <div class="col-md-6 col-sm-6 col-sx-6" id=""> 
+<h2>$86594</h2>
   </div>
   </div>
   
@@ -767,7 +697,7 @@
 		
 		
 		
-        <div class="col-md-3"  style="margin-left: inherit">
+        <div class="col-md-3">
 		
 		<div class="row">  
 	 <div class="col-md-12">
@@ -780,11 +710,11 @@
         
 		 <label class="container">Total Sales RX
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>Yes
+  <span class="checkmark"></span><span class="checkbox_ab">Yes</span>
 </label>
 <label class="container">Total Sales OTC
   <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>No
+  <span class="checkmark"></span><span class="checkbox_ab">No</span>
 </label>
 
          </div>
@@ -809,9 +739,23 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+
+      <script type="text/javascript" src="js/daterangepicker.js"></script>
+	
+	
+	 <style type="text/css">
+      .demo { position: relative; }
+      .demo i {
+        position: absolute; bottom: 10px; right: 24px; top: auto; cursor: pointer;
+      }
+      </style>
+
+      <script type="text/javascript">
+     
+      
 $(document).ready(function(){
 	
 	var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
@@ -867,7 +811,45 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
+ $(document).ready(function() {
 
+        $('#config-text').keyup(function() {
+          eval($(this).val());
+        });
+        
+        $('.configurator input, .configurator select').change(function() {
+          updateConfig();
+        });
+
+        $('.demo i').click(function() {
+          $(this).parent().find('input').click();
+        });
+
+        updateConfig();
+
+        function updateConfig() {
+          var options = {};
+
+            options.ranges = {
+              'Today': [moment(), moment()],
+              'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+              'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+              'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+              'This Month': [moment().startOf('month'), moment().endOf('month')],
+              'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            };
+         
+          if ($('#startDate').val().length) 
+            options.startDate = $('#startDate').val();
+
+          
+          $('#config-text').val("$('#demo').daterangepicker(" + JSON.stringify(options, null, '    ') + ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
+
+          $('#config-demo').daterangepicker(options, function(start, end, label) { console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')'); }).click();;
+          
+        }
+
+      });
 </script>
 </body>
 </html>	

@@ -242,8 +242,8 @@ a.btn-secondary:hover, a.btn-secondary-red:hover { background-color: #cccccc }
 
 #notes_container {
   background-color: white; 
-  border:1px solid #707070;
-  margin-bottom: .5em
+  margin-bottom: .5em;
+  padding: 10px;
 }
 
 #notes_container_col_1 { padding-top: 1.8em }
@@ -274,13 +274,7 @@ a.btn-secondary:hover, a.btn-secondary-red:hover { background-color: #cccccc }
   padding: 10px
 }
 
-#container_Nurse_Routing {
-  background-color: #f1f1f1; 
-  padding-left: 2.2em; 
-  padding-right: 2.2em;
-  padding-bottom: 3em;
-  width:110em;
-}
+
 
 .Nurse_Routing_accordion {
   list-style-type: none;
@@ -409,168 +403,7 @@ a.btn-secondary:hover, a.btn-secondary-red:hover { background-color: #cccccc }
   box-shadow: 8px 15px 10px -15px #111
 }
 
-.circle_BRV {
-  color: #4E79A7; 
-  float: left; 
-  margin-top: .3em
-}
 
-.circle_BRV2 {
-  color: #BAB0AC; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_GRV {
-  color: #F28E2C; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_ORV {
-  color: #E15659; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_CLD {
-  color: #76B7B2; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_LGY {
-  color: #59A14F; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_CRV {
-  color: #EDC948; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_STR {
-  color: #B07AA1; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_ARV {
-  color: #FF9DA7; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_SMT {
-  color: #9C755F; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_TRZ {
-  color: #707070; 
-  float: left; 
-  margin-top: .3em
-}
-
-.circle_add_route_name {
-  color: #707070; 
-  float: left; 
-  margin-top: .3em
-}
-
-.tit_BRV {
-  color:#4E79A7; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_BRV2 {
-  color:#BAB0AC; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_GRV {
-  color:#F28E2C; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_ORV {
-  color:#E15659; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_CLD {
-  color:#76B7B2; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_LGY {
-  color:#59A14F; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_CRV {
-  color:#EDC948; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_STR {
-  color:#B07AA1; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_ARV {
-  color:#FF9DA7; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_SMT {
-  color:#9C755F; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_TRZ {
-  color:#707070; 
-  text-align: left; 
-  text-decoration: none
-}
-
-.tit_add_route_name {
-  color:#707070; 
-  text-align: left; 
-  text-decoration: none
-}
-
-#st_NR_c1, #ewt_NR_c1, #st_NR_c2, #ewt_NR_c2, #nurse_names {
-  border-bottom: 1px solid #707070;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none
-}
-
-#xtimes {
-    background-color: #ffffff;
-    border: 0px;
-    border-radius: 0px;
-    border-bottom: 1px solid #707070;
-    box-shadow: none;
-    transition: none;
-}
 
 .dropdown-menu { background-color: #eeeeee !important }
 
@@ -1335,13 +1168,12 @@ margin-left: inherit; margin-top:2em
     /* margin-left: 0.5em; */
 }
 
-.graph { width:100%; height: 430px; }
+.graph { width:100%; height: 480px; }
 
 #notes_container_graph {
   background-color: white; 
-  border:1px solid #707070;
   margin-bottom: .5em;
-  height:43em;
+  height:48em;
 }
 
 #notes_container1 {
@@ -1351,6 +1183,7 @@ margin-left: inherit; margin-top:2em
   margin: 0.1em;
   padding: 0.3em;
   width: 100%;
+  height: 100%;
 }
 
 .add_field
@@ -1372,6 +1205,183 @@ padding-left: 3.5em;
 .add_tag {
    margin: 1em 0em 0em 0em;
 	}
+	
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 4;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark 
+{
+  position: absolute;
+  top: 0;
+  left: 175px;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ffffff;
+  border: solid #707070;
+  border-width: 1px 1px 1px 1px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #707070;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+
+}
+
+.checkbox_ab {
+    margin: 0px 20px;
+    text-align: left;
+    float: right;
+}	
+.rx_count
+{
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #5A5A5A;
+    font-weight: 500;
+    margin: 2px 0px 1px;
+    line-height: 1.5em;
+    border-bottom: 3px solid #B4B4B4 !important;
+    padding: 12px 7px 5px 4px;
+    box-sizing: content-box;
+    width: 53px;
+    height: 0px;
+    padding: 2px 1px 25px 0px;
+}
+.rx_count_value
+{
+    width: 20px;
+    height: 25px;
+    padding: 19px 7px 8px 15px;
+    border: 1px solid #83BEDF;
+    margin: 10px 5px 2px 27px;	
+}
+.total_sales_otc
+{
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #5A5A5A;
+    font-weight: 500;
+    margin: 2px 0px 1px;
+    line-height: 1.5em;
+    border-bottom: 3px solid #B4B4B4 !important;
+    /* border-width: 3px !important; */
+    padding: 12px 7px 5px 4px;
+    /* border-bottom-width: 13px!important; */
+    box-sizing: content-box;
+    width: 88px;
+    height: 0px;
+    padding: 2px 1px 25px 0px;
+    /* border: 10px solid blue; */
+}	
+.total_sales_otc_value
+{
+    width: 20px;
+    height: 25px;
+    padding: 19px 7px 8px 15px;
+    border: 1px solid #43E0AA;
+    margin: 10px 5px 2px 27px;	
+}
+.total_med
+{
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #5A5A5A;
+    font-weight: 500;
+    margin: 2px 0px 1px;
+    line-height: 1.5em;
+    border-bottom: 3px solid #83BEDF !important;
+    padding: 12px 7px 5px 4px;
+    box-sizing: content-box;
+    width: 102px;
+    height: 0px;
+    padding: 2px 1px 25px 0px;
+}	
+.total_med_value
+{
+width: 20px;
+    height: 25px;
+    padding: 19px 7px 8px 15px;
+    border: 1px solid #935CCB;
+    margin: 10px 5px 2px 27px;
+}
+.total_profit
+{
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #5A5A5A;
+    font-weight: 500;
+    margin: 2px 0px 1px;
+    line-height: 1.5em;
+    border-bottom: 3px solid #83BEDF !important;
+    /* border-width: 3px !important; */
+    padding: 12px 7px 5px 4px;
+    /* border-bottom-width: 13px!important; */
+    box-sizing: content-box;
+    width: 60px;
+    height: 0px;
+    padding: 2px 1px 25px 0px;
+    /* border: 10px solid blue; */	
+}
+.total_profit_value
+{
+width: 20px;
+    height: 25px;
+    padding: 19px 7px 8px 15px;
+    border: 1px solid #24AEFC;
+    margin: 10px 5px 2px 27px;	
+	
+}
 /* Media Css */	
 @media (max-width: 992px) {
   .alert-validate::before {
@@ -1387,7 +1397,14 @@ padding-left: 3.5em;
   }
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 1024px)
+ {
+#container_Nurse_Routing {
+  background-color: #f1f1f1; 
+  padding-left: 2.2em; 
+  padding-right: 2.2em;
+  padding-bottom: 3em;
+}		 
 .txt2
 {
     margin: 30px;	
@@ -1398,6 +1415,13 @@ padding-left: 3.5em;
 }
 }
 @media (min-width: 1024px) and (max-width: 5000px) {
+#container_Nurse_Routing {
+  background-color: #f1f1f1; 
+  padding-left: 2.2em; 
+  padding-right: 2.2em;
+  padding-bottom: 3em;
+  width:110em;
+}	
 .txt2
 {
     margin: 130px;
@@ -1454,7 +1478,7 @@ padding-left: 3.5em;
     outline: 0 !important;
     background: transparent !important;
     border-bottom: 1px solid #707070 !important;
-    margin: 0px 56px 2px 12px !important;
+    margin: 0px 56px 40px 0px !important;
     width: 200px !important;
 }
 .form_inline7 {
@@ -1491,7 +1515,7 @@ padding-left: 3.5em;
     outline: 0 !important;
     background: transparent !important;
     border-bottom: 1px solid #707070 !important;
-    margin: 0px 56px 2px 12px !important;
+    margin: 7px 60px 13px 33px !important;
     width: 80px !important;
 }	
 
