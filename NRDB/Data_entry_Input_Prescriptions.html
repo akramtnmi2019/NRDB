@@ -1,93 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-
-<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="style.css">     
 </head>
-
 <body>
-
-
-<div class="menu-overlay"></div>
-<div class="side-menu-wrapper">
-<a href="#" class="menu-close">x</a>
-<ul>
-	<li><a href="#" target="_blank" rel="nofollow">Care Plan</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Nurse Routing</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Patient Visit</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Administration</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Data Entry</a></li>
-	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
-
-</ul>
-</div>
-
+<!-- Header (start) -->
 <div id="header" class="container">	
- 
  <div class="fleft">
    <img src="images/logo.png" class="logo">
    <span class="title">Patient Directory</span>
  </div>
-
  <div id="backto">
  	<i class="fas fa-arrow-left" id="arrow_backto"></i> <a href="#" class="link_back menu-open">Back to Patient Directory</a>
- 	<span class="menu_bars"><i class="fas fa-bars menu-open"></i></span>
+ 	<span class="menu_bars menu-open"><i class="fas fa-bars"></i></span>
  </div>
-
 </div>
 
-<div id="menu" class="container" style="background:#009688!important;    height: 36px;">	
-
- <a href=""></a>
+<!-- Side Bar Menu (start) -->
+<div class="menu-overlay"></div>
+<div class="side-menu-wrapper">
+<a href="#" class="menu-close">x</a>
+<ul>
+	<li><a href="Careplan.html" target="_blank" rel="nofollow">Care Plan</a></li>
+	<li><a href="Nurse_Routing.html" target="_blank" rel="nofollow">Nurse Routing</a></li>
+	<li><a href="Patient_Visit.html" target="_blank" rel="nofollow">Patient Visit</a></li>
+	<li><a href="Addministration_Care_plan_Tag.html" target="_blank" rel="nofollow">Administration</a></li>
+	<li><a href="Data_Entry.html" target="_blank" rel="nofollow">Data Entry</a></li>
+	<li><a href="#" target="_blank" rel="nofollow">Logout</a></li>
+</ul>
 </div>
+<!-- Side Bar Menu (End) -->
 
+<!-- Menu (start) -->
 
+<!-- Menu (End) -->
+<!-- Middle part (start) -->
+<div id="exTab" class="container">	
+<ul  class="nav nav-pills">
+		<li class="active"><a  href="#1b" data-toggle="tab">Prescription</a></li>
+		<li><a href="#2b" data-toggle="tab">Compound</a></li>
+		<li><a href="#3b" data-toggle="tab">Clinicls</a></li>
+		<li><a href="#4b" data-toggle="tab">Financials</a></li>
+		<li><a href="#5b" data-toggle="tab">Sales Ledger</a></li>
+</ul>
 
-
-<div id="exTab" class="container ">
-
-<div id="collapse_add_route_name5" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_add_route_name">
-		
-	
-		
-		<div class="card-body patient_detail input-group form-control" id="card_content_tag_data">
-			<span class="accordion_remove" data-toggle="collapse" data-target="#collapse_add_route_name5" aria-expanded="true" aria-controls="collapse_add_route_name5" id="accordion_shadow"><i class="fas fa-times"></i></span>
+	<div class="tab-content clearfix" id="tabs_m">
+			  <div class="tab-pane active" id="1b">
        
-	     <div class="row" >
-		  <div class="col-md-12">
-		  <h5 style="    padding: 40px;
-    text-align: center;
-    font-weight: bold;">Data Saved Successfully</h5> 
-        </div>
-        </div>
-		
-      </div>
-    </div>
+<!-- Patient Profile (start) -->
 
-<div class="tab-content clearfix" style="padding-bottom: 2em">
-	<div class="row">
-    <div class="col-md-12">
-      <div class="row">
-       
-    <div class="col-md-3">
+      <div class="row" >
+	  <div class="col-md-3">
 	<label for="data_entry_heading" id="data_entry_heading">Prescription</label>
 	<div id="data_entry_table">
 	
@@ -172,10 +139,30 @@
 		 </div>
          <div style="clear: both;">
 		 </div> 
-		 </div> 
+		 
+		 
+		<div class="row">
+	   <div class="col-md-12" style="float:right; margin-left: inherit; margin-top:2em">
+         <div class="col-md-4" style="
+    margin: 0 0 0 30px"><a href="javascript:void(0)"  data-toggle="collapse" data-target="#collapse_add_route_name5" aria-expanded="true" aria-controls="collapse_add_route_name5" class="btn btn-secondary patient_view" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a>
+	
+		 </div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+	  </div> 
+		 
+		 
+		 </div> 	 
  </div>
- 
- <div class="col-md-3">
+</div>
+
+		</div>
+		
+<!-- Patient Profile (end) -->
+
+		<div class="tab-pane" id="2b">
+          <div class="row" >
+	<div class="col-md-3">
  <label for="data_entry_heading" id="data_entry_heading">Compound</label>
 	<div id="data_entry_table">
 	
@@ -226,10 +213,29 @@
 		 </div>
          <div style="clear: both;">
 		 </div>
+		 <div class="row">
+	   <div class="col-md-12" style="float:right; margin-left: inherit; margin-top:2em">
+         <div class="col-md-4" style="
+    margin: 0 0 0 30px"><a href="javascript:void(0)"  data-toggle="collapse" data-target="#collapse_add_route_name5" aria-expanded="true" aria-controls="collapse_add_route_name5" class="btn btn-secondary patient_view" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a>
+	
+		 </div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+	  </div> 
+		 
+		 
 		 </div>
 		 
  </div>
- <div class="col-md-3">
+        </div>
+		</div>
+        
+
+        <div class="tab-pane" id="3b">
+          
+<!-- Contact (start) -->
+  <div class="row" >
+	<div class="col-md-3">
  <label for="data_entry_heading" id="data_entry_heading">Clinicals</label>
 	<div id="data_entry_table">
 	
@@ -328,10 +334,26 @@
 		 </div>
          <div style="clear: both;">
 		 </div> 
+		 <div class="row">
+	   <div class="col-md-12" style="float:right; margin-left: inherit; margin-top:2em">
+         <div class="col-md-4" style="
+    margin: 0 0 0 30px"><a href="javascript:void(0)"  data-toggle="collapse" data-target="#collapse_add_route_name5" aria-expanded="true" aria-controls="collapse_add_route_name5" class="btn btn-secondary patient_view" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a>
+	
+		 </div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+	  </div> 
+		 
 		 </div> 
 		 
- </div>
- <div class="col-md-3">
+ </div> 
+</div>
+     
+<!-- Contact (end) -->
+		</div>
+<div class="tab-pane" id="4b">
+<!-- Case Manager(s) (start) -->
+  <div class="col-md-3">
  <label for="data_entry_heading" id="data_entry_heading">Financials</label>
 	<div id="data_entry_table">
 	<div class="col-md-6">
@@ -355,42 +377,372 @@
 		 <p></p>
 		 </div>
          <div style="clear: both;"></div>
+		 <div class="row">
+	   <div class="col-md-12" style="float:right; margin-left: inherit; margin-top:2em">
+         <div class="col-md-4" style="
+    margin: 0 0 0 30px"><a href="javascript:void(0)"  data-toggle="collapse" data-target="#collapse_add_route_name5" aria-expanded="true" aria-controls="collapse_add_route_name5" class="btn btn-secondary patient_view" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a>
+	
+		 </div>
+         <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
+        </div>
+	  </div> 
+		 
  </div>
+ </div>    
+<!-- Case Manager(s) (end) -->
+</div>
+
+<div class="tab-pane" id="5b">
+<!-- MD Contacts(s) (start) -->
+<label for="data_entry_heading_sales" id="data_entry_heading_sales">Sales Ledger</label>
+  <div class="row" id="data_entry_table" >
+  
+  
+	  <div class="col-md-4">
+	
+	<div>
+	
+          <div class="col-md-6">
+		 <p>Till Sales</p>
+		 </div>
+		 
+		 
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		 <div class="col-md-12">
+		 <p></p>
+		 </div>
+        
+         <div style="clear: both;"></div>
+		
+		<div class="col-md-6">
+		 <p>Visa</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;"></div> 
+         
+		   <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		 <div class="col-md-6">
+		 <p>MC</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		
+		<div class="col-md-6">
+		 <p>Amex</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 
+         <div style="clear: both;"></div> 
+		 <div class="col-md-6">
+		 <p>Debit</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		
+		<div class="col-md-6">
+		 <p>Cash Deposit</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div> 
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 
+		<div class="col-md-6">
+		 <p>GST</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;">
+		 </div> 
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 <div class="col-md-6">
+		 <p>PST</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;">
+		 </div> 
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 
+		 <div class="col-md-6">
+		 <p>CHEQUE</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;">
+		 </div> 
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 
+		 </div> 	 
  </div>
-     </div>
-	  </div>
-      
-      </div>
-	  
-	  <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-	   <div class="col-md-3" style="float:right; margin-left: inherit; margin-top:6em">
+ 
+ 
+  <div class="col-md-4">
+	<div>
+	
+          <div class="col-md-6">
+		 <p>Paid Out</p>
+		 </div>
+		 
+		 
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		 <div class="col-md-12">
+		 <p></p>
+		 </div>
+        
+         <div style="clear: both;"></div>
+		
+		<div class="col-md-6">
+		 <p>Cash Sales (Till On)</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;"></div> 
+         
+		   <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		 <div class="col-md-6">
+		 <p>OTC Sales</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		
+		<div class="col-md-6">
+		 <p>CS</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		 <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 
+         <div style="clear: both;"></div> 
+		 
+		 <div class="col-md-6">
+		 <p>DVA</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		
+		<div class="col-md-6">
+		 <p>ESI</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div> 
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 
+		<div class="col-md-6">
+		 <p>GS</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;">
+		 </div> 
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 <div class="col-md-6">
+		 <p>PNET</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;">
+		 </div> 
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 
+		 <div class="col-md-6">
+		 <p>RCMP</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;">
+		 </div> 
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+		 
+		 </div> 	 
+ </div>
+ 
+ 
+  <div class="col-md-4">
+	<div>
+	
+          <div class="col-md-6">
+		 <p>PSHCP</p>
+		 </div>
+		 
+		 
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		 <div class="col-md-12">
+		 <p></p>
+		 </div>
+        
+         <div style="clear: both;"></div>
+		
+		<div class="col-md-6">
+		 <p>SSQ</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+         <div style="clear: both;"></div> 
+         
+		   <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		 <div class="col-md-6">
+		 <p>IFHP</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		 
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		 
+		
+		<div class="col-md-6">
+		 <p>IA</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div> 
+		 <div class="col-md-6">
+		 <p>NX</p>
+		 </div>
+         <div class="col-md-4">
+		 <input class="form-control" type="text" name="">
+		 </div>
+		  <div class="col-md-12">
+		 <p></p>
+		 </div>
+         <div style="clear: both;"></div>
+		
+		 
+		<div class="row">
+	   <div class="col-md-12" style="float:right; margin-left: inherit; margin-top:12em">
          <div class="col-md-4"><a href="javascript:void(0)"  data-toggle="collapse" data-target="#collapse_add_route_name5" aria-expanded="true" aria-controls="collapse_add_route_name5" class="btn btn-secondary patient_view" href="#" role="button"><i class="fas fa-save" style="padding-right: .2em"></i>Save</a>
 	
 		 </div>
          <div class="col-md-4" style="width: 32%!important"><a class="btn btn-secondary-red" href="#" role="button"><i class="fas fa-undo" style="padding-right: .2em"></i>Cancel</a></div> 
-
         </div>
-	  
-	  </div>
-	  </div>
-	  </div>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-					</div>
-					</div>
-					
-					
-					
+	  </div> 
+		 
+		 
+		 </div> 	 
+ </div>
+ 
+ 
+ 
+</div>
+     
+<!-- MD Contacts(s) (end) -->
+</div>
 
-		
-		
+  </div>
+  </div>
+  
+  <!-- Middle part (end) -->
+  <!-- Footer part (start)-->
 <!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -400,12 +752,9 @@
 $(document).ready(function(){
 	
 	var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
-	var patient_detail 		= ".patient_detail"; //Menu Wrapper
 var open_button 	= ".menu-open"; //Menu Open Button
-var view_button 	= ".patient_view"; //Menu Open Button
 var close_button 	= ".menu-close"; //Menu Close Button
 var overlay 		= ".menu-overlay"; //Overlay
-var accordion_remove 		= ".accordion_remove"; //Overlay
 
 //Initial menu position
 $(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
@@ -420,17 +769,6 @@ $(open_button).click(function(e){ //On menu open button click
 	$(overlay).css({"opacity":"1", "width":"100%"});
 });
 
-$(view_button).click(function(e){ //On menu open button click
-	e.preventDefault();
-$(patient_detail).css( {"z-index": "2"}); //move menu right position to 0
-	setTimeout(function(){
-		$(patient_detail).addClass('active'); //add active class
-	},50);
-	//$(patient_detail).addClass('active'); //add active class
-	$(overlay).css({"opacity":"1", "width":"100%"});
-});
-
-
 $(close_button).click(function(e){ //on menu close button click
 	e.preventDefault();
 	$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}); //hide menu by setting right position 
@@ -439,13 +777,19 @@ $(close_button).click(function(e){ //on menu close button click
 	},50);
 	$(overlay).css({"opacity":"0", "width":"0"});
 });
-
-$(accordion_remove).click(function(e){
-
-$(overlay).css({"opacity":"1", "width":"100%"});
 });
-});
+$(document).on('click', function(e) { //Hide menu when clicked outside menu area
+var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+var open_button 	= ".menu-open"; //Menu Open Button
+var close_button 	= ".menu-close"; //Menu Close Button
+var overlay 		= ".menu-overlay"; //Overlay
 
+
+	if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){ // check menu condition
+		$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
+		$(overlay).css({"opacity":"0", "width":"0"});
+	}
+});
 
 function allowDrop(ev) {
   ev.preventDefault();
@@ -462,6 +806,6 @@ function drop(ev) {
 }
 
 </script>
-
 </body>
 </html>	
+<!-- Footer part (end) -->
