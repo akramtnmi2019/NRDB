@@ -1491,7 +1491,18 @@ padding-left: 3.5em;
     margin: 0px 56px 2px 12px !important;
     width: 80px !important;
 }	
-
+.form_inline11 
+{
+   border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    /* border-bottom: 1px solid #707070 !important; */
+    margin: 0px 0px 2px 0px !important;
+	color: #707070;
+	font-size: 15px;
+	font-weight: bold;
+	
+}	
 .fake-input img {     
     position: absolute;
     top: 12px;
@@ -1631,7 +1642,18 @@ select.form_inline9
     margin: 0px 56px 2px 12px !important;
     width: 80px !important;
 }	
-
+.form_inline11 
+{
+	    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    /* border-bottom: 1px solid #707070 !important; */
+    margin: 0px 0px 2px 0px !important;
+	color: #707070;
+	font-size: 15px;
+	font-weight: bold;
+}	
 	.fake-input img {     
     position: absolute;
     top: 12px;
